@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AAUG.Service\AAUG.Service.csproj" />
     <ProjectReference Include="..\DataAccess.Implementations\AAUG.DataAccess.Implementations.csproj" />
+    <ProjectReference Include="..\Service.Implementation\AAUG.Service.Implementations.csproj" />
     <ProjectReference Include="..\Service.Interfaces\AAUG.Service.Interfaces.csproj" />
   </ItemGroup>
 

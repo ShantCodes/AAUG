@@ -1,0 +1,12 @@
+D:\AAUG\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.deps.json
+D:\AAUG\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.dll
+D:\AAUG\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.pdb
+D:\AAUG\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\AAUG\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.AssemblyInfoInputs.cache
+D:\AAUG\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.AssemblyInfo.cs
+D:\AAUG\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.csproj.CoreCompileInputs.cache
+D:\AAUG\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.sourcelink.json
+D:\AAUG\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.dll
+D:\AAUG\DataAccess.Interfaces\obj\Debug\net8.0\refint\AAUG.DataAccess.Interfaces.dll
+D:\AAUG\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.pdb
+D:\AAUG\DataAccess.Interfaces\obj\Debug\net8.0\ref\AAUG.DataAccess.Interfaces.dll

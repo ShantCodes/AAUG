@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataAccess.Interfaces\AAUG.DataAccess.Interfaces.csproj" />
+    <ProjectReference Include="..\Service.Interfaces\AAUG.Service.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

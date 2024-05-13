@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="AutoMapper\Dtos\" />
+    <Folder Include="AutoMapper\ViewModels\" />
     <Folder Include="Configurations\Tables\" />
   </ItemGroup>
 

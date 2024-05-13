@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AAUG.DataAccess.Interfaces")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcfae5679d1e71ceb230af3dd611d8bd17abfa31")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5071e231eec82ffe6e3a90b0ba0c7a3bd39f62fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("AAUG.DataAccess.Interfaces")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AAUG.DataAccess.Interfaces")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

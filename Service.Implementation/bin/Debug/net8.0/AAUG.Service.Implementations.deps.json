@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "AAUG.Service.Implementations/1.0.0": {
+        "dependencies": {
+          "AAUG.DataAccess.Interfaces": "1.0.0",
+          "AAUG.Service.Interfaces": "1.0.0"
+        },
+        "runtime": {
+          "AAUG.Service.Implementations.dll": {}
+        }
+      },
+      "AAUG.DataAccess.Interfaces/1.0.0": {
+        "runtime": {
+          "AAUG.DataAccess.Interfaces.dll": {}
+        }
+      },
+      "AAUG.Service.Interfaces/1.0.0": {
+        "runtime": {
+          "AAUG.Service.Interfaces.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AAUG.Service.Implementations/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AAUG.DataAccess.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AAUG.Service.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
