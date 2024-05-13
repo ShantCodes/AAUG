@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "AAUG.DataAccess.Implementations/1.0.0": {
+        "runtime": {
+          "AAUG.DataAccess.Implementations.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AAUG.DataAccess.Implementations/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

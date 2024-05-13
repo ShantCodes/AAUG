@@ -1,0 +1,15 @@
+D:\AAUG\AAUG.Service\bin\Debug\net8.0\AAUG.Service.deps.json
+D:\AAUG\AAUG.Service\bin\Debug\net8.0\AAUG.Service.dll
+D:\AAUG\AAUG.Service\bin\Debug\net8.0\AAUG.Service.pdb
+D:\AAUG\AAUG.Service\bin\Debug\net8.0\AAUG.Service.Interfaces.dll
+D:\AAUG\AAUG.Service\bin\Debug\net8.0\AAUG.Service.Interfaces.pdb
+D:\AAUG\AAUG.Service\obj\Debug\net8.0\AAUG.Service.csproj.AssemblyReference.cache
+D:\AAUG\AAUG.Service\obj\Debug\net8.0\AAUG.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\AAUG\AAUG.Service\obj\Debug\net8.0\AAUG.Service.AssemblyInfoInputs.cache
+D:\AAUG\AAUG.Service\obj\Debug\net8.0\AAUG.Service.AssemblyInfo.cs
+D:\AAUG\AAUG.Service\obj\Debug\net8.0\AAUG.Service.csproj.CoreCompileInputs.cache
+D:\AAUG\AAUG.Service\obj\Debug\net8.0\AAUG.Ser.25052577.Up2Date
+D:\AAUG\AAUG.Service\obj\Debug\net8.0\AAUG.Service.dll
+D:\AAUG\AAUG.Service\obj\Debug\net8.0\refint\AAUG.Service.dll
+D:\AAUG\AAUG.Service\obj\Debug\net8.0\AAUG.Service.pdb
+D:\AAUG\AAUG.Service\obj\Debug\net8.0\ref\AAUG.Service.dll
