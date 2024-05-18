@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|c:\\users\\asus\\desktop\\aaug backend\\aaug\\serviceextensions\\dependencyinjectionserviceextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\serviceextensions\\dependencyinjectionserviceextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|c:\\users\\asus\\desktop\\aaug backend\\service.implementation\\general\\aaugtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\general\\aaugtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|c:\\users\\asus\\desktop\\aaug backend\\aaug\\serviceextensions\\dependencyinjectionserviceextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\serviceextensions\\dependencyinjectionserviceextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|c:\\users\\asus\\desktop\\aaug backend\\aaug\\controllers\\general\\aaughomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,33 +29,30 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DependencyInjectionServiceExtension.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
               "RelativeDocumentMoniker": "AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
               "RelativeToolTip": "AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-13T18:54:16.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AaugTest.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\Service.Implementation\\General\\AaugTest.cs",
               "RelativeDocumentMoniker": "Service.Implementation\\General\\AaugTest.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\Service.Implementation\\General\\AaugTest.cs",
               "RelativeToolTip": "Service.Implementation\\General\\AaugTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T18:51:57.328Z"
+              "WhenOpened": "2024-05-13T18:51:57.328Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

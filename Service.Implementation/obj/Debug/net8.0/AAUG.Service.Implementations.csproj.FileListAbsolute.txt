@@ -16,3 +16,21 @@ D:\AAUG\Service.Implementation\obj\Debug\net8.0\AAUG.Service.Implementations.dll
 D:\AAUG\Service.Implementation\obj\Debug\net8.0\refint\AAUG.Service.Implementations.dll
 D:\AAUG\Service.Implementation\obj\Debug\net8.0\AAUG.Service.Implementations.pdb
 D:\AAUG\Service.Implementation\obj\Debug\net8.0\ref\AAUG.Service.Implementations.dll
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\bin\Debug\net8.0\AAUG.Service.Implementations.deps.json
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\bin\Debug\net8.0\AAUG.Service.Implementations.dll
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\bin\Debug\net8.0\AAUG.Service.Implementations.pdb
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.dll
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\bin\Debug\net8.0\AAUG.Service.Interfaces.dll
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.pdb
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\bin\Debug\net8.0\AAUG.Service.Interfaces.pdb
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\obj\Debug\net8.0\AAUG.Service.Implementations.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\obj\Debug\net8.0\AAUG.Service.Implementations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\obj\Debug\net8.0\AAUG.Service.Implementations.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\obj\Debug\net8.0\AAUG.Service.Implementations.AssemblyInfo.cs
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\obj\Debug\net8.0\AAUG.Service.Implementations.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\obj\Debug\net8.0\AAUG.Service.Implementations.sourcelink.json
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\obj\Debug\net8.0\AAUG.Ser.6B98FE70.Up2Date
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\obj\Debug\net8.0\AAUG.Service.Implementations.dll
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\obj\Debug\net8.0\refint\AAUG.Service.Implementations.dll
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\obj\Debug\net8.0\AAUG.Service.Implementations.pdb
+C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\obj\Debug\net8.0\ref\AAUG.Service.Implementations.dll

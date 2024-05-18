@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {}
+    "c:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {
+    "c:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
+        "projectUniqueName": "c:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
         "projectName": "AAUG.DataAccess.Implementations",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
+        "projectPath": "c:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Implementations\\obj\\",
+        "outputPath": "c:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Implementations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

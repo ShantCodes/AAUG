@@ -10,3 +10,15 @@ D:\AAUG\Service.Interfaces\obj\Debug\net8.0\refint\AAUG.Service.Interfaces.dll
 D:\AAUG\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.pdb
 D:\AAUG\Service.Interfaces\obj\Debug\net8.0\ref\AAUG.Service.Interfaces.dll
 D:\AAUG\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.sourcelink.json
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\bin\Debug\net8.0\AAUG.Service.Interfaces.deps.json
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\bin\Debug\net8.0\AAUG.Service.Interfaces.dll
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\bin\Debug\net8.0\AAUG.Service.Interfaces.pdb
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.AssemblyInfo.cs
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.sourcelink.json
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.dll
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\obj\Debug\net8.0\refint\AAUG.Service.Interfaces.dll
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.pdb
+C:\Users\Asus\Desktop\AAUG Backend\Service.Interfaces\obj\Debug\net8.0\ref\AAUG.Service.Interfaces.dll
