@@ -9,3 +9,4 @@ D:\AAUG\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.dll
 D:\AAUG\Service.Interfaces\obj\Debug\net8.0\refint\AAUG.Service.Interfaces.dll
 D:\AAUG\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.pdb
 D:\AAUG\Service.Interfaces\obj\Debug\net8.0\ref\AAUG.Service.Interfaces.dll
+D:\AAUG\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.sourcelink.json

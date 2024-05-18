@@ -1,0 +1,12 @@
+D:\AAUG\AAUG.Context\bin\Debug\net8.0\AAUG.Context.deps.json
+D:\AAUG\AAUG.Context\bin\Debug\net8.0\AAUG.Context.dll
+D:\AAUG\AAUG.Context\bin\Debug\net8.0\AAUG.Context.pdb
+D:\AAUG\AAUG.Context\obj\Debug\net8.0\AAUG.Context.GeneratedMSBuildEditorConfig.editorconfig
+D:\AAUG\AAUG.Context\obj\Debug\net8.0\AAUG.Context.AssemblyInfoInputs.cache
+D:\AAUG\AAUG.Context\obj\Debug\net8.0\AAUG.Context.AssemblyInfo.cs
+D:\AAUG\AAUG.Context\obj\Debug\net8.0\AAUG.Context.csproj.CoreCompileInputs.cache
+D:\AAUG\AAUG.Context\obj\Debug\net8.0\AAUG.Context.sourcelink.json
+D:\AAUG\AAUG.Context\obj\Debug\net8.0\AAUG.Context.dll
+D:\AAUG\AAUG.Context\obj\Debug\net8.0\refint\AAUG.Context.dll
+D:\AAUG\AAUG.Context\obj\Debug\net8.0\AAUG.Context.pdb
+D:\AAUG\AAUG.Context\obj\Debug\net8.0\ref\AAUG.Context.dll

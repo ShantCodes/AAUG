@@ -9,3 +9,4 @@ D:\AAUG\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementati
 D:\AAUG\DataAccess.Implementations\obj\Debug\net8.0\refint\AAUG.DataAccess.Implementations.dll
 D:\AAUG\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.pdb
 D:\AAUG\DataAccess.Implementations\obj\Debug\net8.0\ref\AAUG.DataAccess.Implementations.dll
+D:\AAUG\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.sourcelink.json
