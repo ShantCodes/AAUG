@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+RRbUUBRhA3BtppVeEUwiK4x13a3+S1gM0bvKpUpRrjKSgJ2v9Vd9VfcQxfrAGSgkxaQytXJXVGCoYldknHDHg==",
+  "dgSpecHash": "6RK5f748BWM/netx7Dum6AIIxlN++MVlTmlE0S1CpLRRDVdJ7A5NNFCGbll0pckSWobIlmp5Wfbsbfn10V5h4g==",
   "success": true,
-  "projectFilePath": "D:\\AAUG\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

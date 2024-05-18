@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Service.Interfaces\AAUG.Service.Interfaces.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

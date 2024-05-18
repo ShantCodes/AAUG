@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AAUG\\AAUG.Context\\AAUG.Context.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG.Context\\AAUG.Context.csproj": {}
   },
   "projects": {
-    "D:\\AAUG\\AAUG.Context\\AAUG.Context.csproj": {
+    "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG.Context\\AAUG.Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AAUG\\AAUG.Context\\AAUG.Context.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG.Context\\AAUG.Context.csproj",
         "projectName": "AAUG.Context",
-        "projectPath": "D:\\AAUG\\AAUG.Context\\AAUG.Context.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG.Context\\AAUG.Context.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "D:\\AAUG\\AAUG.Context\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG.Context\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AAUG\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {}
   },
   "projects": {
-    "D:\\AAUG\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
+    "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AAUG\\AAUG.DomainModels\\AAUG.DomainModels.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG.DomainModels\\AAUG.DomainModels.csproj",
         "projectName": "AAUG.DomainModels",
-        "projectPath": "D:\\AAUG\\AAUG.DomainModels\\AAUG.DomainModels.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG.DomainModels\\AAUG.DomainModels.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "D:\\AAUG\\AAUG.DomainModels\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG.DomainModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V9CjWp0o+1vM0oaVF6BG1wy9CZwuGTCh7qZiAoC/TN2E/WFZGeP5yQJZmr4bf7EdMguMrRewbntYvJ8wrm1A7A==",
+  "dgSpecHash": "cK1YwoG3BtM990Vo55mJmBE9ZrIC5m9WigFB4SGB46vQB1dVHmDPhtvnH2O72rwugRrhAm86uOkr3FoI7h2kMQ==",
   "success": true,
-  "projectFilePath": "D:\\AAUG\\Service.Implementation\\AAUG.Service.Implementations.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\Service.Implementation\\AAUG.Service.Implementations.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
