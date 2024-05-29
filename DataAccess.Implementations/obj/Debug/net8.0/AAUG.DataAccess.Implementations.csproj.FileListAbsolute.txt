@@ -22,3 +22,15 @@ C:\Users\Asus\Desktop\AAUG Backend\DataAccess.Implementations\obj\Debug\net8.0\A
 C:\Users\Asus\Desktop\AAUG Backend\DataAccess.Implementations\obj\Debug\net8.0\refint\AAUG.DataAccess.Implementations.dll
 C:\Users\Asus\Desktop\AAUG Backend\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.pdb
 C:\Users\Asus\Desktop\AAUG Backend\DataAccess.Implementations\obj\Debug\net8.0\ref\AAUG.DataAccess.Implementations.dll
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DataAccess.Implementations.deps.json
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DataAccess.Implementations.dll
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DataAccess.Implementations.pdb
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.AssemblyInfo.cs
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.sourcelink.json
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.dll
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\refint\AAUG.DataAccess.Implementations.dll
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.pdb
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\ref\AAUG.DataAccess.Implementations.dll

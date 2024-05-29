@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tAhA8k8Y6ZlG711tjcyCfBfl4gyy4+KNpPUGdWkSyWNzoYB8+u+/XMQapWs47xw6MnnLPEJEmMlZe/H6BF8sTA==",
+  "dgSpecHash": "HNKfCsKDr5DoZ2j45iLfBV3F2SE1O4Nu7KPIhPZRFfOAzoVo/jEfC2FClyoPH1aXsbudGLUOXZYJ564GDTf0Hw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Asus\\Desktop\\AAUG Backend\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

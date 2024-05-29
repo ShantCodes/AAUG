@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\clone\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|c:\\users\\asus\\desktop\\aaug backend\\service.implementation\\general\\aaugtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|c:\\users\\asus\\desktop\\clone\\service.implementation\\general\\aaugtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\general\\aaugtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|c:\\users\\asus\\desktop\\aaug backend\\aaug\\serviceextensions\\dependencyinjectionserviceextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|c:\\users\\asus\\desktop\\clone\\aaug\\serviceextensions\\dependencyinjectionserviceextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\serviceextensions\\dependencyinjectionserviceextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|c:\\users\\asus\\desktop\\aaug backend\\aaug\\controllers\\general\\aaughomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|c:\\users\\asus\\desktop\\clone\\aaug\\controllers\\general\\aaughomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\controllers\\general\\aaughomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -32,24 +32,23 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "DependencyInjectionServiceExtension.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
               "RelativeDocumentMoniker": "AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
               "RelativeToolTip": "AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T18:54:16.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-13T18:54:16.313Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AaugTest.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\Service.Implementation\\General\\AaugTest.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\General\\AaugTest.cs",
               "RelativeDocumentMoniker": "Service.Implementation\\General\\AaugTest.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\Service.Implementation\\General\\AaugTest.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\General\\AaugTest.cs",
               "RelativeToolTip": "Service.Implementation\\General\\AaugTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-13T18:51:57.328Z",
               "EditorCaption": ""
@@ -58,9 +57,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "AaugHomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG\\Controllers\\General\\AaugHomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\AAUG\\Controllers\\General\\AaugHomeController.cs",
               "RelativeDocumentMoniker": "AAUG\\Controllers\\General\\AaugHomeController.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\AAUG Backend\\AAUG\\Controllers\\General\\AaugHomeController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\AAUG\\Controllers\\General\\AaugHomeController.cs",
               "RelativeToolTip": "AAUG\\Controllers\\General\\AaugHomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

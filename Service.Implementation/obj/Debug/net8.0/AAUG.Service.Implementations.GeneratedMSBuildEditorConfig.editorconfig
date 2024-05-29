@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AAUG.Service.Implementations
-build_property.ProjectDir = C:\Users\Asus\Desktop\AAUG Backend\Service.Implementation\
+build_property.ProjectDir = C:\Users\Asus\Desktop\clone\Service.Implementation\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
