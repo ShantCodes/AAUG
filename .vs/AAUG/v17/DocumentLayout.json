@@ -3,16 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\clone\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|c:\\users\\asus\\desktop\\clone\\service.implementation\\general\\aaugtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\general\\aaugtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|c:\\users\\asus\\desktop\\clone\\aaug\\controllers\\general\\aaughomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\controllers\\general\\aaughomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|c:\\users\\asus\\desktop\\clone\\service.implementation\\general\\newsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\general\\newsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|c:\\users\\asus\\desktop\\clone\\dataaccess.implementations\\general\\newsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|solutionrelative:dataaccess.implementations\\general\\newsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|c:\\users\\asus\\desktop\\clone\\dataaccess.implementations\\entityrepository\\entityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|solutionrelative:dataaccess.implementations\\entityrepository\\entityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|c:\\users\\asus\\desktop\\clone\\dataaccess.implementations\\iaaugunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|solutionrelative:dataaccess.implementations\\iaaugunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|c:\\users\\asus\\desktop\\clone\\dataaccess.implementations\\aaugunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|solutionrelative:dataaccess.implementations\\aaugunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|c:\\users\\asus\\desktop\\clone\\aaug\\serviceextensions\\dependencyinjectionserviceextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\serviceextensions\\dependencyinjectionserviceextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|c:\\users\\asus\\desktop\\clone\\aaug\\controllers\\general\\aaughomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\controllers\\general\\aaughomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|c:\\users\\asus\\desktop\\clone\\aaug\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DA9D63D-BB68-48E4-A4D5-CFACDEBD52F7}|Service.Interfaces\\AAUG.Service.Interfaces.csproj|c:\\users\\asus\\desktop\\clone\\service.interfaces\\general\\inewsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DA9D63D-BB68-48E4-A4D5-CFACDEBD52F7}|Service.Interfaces\\AAUG.Service.Interfaces.csproj|solutionrelative:service.interfaces\\general\\inewsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|c:\\users\\asus\\desktop\\clone\\service.implementation\\viewmodels\\newsviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\viewmodels\\newsviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89BD4D64-6C1F-473F-9541-33C19095BF63}|DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj|c:\\users\\asus\\desktop\\clone\\dataaccess.interfaces\\general\\inewsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89BD4D64-6C1F-473F-9541-33C19095BF63}|DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj|solutionrelative:dataaccess.interfaces\\general\\inewsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43D5CBF3-B21D-4C83-855E-2415B72AA4FC}|AAUG.Context\\AAUG.Context.csproj|c:\\users\\asus\\desktop\\clone\\aaug.context\\configurations\\tables\\general\\eventconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43D5CBF3-B21D-4C83-855E-2415B72AA4FC}|AAUG.Context\\AAUG.Context.csproj|solutionrelative:aaug.context\\configurations\\tables\\general\\eventconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43D5CBF3-B21D-4C83-855E-2415B72AA4FC}|AAUG.Context\\AAUG.Context.csproj|c:\\users\\asus\\desktop\\clone\\aaug.context\\configurations\\tables\\general\\campconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43D5CBF3-B21D-4C83-855E-2415B72AA4FC}|AAUG.Context\\AAUG.Context.csproj|solutionrelative:aaug.context\\configurations\\tables\\general\\campconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43D5CBF3-B21D-4C83-855E-2415B72AA4FC}|AAUG.Context\\AAUG.Context.csproj|c:\\users\\asus\\desktop\\clone\\aaug.context\\configurations\\tables\\general\\aauguserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43D5CBF3-B21D-4C83-855E-2415B72AA4FC}|AAUG.Context\\AAUG.Context.csproj|solutionrelative:aaug.context\\configurations\\tables\\general\\aauguserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43D5CBF3-B21D-4C83-855E-2415B72AA4FC}|AAUG.Context\\AAUG.Context.csproj|c:\\users\\asus\\desktop\\clone\\aaug.context\\context\\aaugcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43D5CBF3-B21D-4C83-855E-2415B72AA4FC}|AAUG.Context\\AAUG.Context.csproj|solutionrelative:aaug.context\\context\\aaugcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|c:\\users\\asus\\desktop\\clone\\service.implementation\\general\\aaugtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\general\\aaugtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,40 +82,205 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
+              "Title": "CampConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.Context\\Configurations\\Tables\\General\\CampConfiguration.cs",
+              "RelativeDocumentMoniker": "AAUG.Context\\Configurations\\Tables\\General\\CampConfiguration.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.Context\\Configurations\\Tables\\General\\CampConfiguration.cs",
+              "RelativeToolTip": "AAUG.Context\\Configurations\\Tables\\General\\CampConfiguration.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAiwBEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T10:54:44.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AaugUserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.Context\\Configurations\\Tables\\General\\AaugUserConfiguration.cs",
+              "RelativeDocumentMoniker": "AAUG.Context\\Configurations\\Tables\\General\\AaugUserConfiguration.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.Context\\Configurations\\Tables\\General\\AaugUserConfiguration.cs",
+              "RelativeToolTip": "AAUG.Context\\Configurations\\Tables\\General\\AaugUserConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T10:52:56.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AaugContext.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.Context\\Context\\AaugContext.cs",
+              "RelativeDocumentMoniker": "AAUG.Context\\Context\\AaugContext.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.Context\\Context\\AaugContext.cs",
+              "RelativeToolTip": "AAUG.Context\\Context\\AaugContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T05:36:57.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DependencyInjectionServiceExtension.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
               "RelativeDocumentMoniker": "AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
               "RelativeToolTip": "AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T18:54:16.313Z"
+              "WhenOpened": "2024-05-13T18:54:16.313Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AaugTest.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\General\\AaugTest.cs",
-              "RelativeDocumentMoniker": "Service.Implementation\\General\\AaugTest.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\General\\AaugTest.cs",
-              "RelativeToolTip": "Service.Implementation\\General\\AaugTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "DocumentIndex": 8,
+              "Title": "INewsService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\Service.Interfaces\\General\\INewsService.cs",
+              "RelativeDocumentMoniker": "Service.Interfaces\\General\\INewsService.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\Service.Interfaces\\General\\INewsService.cs",
+              "RelativeToolTip": "Service.Interfaces\\General\\INewsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T18:51:57.328Z",
+              "WhenOpened": "2024-06-01T06:54:42.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EntityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\EntityRepository\\EntityRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess.Implementations\\EntityRepository\\EntityRepository.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\EntityRepository\\EntityRepository.cs",
+              "RelativeToolTip": "DataAccess.Implementations\\EntityRepository\\EntityRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T05:34:14.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NewsService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\General\\NewsService.cs",
+              "RelativeDocumentMoniker": "Service.Implementation\\General\\NewsService.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\General\\NewsService.cs",
+              "RelativeToolTip": "Service.Implementation\\General\\NewsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T06:50:32.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "NewsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\General\\NewsRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess.Implementations\\General\\NewsRepository.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\General\\NewsRepository.cs",
+              "RelativeToolTip": "DataAccess.Implementations\\General\\NewsRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T04:22:41.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "AaugHomeController.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\AAUG\\Controllers\\General\\AaugHomeController.cs",
               "RelativeDocumentMoniker": "AAUG\\Controllers\\General\\AaugHomeController.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\AAUG\\Controllers\\General\\AaugHomeController.cs",
               "RelativeToolTip": "AAUG\\Controllers\\General\\AaugHomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T18:51:33.507Z"
+              "WhenOpened": "2024-05-13T18:51:33.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AaugUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AaugUnitOfWork.cs",
+              "RelativeDocumentMoniker": "DataAccess.Implementations\\AaugUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AaugUnitOfWork.cs",
+              "RelativeToolTip": "DataAccess.Implementations\\AaugUnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T11:01:40.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAaugUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\IAaugUnitOfWork.cs",
+              "RelativeDocumentMoniker": "DataAccess.Implementations\\IAaugUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\IAaugUnitOfWork.cs",
+              "RelativeToolTip": "DataAccess.Implementations\\IAaugUnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T11:08:07.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "INewsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\General\\INewsRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess.Interfaces\\General\\INewsRepository.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\General\\INewsRepository.cs",
+              "RelativeToolTip": "DataAccess.Interfaces\\General\\INewsRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T06:48:22.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\AAUG\\Program.cs",
+              "RelativeDocumentMoniker": "AAUG\\Program.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\AAUG\\Program.cs",
+              "RelativeToolTip": "AAUG\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T07:03:16.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NewsViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\ViewModels\\NewsViewModels.cs",
+              "RelativeDocumentMoniker": "Service.Implementation\\ViewModels\\NewsViewModels.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\ViewModels\\NewsViewModels.cs",
+              "RelativeToolTip": "Service.Implementation\\ViewModels\\NewsViewModels.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T06:59:57.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EventConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.Context\\Configurations\\Tables\\General\\EventConfiguration.cs",
+              "RelativeDocumentMoniker": "AAUG.Context\\Configurations\\Tables\\General\\EventConfiguration.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.Context\\Configurations\\Tables\\General\\EventConfiguration.cs",
+              "RelativeToolTip": "AAUG.Context\\Configurations\\Tables\\General\\EventConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T11:17:58.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AaugTest.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\General\\AaugTest.cs",
+              "RelativeDocumentMoniker": "Service.Implementation\\General\\AaugTest.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\General\\AaugTest.cs",
+              "RelativeToolTip": "Service.Implementation\\General\\AaugTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T18:51:57.328Z"
             }
           ]
         }

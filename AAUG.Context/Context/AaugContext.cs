@@ -1,15 +1,8 @@
 ﻿using AAUG.DomainModels.Models.Tables.General;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace AAUG.Context.Context
 {
-    internal class AaugContext : DbContext
+    public class AaugContext : DbContext
     {
 
         public AaugContext(DbContextOptions<AaugContext> options)
@@ -45,6 +38,12 @@ namespace AAUG.Context.Context
 
             #region Tables
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.AaugUserConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.CampConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.EventConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.EventLikeConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.NewsConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.UserMajorConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.UserTalentConfiguration());
             #endregion
         }
 

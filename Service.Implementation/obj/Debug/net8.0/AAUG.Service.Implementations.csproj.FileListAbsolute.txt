@@ -52,3 +52,9 @@ C:\Users\Asus\Desktop\clone\Service.Implementation\obj\Debug\net8.0\AAUG.Service
 C:\Users\Asus\Desktop\clone\Service.Implementation\obj\Debug\net8.0\refint\AAUG.Service.Implementations.dll
 C:\Users\Asus\Desktop\clone\Service.Implementation\obj\Debug\net8.0\AAUG.Service.Implementations.pdb
 C:\Users\Asus\Desktop\clone\Service.Implementation\obj\Debug\net8.0\ref\AAUG.Service.Implementations.dll
+C:\Users\Asus\Desktop\clone\Service.Implementation\bin\Debug\net8.0\AAUG.Context.dll
+C:\Users\Asus\Desktop\clone\Service.Implementation\bin\Debug\net8.0\AAUG.DataAccess.Implementations.dll
+C:\Users\Asus\Desktop\clone\Service.Implementation\bin\Debug\net8.0\AAUG.DomainModels.dll
+C:\Users\Asus\Desktop\clone\Service.Implementation\bin\Debug\net8.0\AAUG.DataAccess.Implementations.pdb
+C:\Users\Asus\Desktop\clone\Service.Implementation\bin\Debug\net8.0\AAUG.Context.pdb
+C:\Users\Asus\Desktop\clone\Service.Implementation\bin\Debug\net8.0\AAUG.DomainModels.pdb

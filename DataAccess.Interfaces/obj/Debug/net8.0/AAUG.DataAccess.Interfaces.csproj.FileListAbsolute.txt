@@ -34,3 +34,7 @@ C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAcce
 C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\refint\AAUG.DataAccess.Interfaces.dll
 C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.pdb
 C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\ref\AAUG.DataAccess.Interfaces.dll
+C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DomainModels.dll
+C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DomainModels.pdb
+C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.Dat.847D5364.Up2Date

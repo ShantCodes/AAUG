@@ -48,4 +48,5 @@ public partial class AaugUser
     public virtual ICollection<UserMajor> UserMajors { get; set; } = new List<UserMajor>();
 
     public virtual ICollection<UserTalent> UserTalents { get; set; } = new List<UserTalent>();
+    public virtual ICollection<UserTicketsRelation> UserTicketsRelations { get; set; } 
 }

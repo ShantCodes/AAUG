@@ -24,17 +24,17 @@ namespace AAUG.Context.Configurations.Tables.General
             #region Column Mappings
             builder.Property(x => x.Id).HasColumnName("Id");
             builder.Property(x => x.Name).HasColumnName("Name");
-            builder.Property(x => x.LastName).HasColumnName("Name");
-            builder.Property(x => x.NameArmenian).HasColumnName("Name");
-            builder.Property(x => x.LastNameArmenian).HasColumnName("Name");
-            builder.Property(x => x.RoleId).HasColumnName("Name");
-            builder.Property(x => x.MajorsId).HasColumnName("Name");
-            builder.Property(x => x.TalentsId).HasColumnName("Name");
-            builder.Property(x => x.ProfilePictureFileId).HasColumnName("Name");
-            builder.Property(x => x.NationalCardFileId).HasColumnName("Name");
-            builder.Property(x => x.Email).HasColumnName("Name");
-            builder.Property(x => x.CanGetNotfiedByMail).HasColumnName("Name");
-            builder.Property(x => x.IsApproved).HasColumnName("Name");
+            builder.Property(x => x.LastName).HasColumnName("LastName");
+            builder.Property(x => x.NameArmenian).HasColumnName("NameArmenian");
+            builder.Property(x => x.LastNameArmenian).HasColumnName("LastNameArmenian");
+            builder.Property(x => x.RoleId).HasColumnName("RoleId");
+            builder.Property(x => x.MajorsId).HasColumnName("MajorsId");
+            builder.Property(x => x.TalentsId).HasColumnName("TalentsId");
+            builder.Property(x => x.ProfilePictureFileId).HasColumnName("ProfilePictureFileId");
+            builder.Property(x => x.NationalCardFileId).HasColumnName("NationalCardFileId");
+            builder.Property(x => x.Email).HasColumnName("Email");
+            builder.Property(x => x.CanGetNotfiedByMail).HasColumnName("CanGetNotfiedByMail");
+            builder.Property(x => x.IsApproved).HasColumnName("IsApproved");
 
             #endregion
 
@@ -49,16 +49,33 @@ namespace AAUG.Context.Configurations.Tables.General
             .HasForeignKey(a => a.UserId);
 
             builder.HasMany(a => a.UserTalents)
-            .WithOne(a=>a.User)
+            .WithOne(a => a.User)
             .HasForeignKey(a => a.UserId);
 
             builder.HasMany(a => a.Camps)
             .WithOne(a => a.RepresentatorUser)
             .HasForeignKey(a => a.RepresentatorUserId);
 
-            // builder.HasMany(a => a.EventLikes)
-            // .WithMany(a => a.User)
-            // .HasForeignKey();
+            builder.HasMany(a => a.UserTicketsRelations)
+                .WithOne(a => a.AaugUser)
+                .HasForeignKey(a => a.UserId);
+
+            builder.HasOne(u => u.ProfilePictureFile)
+            .WithMany(m => m.AaugUserProfilePictureFiles)
+            .HasForeignKey(u => u.ProfilePictureFileId)
+            .IsRequired(false);
+
+            builder.HasOne(u => u.NationalCardFile)
+                .WithMany(m => m.AaugUserNationalCardFiles)
+                .HasForeignKey(u => u.NationalCardFileId)
+                .IsRequired();
+
+            builder.HasOne(u => u.UniversityCardFile)
+                .WithMany(m => m.AaugUserUniversityCardFiles)
+                .HasForeignKey(u => u.UniversityCardFileId)
+                .IsRequired();
+
+
             #endregion
         }
     }

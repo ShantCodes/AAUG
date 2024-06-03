@@ -34,3 +34,7 @@ C:\Users\Asus\Desktop\clone\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Int
 C:\Users\Asus\Desktop\clone\Service.Interfaces\obj\Debug\net8.0\refint\AAUG.Service.Interfaces.dll
 C:\Users\Asus\Desktop\clone\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.pdb
 C:\Users\Asus\Desktop\clone\Service.Interfaces\obj\Debug\net8.0\ref\AAUG.Service.Interfaces.dll
+C:\Users\Asus\Desktop\clone\Service.Interfaces\obj\Debug\net8.0\AAUG.Service.Interfaces.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\clone\Service.Interfaces\bin\Debug\net8.0\AAUG.DomainModels.dll
+C:\Users\Asus\Desktop\clone\Service.Interfaces\bin\Debug\net8.0\AAUG.DomainModels.pdb
+C:\Users\Asus\Desktop\clone\Service.Interfaces\obj\Debug\net8.0\AAUG.Ser.9FA93DB2.Up2Date

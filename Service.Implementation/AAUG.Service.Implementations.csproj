@@ -7,12 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess.Implementations\AAUG.DataAccess.Implementations.csproj" />
     <ProjectReference Include="..\DataAccess.Interfaces\AAUG.DataAccess.Interfaces.csproj" />
     <ProjectReference Include="..\Service.Interfaces\AAUG.Service.Interfaces.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ViewModelMapper\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
   </ItemGroup>
 
 </Project>
