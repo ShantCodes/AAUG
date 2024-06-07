@@ -1,5 +1,4 @@
 ﻿using AAUG.Service.Interfaces.General;
-using AAUG.Service.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,13 +21,6 @@ namespace AAUG.Controllers.General
         {
             return Ok(aaugTest.Hello(test));
         }
-
-        [HttpGet("GetNewsData")]
-        public async Task<IActionResult> GetNewsData()
-        {
-            return Ok(await newsService.GetNewsAsync());
-        }
-
         
     }
 }

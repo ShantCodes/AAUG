@@ -23,22 +23,22 @@ C:\Users\Asus\Desktop\AAUG Backend\DataAccess.Implementations\obj\Debug\net8.0\r
 C:\Users\Asus\Desktop\AAUG Backend\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.pdb
 C:\Users\Asus\Desktop\AAUG Backend\DataAccess.Implementations\obj\Debug\net8.0\ref\AAUG.DataAccess.Implementations.dll
 C:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DataAccess.Implementations.deps.json
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DataAccess.Implementations.dll
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DataAccess.Implementations.pdb
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.AssemblyInfoInputs.cache
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.AssemblyInfo.cs
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.csproj.CoreCompileInputs.cache
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.sourcelink.json
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.dll
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\refint\AAUG.DataAccess.Implementations.dll
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.pdb
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\ref\AAUG.DataAccess.Implementations.dll
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DataAccess.Implementations.dll
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DataAccess.Implementations.pdb
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.Context.dll
 c:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.dll
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DomainModels.dll
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.Context.pdb
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DomainModels.pdb
 c:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.pdb
 c:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.csproj.AssemblyReference.cache
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.AssemblyInfoInputs.cache
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.AssemblyInfo.cs
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.csproj.CoreCompileInputs.cache
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.sourcelink.json
 C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.Dat.230EFD08.Up2Date
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.Context.dll
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DomainModels.dll
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.Context.pdb
-C:\Users\Asus\Desktop\clone\DataAccess.Implementations\bin\Debug\net8.0\AAUG.DomainModels.pdb
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.dll
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\refint\AAUG.DataAccess.Implementations.dll
+c:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\AAUG.DataAccess.Implementations.pdb
+C:\Users\Asus\Desktop\clone\DataAccess.Implementations\obj\Debug\net8.0\ref\AAUG.DataAccess.Implementations.dll

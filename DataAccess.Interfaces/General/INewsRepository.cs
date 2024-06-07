@@ -1,9 +1,12 @@
+using AAUG.DomainModels;
 using AAUG.DomainModels.Models.Tables.General;
 
 namespace AAUG.DataAccess.Interfaces.General
 {
     public interface INewsRepository
     {
-        Task<List<News>> GetAllNews();
+        IQueryable<NewsForInsertDto> GetAllNews();
+        Task<News> InsertNews(NewsForInsertDto inputEntity);
+        
     }
 }

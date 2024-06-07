@@ -22,19 +22,19 @@ C:\Users\Asus\Desktop\AAUG Backend\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.D
 C:\Users\Asus\Desktop\AAUG Backend\DataAccess.Interfaces\obj\Debug\net8.0\refint\AAUG.DataAccess.Interfaces.dll
 C:\Users\Asus\Desktop\AAUG Backend\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.pdb
 C:\Users\Asus\Desktop\AAUG Backend\DataAccess.Interfaces\obj\Debug\net8.0\ref\AAUG.DataAccess.Interfaces.dll
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.deps.json
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.dll
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.pdb
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.AssemblyInfoInputs.cache
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.AssemblyInfo.cs
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.csproj.CoreCompileInputs.cache
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.sourcelink.json
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.dll
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\refint\AAUG.DataAccess.Interfaces.dll
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.pdb
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\ref\AAUG.DataAccess.Interfaces.dll
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.csproj.AssemblyReference.cache
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DomainModels.dll
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DomainModels.pdb
-C:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.Dat.847D5364.Up2Date
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.deps.json
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.dll
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DataAccess.Interfaces.pdb
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DomainModels.dll
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\bin\Debug\net8.0\AAUG.DomainModels.pdb
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.csproj.AssemblyReference.cache
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.AssemblyInfoInputs.cache
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.AssemblyInfo.cs
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.csproj.CoreCompileInputs.cache
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.sourcelink.json
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.Dat.847D5364.Up2Date
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.dll
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\refint\AAUG.DataAccess.Interfaces.dll
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\AAUG.DataAccess.Interfaces.pdb
+c:\Users\Asus\Desktop\clone\DataAccess.Interfaces\obj\Debug\net8.0\ref\AAUG.DataAccess.Interfaces.dll

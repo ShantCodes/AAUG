@@ -10,6 +10,16 @@ namespace AAUG.DataAccess.Implementations
 {
     public interface IAaugUnitOfWork
     {
+        #region Transaction Methods
+        void SaveChanges();
+        Task SaveChangesAsync();
+        void BeginTransaction();
+        void BeginTransactionAsync();
+        void CommitTransaction();
+        Task CommitTransactionAsync();
+        void Dispose();
+
+        #endregion
         AaugContext Context {get;}
         INewsRepository NewsRepository {get;}
     }

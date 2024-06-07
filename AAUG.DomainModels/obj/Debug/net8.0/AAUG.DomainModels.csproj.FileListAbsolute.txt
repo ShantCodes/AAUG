@@ -10,9 +10,10 @@ D:\AAUG\AAUG.DomainModels\obj\Debug\net8.0\AAUG.DomainModels.dll
 D:\AAUG\AAUG.DomainModels\obj\Debug\net8.0\refint\AAUG.DomainModels.dll
 D:\AAUG\AAUG.DomainModels\obj\Debug\net8.0\AAUG.DomainModels.pdb
 D:\AAUG\AAUG.DomainModels\obj\Debug\net8.0\ref\AAUG.DomainModels.dll
-c:\Users\Asus\Desktop\clone\AAUG.DomainModels\bin\Debug\net8.0\AAUG.DomainModels.deps.json
+C:\Users\Asus\Desktop\clone\AAUG.DomainModels\bin\Debug\net8.0\AAUG.DomainModels.deps.json
 c:\Users\Asus\Desktop\clone\AAUG.DomainModels\bin\Debug\net8.0\AAUG.DomainModels.dll
 c:\Users\Asus\Desktop\clone\AAUG.DomainModels\bin\Debug\net8.0\AAUG.DomainModels.pdb
+c:\Users\Asus\Desktop\clone\AAUG.DomainModels\obj\Debug\net8.0\AAUG.DomainModels.csproj.AssemblyReference.cache
 c:\Users\Asus\Desktop\clone\AAUG.DomainModels\obj\Debug\net8.0\AAUG.DomainModels.GeneratedMSBuildEditorConfig.editorconfig
 c:\Users\Asus\Desktop\clone\AAUG.DomainModels\obj\Debug\net8.0\AAUG.DomainModels.AssemblyInfoInputs.cache
 c:\Users\Asus\Desktop\clone\AAUG.DomainModels\obj\Debug\net8.0\AAUG.DomainModels.AssemblyInfo.cs
@@ -21,5 +22,4 @@ c:\Users\Asus\Desktop\clone\AAUG.DomainModels\obj\Debug\net8.0\AAUG.DomainModels
 c:\Users\Asus\Desktop\clone\AAUG.DomainModels\obj\Debug\net8.0\AAUG.DomainModels.dll
 c:\Users\Asus\Desktop\clone\AAUG.DomainModels\obj\Debug\net8.0\refint\AAUG.DomainModels.dll
 c:\Users\Asus\Desktop\clone\AAUG.DomainModels\obj\Debug\net8.0\AAUG.DomainModels.pdb
-c:\Users\Asus\Desktop\clone\AAUG.DomainModels\obj\Debug\net8.0\ref\AAUG.DomainModels.dll
-C:\Users\Asus\Desktop\clone\AAUG.DomainModels\obj\Debug\net8.0\AAUG.DomainModels.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\clone\AAUG.DomainModels\obj\Debug\net8.0\ref\AAUG.DomainModels.dll

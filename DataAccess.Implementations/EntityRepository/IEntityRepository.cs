@@ -5,7 +5,8 @@ namespace AAUG.DataAccess.EntityRepository
     public interface IEntityRepository<T> where T : class
     {
         Task<T> GetData(object id);
-        void Create(T entity);
+        void Add(T entity);
+        Task<T> AddAsync(T entity);
         IQueryable<T> FindAll();
         IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool isTrackChanges);
         void Update(T entity);

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {}
+    "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {}
   },
   "projects": {
     "c:\\Users\\Asus\\Desktop\\clone\\AAUG.Context\\AAUG.Context.csproj": {
@@ -54,6 +54,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -133,6 +141,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -166,14 +182,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {
+    "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
+        "projectUniqueName": "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
         "projectName": "AAUG.DataAccess.Implementations",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
+        "projectPath": "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\obj\\",
+        "outputPath": "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -222,6 +238,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -305,6 +329,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"

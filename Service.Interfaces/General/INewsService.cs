@@ -1,9 +1,10 @@
-using AAUG.DomainModels.Models.Tables.General;
 
+using AAUG.DomainModels.ViewModels;
 namespace AAUG.Service.Interfaces.General
 {
     public interface INewsService
     {
-        Task<List<News>> GetNewsAsync();
+        Task<IEnumerable<NewsForInsertViewModel>> GetNewsAsync();
+        Task<NewsForInsertViewModel> InsertNewsAsync(NewsForInsertViewModel inputEntity);
     }
 }

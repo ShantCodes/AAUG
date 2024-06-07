@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AAUG.Service.Interfaces")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d0135aae7fa0dc2aea98e55173ff5db975679b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abeb25a57cf0fa5a6f87bfe5f69885248f605cae")]
 [assembly: System.Reflection.AssemblyProductAttribute("AAUG.Service.Interfaces")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AAUG.Service.Interfaces")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
