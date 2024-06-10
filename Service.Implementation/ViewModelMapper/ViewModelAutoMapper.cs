@@ -20,7 +20,11 @@ namespace AAUG.Service.Implementations.ViewModelMapper
         private void NewsProfile()
         {
             CreateMap<NewsForInsertDto, NewsForInsertViewModel>();
+            CreateMap<NewsForInsertDto, NewsForShowViewModel>();
             CreateMap<NewsForInsertViewModel, NewsForInsertDto>();
+            CreateMap<News, NewsForShowViewModel>();
+            CreateMap<NewsForInsertViewModel, News>();
+            CreateMap<NewsForEditViewModel, News>();
         }
     }
 }

@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 using System.Transactions;
 using AAUG.Context.Context;
 using AAUG.DataAccess.Implementations.General;
-using AAUG.DataAccess.Interfaces.General;
+using AAUG.DataAccess.Implementations;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Storage;
+using AAUG.DataAccess.Interfaces.General;
 
 
-namespace AAUG.DataAccess.Implementations
+namespace AAUG.DataAccess.Implementations.UnitOfWork
 {
     public class AaugUnitOfWork : IAaugUnitOfWork
     {

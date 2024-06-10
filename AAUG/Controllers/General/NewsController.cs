@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AAUG.Api;
 
-[Route("api/")]
+[Route("api/News/")]
 public class NewsController : ControllerBase
 {
     private readonly INewsService newsService;
@@ -24,6 +24,17 @@ public class NewsController : ControllerBase
     public async Task<IActionResult> InsertNews(NewsForInsertViewModel inputEntity)
     {
         return Ok(await newsService.InsertNewsAsync(inputEntity));
+    }
+
+    [HttpDelete("DeleteNews/{id}")]
+    public async Task<IActionResult> DeleteNews(int id)
+    {
+        return Ok(await newsService.DeleteNewsByIdAsync(id));
+    }
+    [HttpPut("EditNews")]
+    public async Task<IActionResult> EditNews(NewsForEditViewModel inputEntity)
+    {
+        return Ok(await newsService.EditNewsAsync(inputEntity));
     }
 
 }

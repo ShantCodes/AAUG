@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using AAUG.Context.Context;
 using AAUG.DataAccess.Interfaces.General;
 
-namespace AAUG.DataAccess.Implementations
+namespace AAUG.DataAccess.Implementations.UnitOfWork
 {
     public interface IAaugUnitOfWork
     {

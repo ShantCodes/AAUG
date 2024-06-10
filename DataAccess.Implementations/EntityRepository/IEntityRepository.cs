@@ -11,5 +11,6 @@ namespace AAUG.DataAccess.EntityRepository
         IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool isTrackChanges);
         void Update(T entity);
         void Delete(T entity);
+        Task<T> DeleteAsync(int id);
     }
 }

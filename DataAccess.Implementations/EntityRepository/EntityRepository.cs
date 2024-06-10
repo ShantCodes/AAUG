@@ -3,6 +3,7 @@ using System.Linq.Expressions;
 using System.Net.Http.Headers;
 using AAUG.Context.Context;
 using AAUG.DataAccess.Implementations;
+using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DomainModels.Models.Tables.General;
 using Microsoft.EntityFrameworkCore;
 
@@ -33,13 +34,23 @@ namespace AAUG.DataAccess.EntityRepository
         {
             context.Set<T>().Remove(entity);
         }
+        public async Task<T> DeleteAsync(int id)
+        {
+            var entity = await context.Set<T>().FindAsync(id);
+            if (entity == null)
+            {
+                throw new ArgumentException($"Entity with id {id} not found");
+            }
+            context.Remove(entity);
+            return entity;
+        }
 
         public IQueryable<T> FindAll()
         {
             return context.Set<T>();
         }
 
-        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool isTrackChanges)
+        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool isTrackChanges = true)
         {
             if (isTrackChanges)
                 return context.Set<T>().Where(expression);
