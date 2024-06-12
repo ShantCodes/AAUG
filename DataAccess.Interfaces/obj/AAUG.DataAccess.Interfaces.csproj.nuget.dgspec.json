@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
+    "C:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj",
         "projectName": "AAUG.DomainModels",
-        "projectPath": "c:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,14 +91,14 @@
         }
       }
     },
-    "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {
+    "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj",
         "projectName": "AAUG.DataAccess.Interfaces",
-        "projectPath": "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -120,8 +120,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
-                "projectPath": "c:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj"
+              "C:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj"
               }
             }
           }
