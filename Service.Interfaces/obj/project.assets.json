@@ -2935,8 +2935,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {
-              "projectPath": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj"
+            "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {
+              "projectPath": "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj"
             },
             "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {
               "projectPath": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj"

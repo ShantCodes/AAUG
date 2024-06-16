@@ -20,9 +20,8 @@ internal class FormQuestionConfiguration : IEntityTypeConfiguration<FormQuestion
 
         #region Column Mappings
         builder.Property(a => a.Id).HasColumnName("Id");
-        builder.Property(a => a.CreatorUserId).HasColumnName("CreatorUserId");
-        builder.Property(a => a.FormTopic).HasColumnName("FormTopic");
         builder.Property(a => a.Question).HasColumnName("Question");
+        builder.Property(a => a.FormId).HasColumnName("FormId");
         #endregion
 
         #region Relations
