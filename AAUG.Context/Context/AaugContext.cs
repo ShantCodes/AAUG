@@ -33,6 +33,8 @@ namespace AAUG.Context.Context
 
         public virtual DbSet<FormQuestion> FormQuestions {get; set;}
 
+        public virtual DbSet<Form> Forms {get; set;}
+
         public virtual DbSet<MediaDrive> MediaDrives {get; set;}
 
         public virtual DbSet<MediaFolder> MediaFolders {get; set;}
@@ -72,6 +74,7 @@ namespace AAUG.Context.Context
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.MediaDriveConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.UserMajorConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.UserTalentConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.FormConfiguration());
             #endregion
         }
 
