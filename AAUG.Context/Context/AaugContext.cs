@@ -1,4 +1,5 @@
-﻿using AAUG.DomainModels.Models.Tables.General;
+﻿using AAUG.DomainModels;
+using AAUG.DomainModels.Models.Tables.General;
 using Microsoft.EntityFrameworkCore;
 namespace AAUG.Context.Context
 {
@@ -28,6 +29,25 @@ namespace AAUG.Context.Context
 
         public virtual DbSet<UserTalent> UserTalents { get; set; }
 
+        public virtual DbSet<FormAnswear> FormAnswears {get; set;}
+
+        public virtual DbSet<FormQuestion> FormQuestions {get; set;}
+
+        public virtual DbSet<MediaDrive> MediaDrives {get; set;}
+
+        public virtual DbSet<MediaFolder> MediaFolders {get; set;}
+
+        public virtual DbSet<Suggestion> Suggestions {get; set;}
+
+        public virtual DbSet<SuggestionVote> SuggestionVotes {get; set;}
+
+        public virtual DbSet<Ticket> Tickets {get; set;}
+
+        public DbSet<UserTicketsRelation> UserTicketsRelations {get; set;}
+
+
+
+ 
         #endregion
 
         #region Configurations
@@ -42,6 +62,14 @@ namespace AAUG.Context.Context
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.EventConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.EventLikeConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.NewsConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.SuggestionConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.SuggestionVoteConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.TicketConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.FormAnswearConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.FormQuestionConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.MediaFileConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.MediaFolderConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.MediaDriveConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.UserMajorConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.UserTalentConfiguration());
             #endregion

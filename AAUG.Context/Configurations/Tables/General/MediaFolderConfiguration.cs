@@ -2,35 +2,33 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AAUG.Context;
+namespace AAUG.Context.Configurations.Tables.General;
 
-public class MediaFolderConfiguration
+internal class MediaFolderConfiguration : IEntityTypeConfiguration<MediaFolder>
 {
-    internal class NewsConfiguration : IEntityTypeConfiguration<MediaFolder>
+    public void Configure(EntityTypeBuilder<MediaFolder> builder)
     {
-        public void Configure(EntityTypeBuilder<MediaFolder> builder)
-        {
-            #region Primary Key
-            builder.HasKey(x => x.Id);
-            #endregion
+        #region Primary Key
+        builder.HasKey(x => x.Id);
+        #endregion
 
-            #region TableMapping
-            builder.ToTable("MediaFolders", "General");
-            #endregion
+        #region TableMapping
+        builder.ToTable("MediaFolders", "General");
+        #endregion
 
-            #region Column Mappings
-            builder.Property(a => a.Id).HasColumnName("Id");
-            builder.Property(a => a.MediaDriveId).HasColumnName("MediaDriveId");
-            builder.Property(a => a.Name).HasColumnName("Name");
-            builder.Property(a => a.ParentId).HasColumnName("ParentId");
-            builder.Property(a => a.VirtualName).HasColumnName("VirtualName");
+        #region Column Mappings
+        builder.Property(a => a.Id).HasColumnName("Id");
+        builder.Property(a => a.MediaDriveId).HasColumnName("MediaDriveId");
+        builder.Property(a => a.Name).HasColumnName("Name");
+        builder.Property(a => a.ParentId).HasColumnName("ParentId");
+        builder.Property(a => a.VirtualName).HasColumnName("VirtualName");
 
 
-            #endregion
+        #endregion
 
-            #region Relations
+        #region Relations
 
-            #endregion
-        }
+        #endregion
     }
 }
+

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AAUG.Context;
+namespace AAUG.Context.Configurations.Tables.General;
 
 internal class SuggestionVoteConfiguration : IEntityTypeConfiguration<SuggestionVote>
 {

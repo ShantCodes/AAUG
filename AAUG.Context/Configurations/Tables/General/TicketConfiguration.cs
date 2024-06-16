@@ -2,34 +2,31 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AAUG.Context;
+namespace AAUG.Context.Configurations.Tables.General;
 
-public class TicketConfiguration
+internal class TicketConfiguration : IEntityTypeConfiguration<Ticket>
 {
-    internal class NewsConfiguration : IEntityTypeConfiguration<Ticket>
+    public void Configure(EntityTypeBuilder<Ticket> builder)
     {
-        public void Configure(EntityTypeBuilder<Ticket> builder)
-        {
-            #region Primary Key
-            builder.HasKey(x => x.Id);
-            #endregion
-            
-            #region TableMapping
-            builder.ToTable("Tickets", "General");
-            #endregion
+        #region Primary Key
+        builder.HasKey(x => x.Id);
+        #endregion
 
-            #region Column Mappings
-            builder.Property(a => a.Id).HasColumnName("Id");
-            builder.Property(a => a.TicketDescription).HasColumnName("TicketDescription");
-            builder.Property(a => a.TicketTitle).HasColumnName("TicketTitle");
-        
-            
-            #endregion
+        #region TableMapping
+        builder.ToTable("Tickets", "General");
+        #endregion
 
-            #region Relations
-            
-            #endregion
-        }
+        #region Column Mappings
+        builder.Property(a => a.Id).HasColumnName("Id");
+        builder.Property(a => a.TicketDescription).HasColumnName("TicketDescription");
+        builder.Property(a => a.TicketTitle).HasColumnName("TicketTitle");
+
+
+        #endregion
+
+        #region Relations
+
+        #endregion
     }
-
 }
+
