@@ -23,6 +23,7 @@ namespace AAUG.Context.Configurations.Tables.General
 
             #region Column Mappings
             builder.Property(x => x.Id).HasColumnName("Id");
+            builder.Property(x => x.UserId).HasColumnName("UserId");
             builder.Property(x => x.Name).HasColumnName("Name");
             builder.Property(x => x.LastName).HasColumnName("LastName");
             builder.Property(x => x.NameArmenian).HasColumnName("NameArmenian");

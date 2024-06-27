@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AAUG.DataAccess.Implementations")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff4de0f03dc9879932f183bd49ec69f66ffed31e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7403d1593e4c2ba846c21e1f1c62544e42f462ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("AAUG.DataAccess.Implementations")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AAUG.DataAccess.Implementations")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

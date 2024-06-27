@@ -2865,8 +2865,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
-              "projectPath": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj"
+            "c:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
+              "projectPath": "c:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj"
             }
           }
         }

@@ -159,6 +159,9 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         public required INewsRepository _newsRepository;
         public INewsRepository NewsRepository => _newsRepository ??= new NewsRepository(this, mapper);
 
+        public IAaugUserRepository _aaugUserRepository;
+        public IAaugUserRepository AaugUserRepository => _aaugUserRepository ??= new AaugUserRepository(this, mapper); 
+
         #endregion
     }
 }

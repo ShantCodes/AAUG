@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tVDM9Se9LmrhgaeQud/mohFduQ+8sqDntx2OyZcFt1Vz7vHPuiMXogcEz08WuidSQm7FDNvYm340mUNnmnDcNQ==",
+  "dgSpecHash": "EQxm523CLZOtgXPqmncX3fZoL6pUb4wOASPv2D0m/pWa3QTQ+dY7mT3HndUiauKD/ox1m9kr+wUUXNIe+AHBoA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj",
+  "projectFilePath": "c:\\Users\\Asus\\Desktop\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -3,7 +3,7 @@ using AAUG.DomainModels.ViewModels;
 using AAUG.Service.Interfaces.General;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AAUG.Api;
+namespace AAUG.Api.Controllers.General;
 
 [Route("api/News/")]
 public class NewsController : ControllerBase

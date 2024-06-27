@@ -22,5 +22,6 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         #endregion
         AaugContext Context {get;}
         INewsRepository NewsRepository {get;}
+        IAaugUserRepository AaugUserRepository {get;}
     }
 }

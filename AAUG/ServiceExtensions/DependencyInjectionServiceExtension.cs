@@ -2,6 +2,7 @@
 using AAUG.DataAccess.Implementations;
 using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.Service.General;
+using AAUG.Service.Implementations.General;
 using AAUG.Service.Interfaces.General;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
@@ -27,6 +28,7 @@ namespace AAUG.ServiceExtentions
 
             services.AddTransient<IAaugTest, AaugTest>();
             services.AddTransient<INewsService, NewsService>();
+            services.AddTransient<IAaugUserService, AaugUserService>();
 
             #endregion
 

@@ -2932,11 +2932,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\AAUG.Service.Implementations.csproj",
+      "projectUniqueName": "c:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\AAUG.Service.Implementations.csproj",
       "projectName": "AAUG.Service.Implementations",
-      "projectPath": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\AAUG.Service.Implementations.csproj",
+      "projectPath": "c:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\AAUG.Service.Implementations.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\obj\\",
+      "outputPath": "c:\\Users\\Asus\\Desktop\\clone\\Service.Implementation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2961,11 +2961,11 @@
             "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {
               "projectPath": "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj"
             },
-            "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj"
+            "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {
+              "projectPath": "c:\\Users\\Asus\\Desktop\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj"
             },
-            "C:\\Users\\Asus\\Desktop\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\Asus\\Desktop\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj"
+            "c:\\Users\\Asus\\Desktop\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj": {
+              "projectPath": "c:\\Users\\Asus\\Desktop\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj"
             }
           }
         }
