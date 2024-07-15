@@ -1,5 +1,7 @@
 ﻿using AAUG.DomainModels;
 using AAUG.DomainModels.Models.Tables.General;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 namespace AAUG.Context.Context
 {
@@ -80,5 +82,13 @@ namespace AAUG.Context.Context
 
         #endregion
 
+    }
+
+    public class AppDbContext : IdentityDbContext<IdentityUser>
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+            
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿
 using AAUG.DomainModels.ViewModels;
 using AAUG.Service.Interfaces.General;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AAUG.Api.Controllers.General;
@@ -13,7 +14,7 @@ public class NewsController : ControllerBase
     {
         this.newsService = newsService;
     }
-
+    [Authorize(Roles = "King")]
     [HttpGet("GetNewsData")]
     public async Task<IActionResult> GetNewsData()
     {

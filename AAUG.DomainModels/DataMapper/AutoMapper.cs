@@ -12,11 +12,21 @@ public class MappingProfile : Profile
         NewsProfile();
 
         AaugUserProfile();
+
+        EventProfile();
+    }
+
+    private void EventProfile()
+    {
+        CreateMap<EventInsertViewModel, EventInsertDto>();
+        CreateMap<EventInsertDto, Event>();
+        CreateMap<EventGetDto, EventGetViewModel>();
     }
 
     private void AaugUserProfile()
     {
         CreateMap<AaugUsersInsertDto, AaugUser>();
+        CreateMap<AaugUser, EventGetDto>();
     }
 
     private void NewsProfile()

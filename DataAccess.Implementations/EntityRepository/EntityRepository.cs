@@ -45,21 +45,16 @@ namespace AAUG.DataAccess.EntityRepository
             return entity;
         }
 
-        public IQueryable<T> FindAll()
+        public IQueryable<T> GetData()
         {
             return context.Set<T>();
         }
 
-        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool isTrackChanges = true)
+        public IQueryable<T> GetData(Expression<Func<T, bool>> expression, bool isTrackChanges = true)
         {
             if (isTrackChanges)
                 return context.Set<T>().Where(expression);
             return context.Set<T>().Where(expression).AsNoTracking();
-        }
-
-        public Task<T> GetData(object id)
-        {
-            throw new NotImplementedException();
         }
 
         public void Update(T entity)

@@ -19,7 +19,7 @@ namespace AAUG.Api.Middlewares
             catch (Exception ex)
             {
                 context.Response.StatusCode = StatusCodes.Status500InternalServerError;
-                var response = new { error = ex.Message };
+                var response = new { error = ex};
 
                 var jsonResponse = JsonConvert.SerializeObject(response);
                 context.Response.ContentType = "application/json";

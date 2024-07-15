@@ -28,7 +28,6 @@ namespace AAUG.Context.Configurations.Tables.General
             builder.Property(x => x.LastName).HasColumnName("LastName");
             builder.Property(x => x.NameArmenian).HasColumnName("NameArmenian");
             builder.Property(x => x.LastNameArmenian).HasColumnName("LastNameArmenian");
-            builder.Property(x => x.RoleId).HasColumnName("RoleId");
             builder.Property(x => x.MajorsId).HasColumnName("MajorsId");
             builder.Property(x => x.TalentsId).HasColumnName("TalentsId");
             builder.Property(x => x.ProfilePictureFileId).HasColumnName("ProfilePictureFileId");

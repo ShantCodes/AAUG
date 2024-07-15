@@ -22,12 +22,12 @@ namespace AAUG.DataAccess.Implementations.General
 
         public Task<News> FirstAsync(int id)
         {
-            return FindByCondition(a => a.Id == id).FirstAsync();
+            return GetData(a => a.Id == id).FirstAsync();
         }
 
         public IQueryable<NewsForInsertDto> GetAllNews()
         {
-            return mapper.ProjectTo<NewsForInsertDto>(FindAll());
+            return mapper.ProjectTo<NewsForInsertDto>(GetData());
         }
 
         public Task<News> InsertNews(NewsForInsertDto inputEntity)

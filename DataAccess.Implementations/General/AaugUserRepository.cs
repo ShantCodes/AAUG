@@ -3,7 +3,9 @@ using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DataAccess.Interfaces.General;
 using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Models.Tables.General;
+using AAUG.DomainModels.ViewModels;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace AAUG.DataAccess.Implementations.General;
 
@@ -21,4 +23,33 @@ public class AaugUserRepository : EntityRepository<AaugUser>, IAaugUserRepositor
     {
         return AddAsync(mapper.Map<AaugUser>(inputEntity));
     }
+
+    public Task<List<AaugUser>> GetUsersAsync()
+    {
+        var data = GetData()
+            .Select(u => new AaugUser
+            {
+                Id = u.Id,
+                UserId = u.UserId,
+                Name = u.Name,
+                LastName = u.LastName,
+                NameArmenian = u.NameArmenian,
+                LastNameArmenian = u.LastNameArmenian,
+                // MajorsId = u.MajorsId ?? default(short?),
+                // TalentsId = u.TalentsId ?? default(short?),
+                // ProfilePictureFileId = u.ProfilePictureFileId ?? default(int?),
+                // NationalCardFileId = u.NationalCardFileId ?? default(int?),
+                // UniversityCardFileId = u.UniversityCardFileId ?? default(int?),
+                // Email = u.Email,
+                // CanGetNotfiedByMail = u.CanGetNotfiedByMail ?? default(bool?),
+                // IsApproved = u.IsApproved ?? default(bool?)
+            })
+            .ToListAsync();
+
+        return data;
+    }
+
+
+
+
 }

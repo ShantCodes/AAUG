@@ -23,5 +23,6 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         AaugContext Context {get;}
         INewsRepository NewsRepository {get;}
         IAaugUserRepository AaugUserRepository {get;}
+        IEventRepository EventRepository {get;}
     }
 }

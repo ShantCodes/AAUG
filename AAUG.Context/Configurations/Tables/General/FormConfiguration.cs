@@ -18,7 +18,7 @@ internal class FormConfiguration : IEntityTypeConfiguration<Form>
 
         #region Column Mappings
         builder.Property(a => a.Id).HasColumnName("Id");
-        builder.Property(a => a.FormQuestions).HasColumnName("FormQuestions");
+        //builder.Property(a => a.FormQuestions).HasColumnName("FormQuestions");
         builder.Property(a => a.CreatorUserId).HasColumnName("CreatorUserId");
         builder.Property(a => a.FormTitle).HasColumnName("FormTitle");
         #endregion

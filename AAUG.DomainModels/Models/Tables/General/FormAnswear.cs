@@ -6,6 +6,6 @@ public class FormAnswear
     public int AnswearerUserId { get; set; }
     public int FormQuestionId { get; set; }
     public string Answear { get; set; }
-    public virtual FormQuestion FormQuestion {get; set;}
+    //public virtual FormQuestion FormQuestion {get; set;}
 
 }

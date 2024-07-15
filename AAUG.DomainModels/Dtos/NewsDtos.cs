@@ -7,3 +7,4 @@ public class NewsForInsertDto
     public string NewsDetails { get; set; } = null!;
 
 }
+

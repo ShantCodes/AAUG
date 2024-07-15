@@ -162,6 +162,9 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         public IAaugUserRepository _aaugUserRepository;
         public IAaugUserRepository AaugUserRepository => _aaugUserRepository ??= new AaugUserRepository(this, mapper); 
 
+        public IEventRepository _eventRepository;
+        public IEventRepository EventRepository => _eventRepository ??= new EventRepository(this, mapper);
+
         #endregion
     }
 }

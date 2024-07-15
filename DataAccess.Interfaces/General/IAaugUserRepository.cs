@@ -6,4 +6,5 @@ namespace AAUG.DataAccess.Interfaces.General;
 public interface IAaugUserRepository
 {
     Task<AaugUser> AddAsync(AaugUsersInsertDto inputEntity);
+    Task<List<AaugUser>> GetUsersAsync();
 }

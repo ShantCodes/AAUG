@@ -18,11 +18,20 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             NewsProfile();
 
             AaugUserProfile();
+
+            EventProfile();
+        }
+
+        private void EventProfile()
+        {
+            CreateMap<Event, EventGetViewModel>();
         }
 
         private void AaugUserProfile()
         {
             CreateMap<AaugUserInsertViewModel, AaugUsersInsertDto>();
+            CreateMap<RegisterDto, AaugUserInsertViewModel>();
+            CreateMap<AaugUser, AaugUserGetViewModel>();
         }
 
         private void NewsProfile()
