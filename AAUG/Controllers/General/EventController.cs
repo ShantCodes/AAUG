@@ -30,15 +30,26 @@ public class EventController : ControllerBase
         return Ok(await eventService.ApproveEvent(eventId, isApproved));
     }
     [HttpGet("GetAllNotApprovedEventsForAdmins")]
-        [Authorize(Roles = "Varich,King")]
+    [Authorize(Roles = "Varich,King")]
     public async Task<IActionResult> GetALlNotApprovedEventsForAdmins()
     {
         return Ok(await eventService.GetAllNotApprovedEventsForAdmins());
     }
     [HttpGet("GetAllEventsForAdmins")]
-        [Authorize(Roles = "Varich,King,Divan")]
+    [Authorize(Roles = "Varich,King,Divan")]
     public async Task<IActionResult> GetALlEventsForAdmins()
     {
         return Ok(await eventService.GetAllEventsForAdmins());
+    }
+    [HttpGet("SearchEvent/{keyWord}")]
+    public async Task<IActionResult> SearchEvent(string keyWord)
+    {
+        return Ok(await eventService.SearchEventAsync(keyWord));
+    }
+    [HttpDelete("DeleteEvent")]
+    [Authorize(Roles = "Varich,King")]
+    public async Task<IActionResult> DeleteEvent(int eventId)
+    {
+        return Ok(await eventService.DeleteEventAsync(eventId));
     }
 }

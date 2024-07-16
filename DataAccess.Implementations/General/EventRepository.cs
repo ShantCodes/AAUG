@@ -33,6 +33,11 @@ public class EventRepository : EntityRepository<Event>, IEventRepository
         return AddAsync(mapper.Map<Event>(insertEntity));
     }
 
+    public Task<List<Event>> SearchEventAsync(string keyWord)
+    {
+        return GetData(a => a.EventTitle.Contains(keyWord)).ToListAsync();
+    }
+
     #region Admins
     public Task<List<Event>> GetNotApprovedEventsForAdmins()
     {
@@ -41,6 +46,10 @@ public class EventRepository : EntityRepository<Event>, IEventRepository
     public Task<List<Event>> GetAllEventsForAdmins()
     {
         return GetData().ToListAsync();
+    }
+    public Task<Event> DeleteEventAsync(int eventId)
+    {
+        return DeleteAsync(eventId);
     }
     #endregion
 }

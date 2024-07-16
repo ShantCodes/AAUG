@@ -35,6 +35,15 @@ public class EventService : IEventService
 
         return data;
     }
+
+    public async Task<IEnumerable<EventGetViewModel>> SearchEventAsync(string keyWord)
+    {
+        return mapper.Map<IEnumerable<EventGetViewModel>>(
+            await unitOfWork.EventRepository.SearchEventAsync(keyWord)
+        );
+    }
+
+    #region admins
     public async Task<bool> ApproveEvent(int eventId, bool isApproved)
     {
         var data = await unitOfWork.EventRepository.FirstAsync(eventId);
@@ -45,8 +54,6 @@ public class EventService : IEventService
 
         return true;
     }
-
-    #region admins
     public async Task<IEnumerable<EventGetViewModel>> GetAllEventsForAdmins()
     {
         return mapper.Map<IEnumerable<EventGetViewModel>>(
@@ -58,6 +65,21 @@ public class EventService : IEventService
         return mapper.Map<IEnumerable<EventGetViewModel>>(
             await unitOfWork.EventRepository.GetNotApprovedEventsForAdmins());
     }
+
+    public async Task<bool> DeleteEventAsync(int eventId)
+    {
+        var data = await unitOfWork.EventRepository.FirstAsync(eventId);
+        if (data == null)
+        {
+            return false;
+        }
+        await unitOfWork.EventRepository.DeleteEventAsync(eventId);
+
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+        return true;
+    }
+
     #endregion
 
 }
