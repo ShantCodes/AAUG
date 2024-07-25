@@ -14,7 +14,7 @@ internal class MediaFileConfiguration : IEntityTypeConfiguration<MediaFile>
         #endregion
 
         #region TableMapping
-        builder.ToTable("UserTicketsRelations", "General");
+        builder.ToTable("MediaFiles", "Media");
         #endregion
 
         #region Column Mappings

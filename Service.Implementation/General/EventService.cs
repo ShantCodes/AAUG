@@ -2,6 +2,7 @@
 using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.ViewModels;
 using AAUG.Service.Interfaces.General;
+using AAUG.Service.Interfaces.Media;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,10 +12,12 @@ public class EventService : IEventService
 {
     private readonly IMapper mapper;
     private IAaugUnitOfWork unitOfWork;
-    public EventService(IAaugUnitOfWork unitOfWork, IMapper mapper)
+    private readonly IMediaFileService mediaFileService;
+    public EventService(IAaugUnitOfWork unitOfWork, IMapper mapper, IMediaFileService mediaFileService)
     {
         this.unitOfWork = unitOfWork;
         this.mapper = mapper;
+        this.mediaFileService = mediaFileService;
     }
 
     public async Task<IEnumerable<EventGetViewModel>> GetAllEventsAsync()
@@ -29,6 +32,8 @@ public class EventService : IEventService
         data.IsApproved = false;
         data.HasHappened = false;
 
+        var mediaFileDto = await mediaFileService.InsertEventsMediaFileAsync(inputEntity.ThumbNailFile);
+        data.ThumbNailFileId = mediaFileDto.Id;
         await unitOfWork.EventRepository.AddAsync(data);
         await unitOfWork.SaveChangesAsync();
         await unitOfWork.CommitTransactionAsync();

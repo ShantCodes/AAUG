@@ -20,4 +20,5 @@ public partial class MediaFile
     public virtual ICollection<AaugUser> AaugUserProfilePictureFiles { get; set; } = new List<AaugUser>();
 
     public virtual ICollection<AaugUser> AaugUserUniversityCardFiles { get; set; } = new List<AaugUser>();
+    public virtual ICollection<News> News { get; set; } 
 }

@@ -55,4 +55,6 @@ public partial class AaugUser
     public virtual ICollection<SuggestionVote> SuggestionVotes {get; set;}
 
     public virtual ICollection<FormQuestion> FormQuestions {get; set;} 
+
+    public virtual ICollection<News> News {get; set;}
 }

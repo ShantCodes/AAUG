@@ -11,6 +11,8 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Storage;
 using AAUG.DataAccess.Interfaces.General;
+using AAUG.DataAccess.Interfaces.Media;
+using AAUG.DataAccess.Implementations.Media;
 
 
 namespace AAUG.DataAccess.Implementations.UnitOfWork
@@ -164,6 +166,14 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
 
         public IEventRepository _eventRepository;
         public IEventRepository EventRepository => _eventRepository ??= new EventRepository(this, mapper);
+
+        #region Media
+        public IMediaFileRepository _mediaFileRepository;
+        public IMediaFileRepository MediaFileRepository => _mediaFileRepository ??= new MediaFileRepository(this, mapper);
+
+        public IMediaFolderRepository _mediaFolderRepository;
+        public IMediaFolderRepository MediaFolderRepository => _mediaFolderRepository ??= new MediaFolderRepository(this, mapper);
+        #endregion
 
         #endregion
     }

@@ -13,7 +13,7 @@ internal class MediaFolderConfiguration : IEntityTypeConfiguration<MediaFolder>
         #endregion
 
         #region TableMapping
-        builder.ToTable("MediaFolders", "General");
+        builder.ToTable("MediaFolders", "Media");
         #endregion
 
         #region Column Mappings
@@ -21,8 +21,7 @@ internal class MediaFolderConfiguration : IEntityTypeConfiguration<MediaFolder>
         builder.Property(a => a.MediaDriveId).HasColumnName("MediaDriveId");
         builder.Property(a => a.Name).HasColumnName("Name");
         builder.Property(a => a.ParentId).HasColumnName("ParentId");
-        builder.Property(a => a.VirtualName).HasColumnName("VirtualName");
-
+        builder.Property(a => a.MediaPathTypeId).HasColumnName("MediaPathTypeId");
 
         #endregion
 

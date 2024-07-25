@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AAUG.Context.Context;
 using AAUG.DataAccess.Interfaces.General;
+using AAUG.DataAccess.Interfaces.Media;
 
 namespace AAUG.DataAccess.Implementations.UnitOfWork
 {
@@ -20,9 +21,15 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         void Dispose();
 
         #endregion
+
+        #region Repositories
         AaugContext Context {get;}
         INewsRepository NewsRepository {get;}
         IAaugUserRepository AaugUserRepository {get;}
         IEventRepository EventRepository {get;}
+        IMediaFileRepository MediaFileRepository {get;}
+        IMediaFolderRepository MediaFolderRepository {get;}
+
+        #endregion
     }
 }

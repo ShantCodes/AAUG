@@ -33,6 +33,7 @@ namespace AAUG.Service.General
             await unitOfWork.CommitTransactionAsync();
             return inputEntity;
         }
+        
         public async Task<NewsForEditViewModel> EditNewsAsync(NewsForEditViewModel inputEntity)
         {
             var entity = await unitOfWork.NewsRepository.FirstAsync(inputEntity.Id);

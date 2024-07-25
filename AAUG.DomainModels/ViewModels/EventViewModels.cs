@@ -1,4 +1,6 @@
-﻿namespace AAUG.DomainModels.ViewModels;
+﻿using Microsoft.AspNetCore.Http;
+
+namespace AAUG.DomainModels.ViewModels;
 
 public class EventGetViewModel
 {
@@ -35,5 +37,5 @@ public class EventInsertViewModel
 
     public int? PresentatorUserId { get; set; }
 
-    public int? ThumbNailFileId { get; set; }
+    public IFormFile? ThumbNailFile { get; set; }
 }

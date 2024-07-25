@@ -5,9 +5,11 @@ using AAUG.Service.General;
 using AAUG.Service.Implementations;
 using AAUG.Service.Implementations.EmailSender;
 using AAUG.Service.Implementations.General;
+using AAUG.Service.Implementations.Media;
 using AAUG.Service.Interfaces;
 using AAUG.Service.Interfaces.EmailSender;
 using AAUG.Service.Interfaces.General;
+using AAUG.Service.Interfaces.Media;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
@@ -41,7 +43,11 @@ namespace AAUG.ServiceExtentions
             services.AddTransient<IAaugTest, AaugTest>();
             services.AddTransient<INewsService, NewsService>();
             services.AddTransient<IAaugUserService, AaugUserService>();            
-            services.AddTransient<IEventService, EventService>();            
+            services.AddTransient<IEventService, EventService>();     
+
+            #region media service DI
+            services.AddTransient<IMediaFileService, MediaFIleService>();
+            #endregion       
 
             #endregion
 

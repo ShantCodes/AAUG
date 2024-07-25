@@ -1,4 +1,5 @@
 ﻿using AAUG.DomainModels.Dtos;
+using AAUG.DomainModels.Dtos.Media;
 using AAUG.DomainModels.Models.Tables.General;
 using AAUG.DomainModels.ViewModels;
 using AutoMapper;
@@ -14,6 +15,17 @@ public class MappingProfile : Profile
         AaugUserProfile();
 
         EventProfile();
+
+        MediaFolderProfile();
+    }
+
+    private void MediaFolderProfile()
+    {
+        CreateMap<MediaFolder, MediaFolderPathDto>()
+        .ForMember(a => a.MediaDriveId, a => a.Ignore());
+
+        CreateMap<MediaFileInsertDto, MediaFile>();
+        CreateMap<MediaFileInsertDto, MediaFileGetDto>();
     }
 
     private void EventProfile()
