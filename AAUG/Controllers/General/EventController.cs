@@ -25,6 +25,7 @@ public class EventController : ControllerBase
         return Ok(await eventService.InsertEventAsync(inputEntity));
     }
     [HttpPut("ApproveEvent/{eventId}/{isApproved}")]
+    [Authorize(Roles = "Varich,King,Divan")]
     public async Task<IActionResult> ApproveEvent(int eventId, bool isApproved)
     {
         return Ok(await eventService.ApproveEvent(eventId, isApproved));

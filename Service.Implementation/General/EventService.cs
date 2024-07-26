@@ -27,7 +27,8 @@ public class EventService : IEventService
             await unitOfWork.EventRepository.GetEvents().ToListAsync());
         foreach (var item in data)
         {
-            item.thumbnailFile.FolderPathTypeId = MediaPaths.EventsFolder;
+            if (item.thumbnailFile != null)
+                item.thumbnailFile.FolderPathTypeId = MediaPaths.EventsFolder;
         }
 
         return data;
@@ -66,10 +67,18 @@ public class EventService : IEventService
 
         return true;
     }
+
     public async Task<IEnumerable<EventGetViewModel>> GetAllEventsForAdmins()
     {
-        return mapper.Map<IEnumerable<EventGetViewModel>>(
-            await unitOfWork.EventRepository.GetAllEventsForAdmins());
+        var data = mapper.Map<List<EventGetViewModel>>(
+            await unitOfWork.EventRepository.GetEvents().ToListAsync());
+        foreach (var item in data)
+        {
+            if (item.thumbnailFile != null)
+                item.thumbnailFile.FolderPathTypeId = MediaPaths.EventsFolder;
+        }
+
+        return data;
     }
 
     public async Task<IEnumerable<EventGetViewModel>> GetAllNotApprovedEventsForAdmins()

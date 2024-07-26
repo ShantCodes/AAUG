@@ -51,9 +51,9 @@ public class EventRepository : EntityRepository<Event>, IEventRepository
     {
         return GetData(a => !a.IsApproved).ToListAsync();
     }
-    public Task<List<Event>> GetAllEventsForAdmins()
+    public IQueryable<EventGetDto> GetAllEventsForAdmins()
     {
-        return GetData().ToListAsync();
+        return mapper.ProjectTo<EventGetDto>(GetData());
     }
     public Task<Event> DeleteEventAsync(int eventId)
     {

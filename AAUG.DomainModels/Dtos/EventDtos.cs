@@ -25,6 +25,7 @@ public class EventInsertDto
 
 public class EventGetDto
 {
+    public int Id { get; set; }
     public string EventTitle { get; set; } = null!;
 
     public string? EventDetails { get; set; }
@@ -41,7 +42,7 @@ public class EventGetDto
 
     public bool HasHappened { get; set; }
 
-    public AaugUserGetViewModel? AaugUserGetViewModel {get; set;}
+    public AaugUserGetViewModel? AaugUserGetViewModel { get; set; }
 
-    public MediaFileGetDto? ThumbnailFile {get; set;}
+    public MediaFileGetDto? ThumbnailFile { get; set; }
 }

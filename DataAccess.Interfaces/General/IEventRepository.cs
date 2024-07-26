@@ -13,7 +13,7 @@ public interface IEventRepository
 
     #region Admins
     Task<List<Event>> GetNotApprovedEventsForAdmins();
-    Task<List<Event>> GetAllEventsForAdmins();
+    IQueryable<EventGetDto> GetAllEventsForAdmins();
     Task<Event> DeleteEventAsync(int eventId);
     #endregion
 }
