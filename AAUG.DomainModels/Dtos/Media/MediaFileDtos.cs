@@ -20,6 +20,14 @@ public class MediaFileGetDto
     public string Extension { get; set; }
     public double Size { get; set; }
     public bool IsOmit { get; set; }
-    public DateTime Date { get; set; }  
+    public DateTime Date { get; set; }
+    public short FolderPathTypeId { get; set; }
+}
+
+public class FileResultDto
+{
+    public string FileName { get; set; }
+    public string ContentType { get; set; }
+    public byte[] FileBytes { get; set; }
 }
 

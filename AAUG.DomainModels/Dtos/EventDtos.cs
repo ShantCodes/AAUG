@@ -1,4 +1,5 @@
-﻿using AAUG.DomainModels.ViewModels;
+﻿using AAUG.DomainModels.Dtos.Media;
+using AAUG.DomainModels.ViewModels;
 
 namespace AAUG.DomainModels.Dtos;
 
@@ -41,4 +42,6 @@ public class EventGetDto
     public bool HasHappened { get; set; }
 
     public AaugUserGetViewModel? AaugUserGetViewModel {get; set;}
+
+    public MediaFileGetDto? ThumbnailFile {get; set;}
 }

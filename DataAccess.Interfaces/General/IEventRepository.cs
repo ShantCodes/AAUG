@@ -9,6 +9,7 @@ public interface IEventRepository
     Task<Event> FirstAsync(int Id);
     Task<Event> AddAsync(EventInsertDto insertEntity);
     Task<List<Event>> SearchEventAsync(string keyWord);
+    IQueryable<EventGetDto> GetEvents();
 
     #region Admins
     Task<List<Event>> GetNotApprovedEventsForAdmins();

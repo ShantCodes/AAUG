@@ -23,6 +23,14 @@ public class EventRepository : EntityRepository<Event>, IEventRepository
         return GetData(a => a.IsApproved).ToListAsync();
     }
 
+    public IQueryable<EventGetDto> GetEvents()
+    {
+        var data = GetData(a => a.IsApproved)
+                        .Include(a => a.ThumbnailFile);
+        return mapper.ProjectTo<EventGetDto>(data);
+
+    }
+
     public Task<Event> FirstAsync(int Id)
     {
         return GetData(a => a.Id == Id).FirstAsync();

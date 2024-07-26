@@ -26,4 +26,6 @@ public partial class Event
     public virtual ICollection<EventLike> EventLikes { get; set; } = new List<EventLike>();
 
     public virtual AaugUser? PresentatorUser { get; set; }
+
+    public virtual MediaFile? ThumbnailFile { get; set; }
 }

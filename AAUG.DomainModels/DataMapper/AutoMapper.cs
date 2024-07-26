@@ -17,6 +17,13 @@ public class MappingProfile : Profile
         EventProfile();
 
         MediaFolderProfile();
+
+        MediaFIleProfile();
+    }
+
+    private void MediaFIleProfile()
+    {
+        CreateMap<MediaFile, MediaFileGetDto>();
     }
 
     private void MediaFolderProfile()
@@ -33,6 +40,8 @@ public class MappingProfile : Profile
         CreateMap<EventInsertViewModel, EventInsertDto>();
         CreateMap<EventInsertDto, Event>();
         CreateMap<EventGetDto, EventGetViewModel>();
+        CreateMap<Event, EventGetDto>();
+        // .ForMember(a => a.ThumbnailFile, a => a.Ignore());
     }
 
     private void AaugUserProfile()

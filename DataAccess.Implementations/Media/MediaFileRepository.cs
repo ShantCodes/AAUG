@@ -21,4 +21,11 @@ public class MediaFileRepository : EntityRepository<MediaFile>, IMediaFileReposi
     {
         return AddAsync(mapper.Map<MediaFile>(insertEntity));
     }
+
+    public IQueryable<MediaFileGetDto> GetMediaFile(int fileId)
+    {
+        return mapper.ProjectTo<MediaFileGetDto>(
+            GetData(a => a.Id == fileId)
+        );
+    }
 }

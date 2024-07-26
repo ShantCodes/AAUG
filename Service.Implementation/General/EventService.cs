@@ -1,5 +1,6 @@
 ﻿using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DomainModels.Dtos;
+using AAUG.DomainModels.Enums;
 using AAUG.DomainModels.ViewModels;
 using AAUG.Service.Interfaces.General;
 using AAUG.Service.Interfaces.Media;
@@ -22,8 +23,14 @@ public class EventService : IEventService
 
     public async Task<IEnumerable<EventGetViewModel>> GetAllEventsAsync()
     {
-        return mapper.Map<List<EventGetViewModel>>(
-            await unitOfWork.EventRepository.GetEventsAsync());
+        var data = mapper.Map<List<EventGetViewModel>>(
+            await unitOfWork.EventRepository.GetEvents().ToListAsync());
+        foreach (var item in data)
+        {
+            item.thumbnailFile.FolderPathTypeId = MediaPaths.EventsFolder;
+        }
+
+        return data;
     }
 
     public async Task<EventInsertDto> InsertEventAsync(EventInsertViewModel inputEntity)

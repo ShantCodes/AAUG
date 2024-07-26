@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AAUG.DomainModels.Dtos.Media;
+using Microsoft.AspNetCore.Http;
 
 namespace AAUG.DomainModels.ViewModels;
 
@@ -22,12 +23,14 @@ public class EventGetViewModel
 
     public bool HasHappened { get; set; }
 
-    public AaugUserGetViewModel? AaugUserGetViewModel {get; set;}
+    public AaugUserGetViewModel? AaugUserGetViewModel { get; set; }
+
+    public MediaFileGetDto? thumbnailFile { get; set; }
 }
 
 public class EventInsertViewModel
 {
-    public string? EventTitle { get; set; } 
+    public string? EventTitle { get; set; }
 
     public string? EventDetails { get; set; }
 

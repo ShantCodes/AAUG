@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AAUG.DomainModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbf7f57252e966c48f449490f52ebea7bf42d29e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08b4046d345720994f00afd439c6ce10c01847f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("AAUG.DomainModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AAUG.DomainModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

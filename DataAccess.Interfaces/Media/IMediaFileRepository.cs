@@ -6,4 +6,5 @@ namespace AAUG.DataAccess.Interfaces.Media;
 public interface IMediaFileRepository
 {
     Task<MediaFile> AddMediaFileAsync(MediaFileInsertDto insertEntity);
+    IQueryable<MediaFileGetDto> GetMediaFile(int fileId);
 }
