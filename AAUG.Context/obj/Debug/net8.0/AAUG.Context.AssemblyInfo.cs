@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AAUG.Context")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cdbb9ac60e9ed7fe2e6695141701e834cf38cbea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+732db7c5c54499b75f387bad3d872ee978cf1f94")]
 [assembly: System.Reflection.AssemblyProductAttribute("AAUG.Context")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AAUG.Context")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

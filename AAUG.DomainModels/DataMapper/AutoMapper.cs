@@ -42,6 +42,7 @@ public class MappingProfile : Profile
         CreateMap<EventGetDto, EventGetViewModel>();
         CreateMap<Event, EventGetDto>();
         // .ForMember(a => a.ThumbnailFile, a => a.Ignore());
+        CreateMap<MediaFile, MediaFolderPathDto>();
     }
 
     private void AaugUserProfile()

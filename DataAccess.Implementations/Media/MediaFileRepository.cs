@@ -2,8 +2,10 @@
 using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DataAccess.Interfaces.Media;
 using AAUG.DomainModels.Dtos.Media;
+using AAUG.DomainModels.Enums;
 using AAUG.DomainModels.Models.Tables.General;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace AAUG.DataAccess.Implementations.Media;
 
@@ -26,6 +28,7 @@ public class MediaFileRepository : EntityRepository<MediaFile>, IMediaFileReposi
     {
         return mapper.ProjectTo<MediaFileGetDto>(
             GetData(a => a.Id == fileId)
+            .Include(a => a.MediaFolder)
         );
     }
 }

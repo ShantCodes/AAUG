@@ -11,10 +11,11 @@ public class MediaFileController : ControllerBase
     {
         this.mediaFileService = mediaFileService;
     }
-    [HttpGet("DownloadFile/{fileId}/{pathId}")]
-    public async Task<IActionResult> DownloadFile(int fileId, short pathId)
+    [HttpGet("DownloadFile/{fileId}")]
+    public async Task<IActionResult> DownloadFile(int fileId)
     {
-        var fileResult = await mediaFileService.DownloadMediaFileAsync(fileId, pathId);
+        var fileResult = await mediaFileService.DownloadMediaFileAsync(fileId);
         return File(fileResult.FileBytes, fileResult.ContentType, fileResult.FileName);
     }
+
 }

@@ -18,7 +18,7 @@ public class EventController : ControllerBase
     public async Task<IActionResult> GetAllEvents()
     {
         return Ok(await eventService.GetAllEventsAsync());
-    }
+    }     
     [HttpPost("InsertEvent")]
     public async Task<IActionResult> InsertEvent(EventInsertViewModel inputEntity)
     {

@@ -14,11 +14,12 @@ public partial class MediaFile
     public bool IsOmit { get; set; }
     public DateTime Date { get; set; }
 
+    public MediaFolder? MediaFolder { get; set; }
 
     public virtual ICollection<AaugUser> AaugUserNationalCardFiles { get; set; } = new List<AaugUser>();
 
     public virtual ICollection<AaugUser> AaugUserProfilePictureFiles { get; set; } = new List<AaugUser>();
 
     public virtual ICollection<AaugUser> AaugUserUniversityCardFiles { get; set; } = new List<AaugUser>();
-    public virtual ICollection<News> News { get; set; } 
+    public virtual ICollection<News> News { get; set; }
 }

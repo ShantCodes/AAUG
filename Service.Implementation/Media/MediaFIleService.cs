@@ -8,6 +8,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace AAUG.Service.Implementations.Media;
 
@@ -72,32 +73,28 @@ public class MediaFIleService : IMediaFileService
 
     }
 
-    public async Task<FileResultDto> DownloadMediaFileAsync(int fileId, short mediafilePath)
+    public async Task<FileResultDto> DownloadMediaFileAsync(int fileId)
     {
-        if (mediafilePath == MediaPaths.EventsFolder)
+        var mediaFile = await unitOfWork.MediaFileRepository.GetMediaFile(fileId).FirstOrDefaultAsync();
+        if (mediaFile == null)
         {
-            var mediaFile = await unitOfWork.MediaFileRepository.GetMediaFile(fileId).FirstOrDefaultAsync();
-            if (mediaFile == null)
-            {
-                throw new FileNotFoundException("File not found");
-            }
-            var folderPath = await unitOfWork.MediaFolderRepository.GetEventsFolder().FirstAsync();
-            var filePath = Path.Combine(folderPath.Name, $"{mediaFile.Gid}{mediaFile.Extension}");
-
-            if (!File.Exists(filePath))
-            {
-                throw new FileNotFoundException("File not found on disk.");
-            }
-
-            var fileBytes = await File.ReadAllBytesAsync(filePath);
-
-            return new FileResultDto
-            {
-                FileName = $"{mediaFile.Name}{mediaFile.Extension}",
-                ContentType = GetContentType(mediaFile.Extension),
-                FileBytes = fileBytes
-            };
+            throw new FileNotFoundException("File not found");
         }
+        var folderPath = mediaFile.MediaFolder.Name;
+        var filePath = Path.Combine(folderPath, $"{mediaFile.Gid}{mediaFile.Extension}");
+
+        if (!File.Exists(filePath))
+        {
+            throw new FileNotFoundException("File not found on disk.");
+        }
+        var fileBytes = await File.ReadAllBytesAsync(filePath);
+
+        return new FileResultDto
+        {
+            FileName = $"{mediaFile.Name}{mediaFile.Extension}",
+            ContentType = GetContentType(mediaFile.Extension),
+            FileBytes = fileBytes
+        };
         throw new ArgumentException("Invalid media file path.");
     }
     private string GetContentType(string extension)
@@ -113,6 +110,4 @@ public class MediaFIleService : IMediaFileService
             _ => "application/octet-stream",
         };
     }
- 
-
 }

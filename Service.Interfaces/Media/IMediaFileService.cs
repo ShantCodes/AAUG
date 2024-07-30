@@ -9,5 +9,5 @@ public interface IMediaFileService
 {
     Task<MediaFileInsertViewModel> InsertMediaFilesAsync(MediaFileInsertViewModel insertEntity);
     Task<MediaFileGetDto> InsertEventsMediaFileAsync(IFormFile file);
-    Task<FileResultDto> DownloadMediaFileAsync(int fileId, short mediafilePath);
+    Task<FileResultDto> DownloadMediaFileAsync(int fileId);
 }

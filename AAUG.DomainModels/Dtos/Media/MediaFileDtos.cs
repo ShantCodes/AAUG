@@ -22,6 +22,7 @@ public class MediaFileGetDto
     public bool IsOmit { get; set; }
     public DateTime Date { get; set; }
     public short FolderPathTypeId { get; set; }
+    public MediaFolderPathDto MediaFolder { get; set; } 
 }
 
 public class FileResultDto
