@@ -32,6 +32,7 @@ namespace AAUG.Context.Configurations.Tables.General
             builder.Property(x => x.TalentsId).HasColumnName("TalentsId");
             builder.Property(x => x.ProfilePictureFileId).HasColumnName("ProfilePictureFileId");
             builder.Property(x => x.NationalCardFileId).HasColumnName("NationalCardFileId");
+            builder.Property(x => x.ReceiptFileId).HasColumnName("ReceiptFileId");
             builder.Property(x => x.Email).HasColumnName("Email");
             builder.Property(x => x.CanGetNotfiedByMail).HasColumnName("CanGetNotfiedByMail");
             builder.Property(x => x.IsApproved).HasColumnName("IsApproved");
@@ -73,6 +74,11 @@ namespace AAUG.Context.Configurations.Tables.General
             builder.HasOne(u => u.UniversityCardFile)
                 .WithMany(m => m.AaugUserUniversityCardFiles)
                 .HasForeignKey(u => u.UniversityCardFileId)
+                .IsRequired();
+
+            builder.HasOne(u => u.ReceiptFile)
+                .WithMany(m => m.AaugUserReceiptFiles)
+                .HasForeignKey(u => u.ReceiptFileId)
                 .IsRequired();
 
 

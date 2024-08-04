@@ -43,12 +43,19 @@ public class MappingProfile : Profile
         CreateMap<Event, EventGetDto>();
         // .ForMember(a => a.ThumbnailFile, a => a.Ignore());
         CreateMap<MediaFile, MediaFolderPathDto>();
+        CreateMap<EventEditViewModel, EventGetDto>()
+        .ForMember(a => a.ThumbnailFile, a => a.Ignore());
+
+        CreateMap<EventEditDto, Event>();
+
     }
 
     private void AaugUserProfile()
     {
         CreateMap<AaugUsersInsertDto, AaugUser>();
         CreateMap<AaugUser, EventGetDto>();
+        CreateMap<AaugUser, AaugUserFullGetDto>();
+        CreateMap<AaugUser, AaugUserGetDto>();
     }
 
     private void NewsProfile()

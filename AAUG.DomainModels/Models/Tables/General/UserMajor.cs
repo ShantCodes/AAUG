@@ -17,5 +17,5 @@ public partial class UserMajor
 
     public DateOnly EntryDate { get; set; }
 
-    public virtual AaugUser User { get; set; } = null!;
+    public virtual AaugUser? User { get; set; } = null!;
 }

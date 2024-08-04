@@ -27,6 +27,11 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             CreateMap<Event, EventGetViewModel>();
             CreateMap<EventGetDto, EventWithMediaGetViewModel>()
                 .ForMember(a => a.ThumbnailBase64, a => a.Ignore());
+            CreateMap<EventEditViewModel, EventGetDto>()
+            .ForMember(a => a.ThumbNailFileId, a => a.Ignore());
+
+            CreateMap<EventEditViewModel, EventEditDto>()
+            .ForMember(a => a.ThumbNailFileId, a => a.Ignore());
         }
 
         private void AaugUserProfile()

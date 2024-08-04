@@ -49,7 +49,18 @@ public class AaugUserRepository : EntityRepository<AaugUser>, IAaugUserRepositor
         return data;
     }
 
+    public IQueryable<AaugUserFullGetDto> GetFullUserInfoByUserId(int Id)
+    {
+        return mapper.ProjectTo<AaugUserFullGetDto>(
+            GetData(a => a.Id == Id)
+        );
+    }
 
-
+    public IQueryable<AaugUserGetDto> GetUserByGuId(string guId)
+    {
+        return mapper.ProjectTo<AaugUserGetDto>(
+            GetData(a => a.UserId == guId)
+        );
+    }
 
 }

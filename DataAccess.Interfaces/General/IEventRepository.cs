@@ -6,6 +6,8 @@ namespace AAUG.DataAccess.Interfaces.General;
 public interface IEventRepository
 {
     Task<List<Event>> GetEventsAsync();
+    IQueryable<Event> GetEvent(int id);
+    IQueryable<EventGetDto> GetEventAsync(int id);
     Task<Event> FirstAsync(int Id);
     Task<Event> AddAsync(EventInsertDto insertEntity);
     Task<List<Event>> SearchEventAsync(string keyWord);

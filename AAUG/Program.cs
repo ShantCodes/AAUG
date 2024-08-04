@@ -105,6 +105,7 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.UseMiddleware<ExceptionMiddleware>();
+app.UseMiddleware<TokenMiddleware>();
 
 app.MapControllers();
 

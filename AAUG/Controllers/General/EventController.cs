@@ -18,11 +18,16 @@ public class EventController : ControllerBase
     public async Task<IActionResult> GetAllEvents()
     {
         return Ok(await eventService.GetAllEventsAsync());
-    }     
+    }
     [HttpPost("InsertEvent")]
     public async Task<IActionResult> InsertEvent(EventInsertViewModel inputEntity)
     {
         return Ok(await eventService.InsertEventAsync(inputEntity));
+    }
+    [HttpPut("EditEventAsync")]
+    public async Task<IActionResult> EditEvent([FromForm] EventEditViewModel inputEntity)
+    {
+        return Ok(await eventService.EditEventAsync(inputEntity));
     }
     [HttpPut("ApproveEvent/{eventId}/{isApproved}")]
     [Authorize(Roles = "Varich,King,Divan")]

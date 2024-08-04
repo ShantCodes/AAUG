@@ -7,6 +7,7 @@ public interface IEventService
 {
     Task<IEnumerable<EventGetViewModel>> GetAllEventsAsync();
     Task<EventInsertDto> InsertEventAsync(EventInsertViewModel inputEntity);
+    Task<EventEditViewModel> EditEventAsync(EventEditViewModel inputEntity);
     Task<bool> ApproveEvent(int eventId, bool isApproved);
     Task<IEnumerable<EventGetViewModel>> SearchEventAsync(string keyWord);
 

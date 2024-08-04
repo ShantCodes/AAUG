@@ -12,6 +12,6 @@ public class Suggestion
     public int UserId { get; set; }
     public DateOnly Date { get; set; }
 
-    public AaugUser AaugUser { get; set; }
+    public AaugUser? AaugUser { get; set; }
     public virtual ICollection<SuggestionVote> SuggestionVotes {get; set;}
 }

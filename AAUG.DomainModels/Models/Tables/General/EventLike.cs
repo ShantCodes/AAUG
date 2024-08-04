@@ -13,5 +13,5 @@ public partial class EventLike
 
     public virtual Event Event { get; set; } = null!;
 
-    public virtual AaugUser User { get; set; } = null!;
+    public virtual AaugUser? User { get; set; } = null!;
 }

@@ -1,9 +1,15 @@
-﻿using AAUG.DomainModels.ViewModels;
+﻿using AAUG.DomainModels.Dtos;
+using AAUG.DomainModels.ViewModels;
+using Microsoft.AspNetCore.Identity;
 
 namespace AAUG.Service.Interfaces.General;
 
 public interface IAaugUserService
 {
     Task<AaugUserInsertViewModel> InsertUserInfoAsync(AaugUserInsertViewModel inputEntity);
+    Task<IdentityUser> GetUserByIdAsync(string userId);
+    Task<AaugUserFullInsertViewModel> InsertFullUserInfoAsync(AaugUserFullInsertViewModel inputEntity);
     Task<IEnumerable<AaugUserGetViewModel>> GetAllUsersAsync();
+    Task<AaugUserGetDto> GetCurrentUserInfo();
+
 }

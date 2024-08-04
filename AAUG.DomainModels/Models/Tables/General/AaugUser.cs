@@ -5,9 +5,9 @@ namespace AAUG.DomainModels.Models.Tables.General;
 
 public partial class AaugUser
 {
-    public int? Id { get; set; }
+    public int Id { get; set; }
 
-    public string? UserId { get; set; }
+    public string UserId { get; set; }
 
     public string? Name { get; set; } 
 
@@ -26,6 +26,7 @@ public partial class AaugUser
     public int? NationalCardFileId { get; set; }
 
     public int? UniversityCardFileId { get; set; }
+    public int? ReceiptFileId { get; set; }
 
     public string? Email { get; set; }
 
@@ -33,28 +34,29 @@ public partial class AaugUser
 
     public bool? IsApproved { get; set; }
 
-    public virtual ICollection<Camp> Camps { get; set; }
+    public virtual ICollection<Camp>? Camps { get; set; }
 
-    public virtual ICollection<EventLike> EventLikes { get; set; }
+    public virtual ICollection<EventLike>? EventLikes { get; set; }
 
-    public virtual ICollection<Event> Events { get; set; }
+    public virtual ICollection<Event>? Events { get; set; }
 
     public virtual MediaFile? NationalCardFile { get; set; }
 
     public virtual MediaFile? ProfilePictureFile { get; set; }
 
     public virtual MediaFile? UniversityCardFile { get; set; } 
+    public virtual MediaFile? ReceiptFile { get; set; } 
 
-    public virtual ICollection<UserMajor> UserMajors { get; set; } 
+    public virtual ICollection<UserMajor>? UserMajors { get; set; } 
 
-    public virtual ICollection<UserTalent> UserTalents { get; set; } 
-    public virtual ICollection<UserTicketsRelation> UserTicketsRelations { get; set; }
+    public virtual ICollection<UserTalent>? UserTalents { get; set; } 
+    public virtual ICollection<UserTicketsRelation>? UserTicketsRelations { get; set; }
 
-    public virtual ICollection<Suggestion> Suggestions {get; set;}
+    public virtual ICollection<Suggestion>? Suggestions {get; set;}
 
-    public virtual ICollection<SuggestionVote> SuggestionVotes {get; set;}
+    public virtual ICollection<SuggestionVote>? SuggestionVotes {get; set;}
 
-    public virtual ICollection<FormQuestion> FormQuestions {get; set;} 
+    public virtual ICollection<FormQuestion>? FormQuestions {get; set;} 
 
-    public virtual ICollection<News> News {get; set;}
+    public virtual ICollection<News>? News {get; set;}
 }

@@ -68,3 +68,19 @@ public class EventInsertViewModel
 
     public IFormFile? ThumbNailFile { get; set; }
 }
+
+public class EventEditViewModel
+{
+    public int Id { get; set; }
+    public string? EventTitle { get; set; }
+
+    public string? EventDetails { get; set; }
+
+    public DateOnly EventDate { get; set; }
+
+    public string? Presentator { get; set; }
+
+    public int? PresentatorUserId { get; set; }
+
+    public IFormFile? ThumbNailFile { get; set; }
+}

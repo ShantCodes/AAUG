@@ -31,4 +31,11 @@ public class MediaFileRepository : EntityRepository<MediaFile>, IMediaFileReposi
             .Include(a => a.MediaFolder)
         );
     }
+
+    public IQueryable<MediaFileGetDto> GetMediaFileByGuIdAsync(int id)
+    {
+        return mapper.ProjectTo<MediaFileGetDto>(
+            GetData(a => a.Id == id)
+        );
+    }
 }

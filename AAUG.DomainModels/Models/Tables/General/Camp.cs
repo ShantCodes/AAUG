@@ -21,5 +21,5 @@ public partial class Camp
 
     public short UserMaxCapacity { get; set; }
 
-    public virtual AaugUser RepresentatorUser { get; set; } = null!;
+    public virtual AaugUser? RepresentatorUser { get; set; } = null!;
 }

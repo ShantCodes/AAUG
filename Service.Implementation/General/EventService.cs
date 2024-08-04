@@ -2,24 +2,41 @@
 using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Enums;
 using AAUG.DomainModels.ViewModels;
+using AAUG.Service.Interfaces;
 using AAUG.Service.Interfaces.General;
 using AAUG.Service.Interfaces.Media;
 using AutoMapper;
+using Azure.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace AAUG.Service.Implementations.General;
 
 public class EventService : IEventService
 {
+    #region injection
     private readonly IMapper mapper;
     private IAaugUnitOfWork unitOfWork;
     private readonly IMediaFileService mediaFileService;
-    public EventService(IAaugUnitOfWork unitOfWork, IMapper mapper, IMediaFileService mediaFileService)
+    private readonly ITokenService tokenService;
+    private readonly IUserService userService;
+    private readonly IAaugUserService aaugUserService;
+    public EventService(IAaugUnitOfWork unitOfWork,
+                        IMapper mapper,
+                        IMediaFileService mediaFileService,
+                        ITokenService tokenService,
+                        IUserService userService,
+                        IAaugUserService aaugUserService)
     {
         this.unitOfWork = unitOfWork;
         this.mapper = mapper;
         this.mediaFileService = mediaFileService;
+        this.tokenService = tokenService;
+        this.userService = userService;
+        this.aaugUserService = aaugUserService;
     }
+
+    #endregion
 
     public async Task<IEnumerable<EventGetViewModel>> GetAllEventsAsync()
     {
@@ -47,6 +64,25 @@ public class EventService : IEventService
         await unitOfWork.CommitTransactionAsync();
 
         return data;
+    }
+
+    public async Task<EventEditViewModel> EditEventAsync(EventEditViewModel inputEntity)
+    {
+        var existingData = await unitOfWork.EventRepository.GetEvent(inputEntity.Id).FirstOrDefaultAsync();
+        if (existingData == null)
+            throw new Exception("the Event not found or the data is empty");
+            var eventdto = mapper.Map<EventEditDto>(inputEntity);
+        mapper.Map(eventdto, existingData);
+
+        if (inputEntity.ThumbNailFile != null)
+        {
+            var newMediaFileDto = await mediaFileService.InsertEventsMediaFileAsync(inputEntity.ThumbNailFile, existingData.ThumbNailFileId);
+            existingData.ThumbNailFileId = newMediaFileDto.Id;
+        }
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+
+        return inputEntity;
     }
 
     public async Task<IEnumerable<EventGetViewModel>> SearchEventAsync(string keyWord)

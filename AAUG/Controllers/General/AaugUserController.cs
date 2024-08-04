@@ -1,8 +1,10 @@
 ﻿
 using System.Security.Claims;
+using AAUG.DomainModels.Models.Tables.General;
 using AAUG.DomainModels.ViewModels;
 using AAUG.Service.Interfaces;
 using AAUG.Service.Interfaces.General;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AAUG.Api.Controllers.General;
@@ -47,5 +49,16 @@ public class AaugUserController : ControllerBase
     {
         return Ok(await userService.UnassignRoleFromUserAsync(userId, roleId));
     }
-
+    [HttpGet("GetCurrentUserInfo")]
+    [Authorize]
+    public async Task<IActionResult> GetCurrentUserInfo()
+    {
+        return Ok(await AaugUserService.GetCurrentUserInfo());
+    }
+    [HttpPut("SubscribeMembership")]
+    [Authorize]
+    public async Task<IActionResult> SubscribeMembership(AaugUserFullInsertViewModel insertEntity)
+    {
+        return Ok(await AaugUserService.InsertFullUserInfoAsync(insertEntity));
+    }
 }

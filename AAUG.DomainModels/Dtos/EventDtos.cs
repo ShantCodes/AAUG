@@ -23,6 +23,27 @@ public class EventInsertDto
 
 }
 
+public class EventEditDto
+{
+    public int Id { get; set; }
+    public string EventTitle { get; set; } = null!;
+
+    public string? EventDetails { get; set; }
+
+    public DateOnly EventDate { get; set; }
+
+    public string? Presentator { get; set; }
+
+    public int? PresentatorUserId { get; set; }
+
+    public int? ThumbNailFileId { get; set; }
+
+    public bool IsApproved { get; set; }
+
+    public bool HasHappened { get; set; }
+
+}
+
 public class EventGetDto
 {
     public int Id { get; set; }

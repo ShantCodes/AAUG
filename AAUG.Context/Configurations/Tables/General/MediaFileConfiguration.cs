@@ -46,6 +46,11 @@ internal class MediaFileConfiguration : IEntityTypeConfiguration<MediaFile>
             .WithOne(u => u.UniversityCardFile)
             .HasForeignKey(u => u.UniversityCardFileId);
 
+        builder
+            .HasMany(m => m.AaugUserReceiptFiles)
+            .WithOne(u => u.ReceiptFile)
+            .HasForeignKey(u => u.ReceiptFileId);
+
         #endregion
     }
 }

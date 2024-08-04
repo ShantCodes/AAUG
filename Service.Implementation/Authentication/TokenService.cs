@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using AAUG.DomainModels.Dtos;
 using AAUG.Service.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -13,10 +14,12 @@ public class TokenService : ITokenService
 {
     private IConfiguration configuration;
     private readonly UserManager<IdentityUser> userManager;
-    public TokenService(IConfiguration configuration, UserManager<IdentityUser> userManager)
+    private readonly IHttpContextAccessor httpContextAccessor;
+    public TokenService(IConfiguration configuration, UserManager<IdentityUser> userManager, IHttpContextAccessor httpContextAccessor)
     {
         this.configuration = configuration;
         this.userManager = userManager;
+        this.httpContextAccessor = httpContextAccessor;
     }
 
     public async Task<string> GenerateJwtToken(LoginDto user)
@@ -61,4 +64,16 @@ public class TokenService : ITokenService
         var token = await userManager.GeneratePasswordResetTokenAsync(user);
         return token;
     }
+    public string GetUserFromToken()
+    {
+        var headers = httpContextAccessor.HttpContext.Request.Headers;
+
+        if (headers.ContainsKey("Authorization"))
+        {
+            return headers["Authorization"].ToString();
+        }
+
+        return null;
+    }
+
 }

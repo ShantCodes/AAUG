@@ -57,6 +57,18 @@ namespace AAUG.DataAccess.EntityRepository
             return context.Set<T>().Where(expression).AsNoTracking();
         }
 
+        public IQueryable<T> GetData(Expression<Func<T, bool>> filter = null)
+        {
+            IQueryable<T> query = context.Set<T>();
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            return query;
+        }
+
         public void Update(T entity)
         {
             context.Set<T>().Update(entity);

@@ -5,6 +5,7 @@ using AAUG.Service.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Dtos.Authentication;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AAUG.Api.Controllers.Authentication
 {
@@ -53,8 +54,7 @@ namespace AAUG.Api.Controllers.Authentication
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto resetPasswordDto)
         {
             return Ok(await authService.ResetPasswordAsync(resetPasswordDto));
-        }
-
+        }                
     }
 
 }

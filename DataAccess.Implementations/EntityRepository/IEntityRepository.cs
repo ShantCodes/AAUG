@@ -8,6 +8,7 @@ namespace AAUG.DataAccess.EntityRepository
         Task<T> AddAsync(T entity);
         IQueryable<T> GetData();
         IQueryable<T> GetData(Expression<Func<T, bool>> expression, bool isTrackChanges);
+        IQueryable<T> GetData(Expression<Func<T, bool>> filter = null);
         void Update(T entity);
         void Delete(T entity);
         Task<T> DeleteAsync(int id);

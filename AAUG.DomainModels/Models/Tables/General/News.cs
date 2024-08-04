@@ -14,6 +14,6 @@ public partial class News
     public int CreatorUserId { get; set; }
     public int NewsFileId { get; set; }
 
-    public AaugUser AaugUser { get; set; }
+    public AaugUser? AaugUser { get; set; }
     public MediaFile NewsFile { get; set; }
 }

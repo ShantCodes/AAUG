@@ -7,4 +7,5 @@ public interface IMediaFileRepository
 {
     Task<MediaFile> AddMediaFileAsync(MediaFileInsertDto insertEntity);
     IQueryable<MediaFileGetDto> GetMediaFile(int fileId);
+    IQueryable<MediaFileGetDto> GetMediaFileByGuIdAsync(int id);
 }
