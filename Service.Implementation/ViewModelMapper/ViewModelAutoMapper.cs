@@ -20,6 +20,15 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             AaugUserProfile();
 
             EventProfile();
+
+            EventLikeProfile();
+        }
+
+        private void EventLikeProfile()
+        {
+            CreateMap<EventLikeGetDto, EventLikeGetViewModel>()
+            .ForMember(a => a.User, a => a.Ignore());
+            CreateMap<EventLikeGetDto, EventLikeDeleteDto>();
         }
 
         private void EventProfile()
@@ -39,6 +48,12 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             CreateMap<AaugUserInsertViewModel, AaugUsersInsertDto>();
             CreateMap<RegisterDto, AaugUserInsertViewModel>();
             CreateMap<AaugUser, AaugUserGetViewModel>();
+            CreateMap<AaugUserFullEditViewModel, AaugUsersEditDto>()
+            .ForMember(a => a.NationalCardFileId, a => a.Ignore())
+            .ForMember(a => a.ProfilePictureFileId, a => a.Ignore())
+            .ForMember(a => a.UniversityCardFileId, a => a.Ignore());
+
+            CreateMap<AaugUserGetDto, AaugUserGetViewModel>();
         }
 
         private void NewsProfile()

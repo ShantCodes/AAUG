@@ -174,6 +174,11 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         public IMediaFolderRepository _mediaFolderRepository;
         public IMediaFolderRepository MediaFolderRepository => _mediaFolderRepository ??= new MediaFolderRepository(this, mapper);
         #endregion
+        #region likes
+        public IEventLikeRepository _eventLikeRepository;
+        public IEventLikeRepository EventLikeRepository => _eventLikeRepository ??= new EventLikeRepository(this, mapper); 
+        
+        #endregion
 
         #endregion
     }

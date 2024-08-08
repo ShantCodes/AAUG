@@ -19,6 +19,15 @@ public class MappingProfile : Profile
         MediaFolderProfile();
 
         MediaFIleProfile();
+
+        EventLikeProfile();
+    }
+
+    private void EventLikeProfile()
+    {
+        CreateMap<EventLike, EventLikeGetDto>();
+        CreateMap<EventLikeInsertDto, EventLike>();
+        CreateMap<EventLikeDeleteDto, EventLike>();
     }
 
     private void MediaFIleProfile()
@@ -56,6 +65,7 @@ public class MappingProfile : Profile
         CreateMap<AaugUser, EventGetDto>();
         CreateMap<AaugUser, AaugUserFullGetDto>();
         CreateMap<AaugUser, AaugUserGetDto>();
+        CreateMap<AaugUsersEditDto, AaugUser>();
     }
 
     private void NewsProfile()

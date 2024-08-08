@@ -83,7 +83,7 @@ public class AaugUserService : IAaugUserService
         var profilePictureFile = await mediaFileService.InsertUserMediaFileAsync(inputEntity.ProfilePictureFile);
         var nationalCardFile = await mediaFileService.InsertUserMediaFileAsync(inputEntity.NationalCardFile);
         var universityCardFile = await mediaFileService.InsertUserMediaFileAsync(inputEntity.UniversityCardFile);
-        var receiptFile= await mediaFileService.InsertUserMediaFileAsync(inputEntity.ReceiptFile);
+        var receiptFile = await mediaFileService.InsertUserMediaFileAsync(inputEntity.ReceiptFile);
         existingEntity.NationalCardFileId = nationalCardFile.Id;
         existingEntity.UniversityCardFileId = universityCardFile.Id;
         existingEntity.ProfilePictureFileId = profilePictureFile.Id;
@@ -94,6 +94,26 @@ public class AaugUserService : IAaugUserService
 
         return mapper.Map<AaugUserFullInsertViewModel>(existingEntity);
 
+    }
+
+    public async Task<AaugUserFullEditViewModel> EditAaugUserFullAsync(AaugUserFullEditViewModel inputEntity)
+    {
+        var existingRecord = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(inputEntity.Id).FirstOrDefaultAsync();
+        if (existingRecord == null)
+            throw new Exception("the user data not found");
+
+        var entity = mapper.Map<AaugUsersEditDto>(inputEntity);
+        mapper.Map(entity, existingRecord);
+
+        if (inputEntity.NationalCardFile != null)
+        {
+            var newMediaFileDto = await mediaFileService.InsertUserMediaFileAsync(inputEntity.NationalCardFile, existingRecord.NationalCardFileId);
+            existingRecord.NationalCardFileId = newMediaFileDto.Id;
+        }
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+
+        return inputEntity;
     }
 
     public async Task<IEnumerable<AaugUserGetViewModel>> GetAllUsersAsync()

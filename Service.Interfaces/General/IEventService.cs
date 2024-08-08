@@ -10,6 +10,10 @@ public interface IEventService
     Task<EventEditViewModel> EditEventAsync(EventEditViewModel inputEntity);
     Task<bool> ApproveEvent(int eventId, bool isApproved);
     Task<IEnumerable<EventGetViewModel>> SearchEventAsync(string keyWord);
+    #region likes
+    Task<IEnumerable<EventLikeGetViewModel>> GetEventLikesAsync(int eventId);
+    Task<bool> LikeEventAsync(int aaugUserId, int eventId);
+    #endregion
 
     #region  Admins
     Task<IEnumerable<EventGetViewModel>> GetAllEventsForAdmins();

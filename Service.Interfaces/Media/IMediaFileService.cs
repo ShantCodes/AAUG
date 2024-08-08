@@ -11,5 +11,6 @@ public interface IMediaFileService
     Task<MediaFileGetDto> InsertEventsMediaFileAsync(IFormFile file);
     Task<MediaFileGetDto> InsertEventsMediaFileAsync(IFormFile file, int? existingFileId);
     Task<MediaFileGetDto> InsertUserMediaFileAsync(IFormFile file);
+    Task<MediaFileGetDto> InsertUserMediaFileAsync(IFormFile file, int? existingFileId);
     Task<FileResultDto> DownloadMediaFileAsync(int fileId);
 }

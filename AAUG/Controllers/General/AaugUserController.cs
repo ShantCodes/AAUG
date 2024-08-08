@@ -61,4 +61,9 @@ public class AaugUserController : ControllerBase
     {
         return Ok(await AaugUserService.InsertFullUserInfoAsync(insertEntity));
     }
+    [HttpPut("EditAaugUserFull")]
+    public async Task<IActionResult> EditAaugUserFull(AaugUserFullEditViewModel inputEntity)
+    {
+        return Ok(await AaugUserService.EditAaugUserFullAsync(inputEntity));
+    }
 }

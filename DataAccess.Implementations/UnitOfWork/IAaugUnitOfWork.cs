@@ -23,12 +23,13 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         #endregion
 
         #region Repositories
-        AaugContext Context {get;}
-        INewsRepository NewsRepository {get;}
-        IAaugUserRepository AaugUserRepository {get;}
-        IEventRepository EventRepository {get;}
-        IMediaFileRepository MediaFileRepository {get;}
-        IMediaFolderRepository MediaFolderRepository {get;}
+        AaugContext Context { get; }
+        INewsRepository NewsRepository { get; }
+        IAaugUserRepository AaugUserRepository { get; }
+        IEventRepository EventRepository { get; }
+        IMediaFileRepository MediaFileRepository { get; }
+        IMediaFolderRepository MediaFolderRepository { get; }
+        IEventLikeRepository EventLikeRepository { get; }
 
         #endregion
     }

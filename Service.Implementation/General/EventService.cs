@@ -71,7 +71,7 @@ public class EventService : IEventService
         var existingData = await unitOfWork.EventRepository.GetEvent(inputEntity.Id).FirstOrDefaultAsync();
         if (existingData == null)
             throw new Exception("the Event not found or the data is empty");
-            var eventdto = mapper.Map<EventEditDto>(inputEntity);
+        var eventdto = mapper.Map<EventEditDto>(inputEntity);
         mapper.Map(eventdto, existingData);
 
         if (inputEntity.ThumbNailFile != null)
@@ -91,6 +91,45 @@ public class EventService : IEventService
             await unitOfWork.EventRepository.SearchEventAsync(keyWord)
         );
     }
+    #region likes
+    public async Task<bool> LikeEventAsync(int aaugUserId, int eventId)
+    {
+        var existingLike = await unitOfWork.EventLikeRepository.GetUserEventLike(aaugUserId, eventId).FirstOrDefaultAsync();
+        if (existingLike != null)
+        {
+            var deleteEntity = mapper.Map<EventLikeDeleteDto>(existingLike);
+            unitOfWork.EventLikeRepository.DeleteLike(deleteEntity);
+
+            await unitOfWork.SaveChangesAsync();
+            await unitOfWork.CommitTransactionAsync();
+
+            return true;
+        }
+        var eventLikeDto = new EventLikeInsertDto
+        {
+            EventId = eventId,
+            UserId = aaugUserId
+        };
+        await unitOfWork.EventLikeRepository.InsertLikeAsync(eventLikeDto);
+
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+
+        return true;
+    }
+    public async Task<IEnumerable<EventLikeGetViewModel>> GetEventLikesAsync(int eventId)
+    {
+        var data = await unitOfWork.EventLikeRepository.GetEventLikes(eventId).ToListAsync();
+        var result = mapper.Map<IEnumerable<EventLikeGetViewModel>>(data);
+
+        foreach (var item in result)
+        {
+            var correspondingUser = data.FirstOrDefault(d => d.User.Id == item.UserId)?.User;
+            item.User = mapper.Map<AaugUserGetViewModel>(correspondingUser);
+        }
+        return result;
+    }
+    #endregion
 
     #region admins
     public async Task<bool> ApproveEvent(int eventId, bool isApproved)

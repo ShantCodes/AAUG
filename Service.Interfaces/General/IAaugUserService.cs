@@ -9,6 +9,7 @@ public interface IAaugUserService
     Task<AaugUserInsertViewModel> InsertUserInfoAsync(AaugUserInsertViewModel inputEntity);
     Task<IdentityUser> GetUserByIdAsync(string userId);
     Task<AaugUserFullInsertViewModel> InsertFullUserInfoAsync(AaugUserFullInsertViewModel inputEntity);
+    Task<AaugUserFullEditViewModel> EditAaugUserFullAsync(AaugUserFullEditViewModel inputEntity);
     Task<IEnumerable<AaugUserGetViewModel>> GetAllUsersAsync();
     Task<AaugUserGetDto> GetCurrentUserInfo();
 

@@ -58,4 +58,16 @@ public class EventController : ControllerBase
     {
         return Ok(await eventService.DeleteEventAsync(eventId));
     }
+    #region Likes
+    [HttpGet("GetEventLikes")]
+    public async Task<IActionResult> GetEventLikes(int eventId)
+    {
+        return Ok(await eventService.GetEventLikesAsync(eventId));
+    }
+    [HttpPost("LikeEvent/{aaugUserId}/{eventId}")]
+    public async Task<IActionResult> LikeEvent(int aaugUserId, int eventId)
+    {
+        return Ok(await eventService.LikeEventAsync(aaugUserId, eventId));
+    }
+    #endregion
 }

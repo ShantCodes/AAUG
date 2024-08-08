@@ -8,5 +8,6 @@ public interface IAaugUserRepository
     Task<AaugUser> AddAsync(AaugUsersInsertDto inputEntity);
     Task<List<AaugUser>> GetUsersAsync();
     IQueryable<AaugUserFullGetDto> GetFullUserInfoByUserId(int Id);
+    IQueryable<AaugUser> GetFullUserInfoByUserIdWithTracking(int Id);
     IQueryable<AaugUserGetDto> GetUserByGuId(string guId);
 }
