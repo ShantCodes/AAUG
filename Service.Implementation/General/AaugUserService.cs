@@ -96,6 +96,23 @@ public class AaugUserService : IAaugUserService
 
     }
 
+    public async Task<AaugUserFullGetViewModel> UpdateSubscribtion(int userId, IFormFile receiptFile)
+    {
+        var entity = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(userId).FirstOrDefaultAsync();
+        if (entity == null)
+            throw new Exception("the user not found");
+
+        var NewMediaFileDto = await mediaFileService.InsertUserMediaFileAsync(receiptFile, entity.ReceiptFileId); 
+        entity.ReceiptFileId = NewMediaFileDto.Id;
+        entity.IsApproved = false;        
+        entity.SubscribeDate = DateTime.UtcNow;
+
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();   
+
+        return mapper.Map<AaugUserFullGetViewModel>(entity);
+    }
+
     public async Task<AaugUserFullEditViewModel> EditAaugUserFullAsync(AaugUserFullEditViewModel inputEntity)
     {
         var existingRecord = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(inputEntity.Id).FirstOrDefaultAsync();

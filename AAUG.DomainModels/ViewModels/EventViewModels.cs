@@ -22,6 +22,7 @@ public class EventGetViewModel
     public bool IsApproved { get; set; }
 
     public bool HasHappened { get; set; }
+    public short LikeCount { get; set; }
 
     public AaugUserGetViewModel? AaugUserGetViewModel { get; set; }
 

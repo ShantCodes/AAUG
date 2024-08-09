@@ -104,6 +104,14 @@ public class AaugUserFullGetDto
     public bool? CanGetNotfiedByMail { get; set; }
 
     public bool? IsApproved { get; set; }
+    public DateTime? SubscribeDate { get; set; }
+}
+
+public class SubscribeFileDto
+{
+    public int Id { get; set; }
+    public int? ReceiptFileId { get; set; }
+    public DateOnly SubscribeDate { get; set; }
 }
 
 

@@ -9,9 +9,9 @@ public partial class AaugUser
 
     public string UserId { get; set; }
 
-    public string? Name { get; set; } 
+    public string? Name { get; set; }
 
-    public string? LastName { get; set; } 
+    public string? LastName { get; set; }
 
     public string? NameArmenian { get; set; }
 
@@ -34,6 +34,8 @@ public partial class AaugUser
 
     public bool? IsApproved { get; set; }
 
+    public DateTime? SubscribeDate { get; set; }
+
     public virtual ICollection<Camp>? Camps { get; set; }
 
     public virtual ICollection<EventLike>? EventLikes { get; set; }
@@ -44,19 +46,19 @@ public partial class AaugUser
 
     public virtual MediaFile? ProfilePictureFile { get; set; }
 
-    public virtual MediaFile? UniversityCardFile { get; set; } 
-    public virtual MediaFile? ReceiptFile { get; set; } 
+    public virtual MediaFile? UniversityCardFile { get; set; }
+    public virtual MediaFile? ReceiptFile { get; set; }
 
-    public virtual ICollection<UserMajor>? UserMajors { get; set; } 
+    public virtual ICollection<UserMajor>? UserMajors { get; set; }
 
-    public virtual ICollection<UserTalent>? UserTalents { get; set; } 
+    public virtual ICollection<UserTalent>? UserTalents { get; set; }
     public virtual ICollection<UserTicketsRelation>? UserTicketsRelations { get; set; }
 
-    public virtual ICollection<Suggestion>? Suggestions {get; set;}
+    public virtual ICollection<Suggestion>? Suggestions { get; set; }
 
-    public virtual ICollection<SuggestionVote>? SuggestionVotes {get; set;}
+    public virtual ICollection<SuggestionVote>? SuggestionVotes { get; set; }
 
-    public virtual ICollection<FormQuestion>? FormQuestions {get; set;} 
+    public virtual ICollection<FormQuestion>? FormQuestions { get; set; }
 
-    public virtual ICollection<News>? News {get; set;}
+    public virtual ICollection<News>? News { get; set; }
 }

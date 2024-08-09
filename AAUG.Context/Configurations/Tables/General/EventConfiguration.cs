@@ -26,6 +26,7 @@ namespace AAUG.Context.Configurations.Tables.General
             builder.Property(a => a.IsApproved).HasColumnName("IsApproved");
             builder.Property(a => a.HasHappened).HasColumnName("HasHappened");
             builder.Property(a => a.EventDate).HasColumnName("EventDate");
+            builder.Property(a => a.LikeCount).HasColumnName("LikeCount");
             #endregion
 
             #region Relations

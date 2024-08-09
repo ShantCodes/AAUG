@@ -62,6 +62,7 @@ public class EventGetDto
     public bool IsApproved { get; set; }
 
     public bool HasHappened { get; set; }
+    public short LikeCount { get; set; }
 
     public AaugUserGetViewModel? AaugUserGetViewModel { get; set; }
 

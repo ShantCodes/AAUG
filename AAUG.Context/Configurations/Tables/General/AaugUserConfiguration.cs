@@ -36,6 +36,7 @@ namespace AAUG.Context.Configurations.Tables.General
             builder.Property(x => x.Email).HasColumnName("Email");
             builder.Property(x => x.CanGetNotfiedByMail).HasColumnName("CanGetNotfiedByMail");
             builder.Property(x => x.IsApproved).HasColumnName("IsApproved");
+            builder.Property(x => x.SubscribeDate).HasColumnName("SubscribeDate");
 
             #endregion
 

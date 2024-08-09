@@ -95,10 +95,16 @@ public class EventService : IEventService
     public async Task<bool> LikeEventAsync(int aaugUserId, int eventId)
     {
         var existingLike = await unitOfWork.EventLikeRepository.GetUserEventLike(aaugUserId, eventId).FirstOrDefaultAsync();
+        var existingEvent = await unitOfWork.EventRepository.GetEvent(eventId).FirstOrDefaultAsync();
+
+        if (existingEvent == null)
+            throw new Exception("Event not found");
+            
         if (existingLike != null)
         {
             var deleteEntity = mapper.Map<EventLikeDeleteDto>(existingLike);
             unitOfWork.EventLikeRepository.DeleteLike(deleteEntity);
+            existingEvent.LikeCount -= 1;
 
             await unitOfWork.SaveChangesAsync();
             await unitOfWork.CommitTransactionAsync();
@@ -110,6 +116,7 @@ public class EventService : IEventService
             EventId = eventId,
             UserId = aaugUserId
         };
+        existingEvent.LikeCount++;
         await unitOfWork.EventLikeRepository.InsertLikeAsync(eventLikeDto);
 
         await unitOfWork.SaveChangesAsync();

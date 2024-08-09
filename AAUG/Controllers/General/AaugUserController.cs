@@ -61,9 +61,15 @@ public class AaugUserController : ControllerBase
     {
         return Ok(await AaugUserService.InsertFullUserInfoAsync(insertEntity));
     }
+    [HttpPost("updateSubscribtion")]
+    public async Task<IActionResult> updateSubscribtion(int userId, IFormFile file)
+    {
+        return Ok(await AaugUserService.UpdateSubscribtion(userId, file));
+    }
     [HttpPut("EditAaugUserFull")]
     public async Task<IActionResult> EditAaugUserFull(AaugUserFullEditViewModel inputEntity)
     {
         return Ok(await AaugUserService.EditAaugUserFullAsync(inputEntity));
     }
+
 }

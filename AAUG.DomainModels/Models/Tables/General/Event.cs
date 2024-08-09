@@ -22,6 +22,7 @@ public partial class Event
     public bool IsApproved { get; set; }
 
     public bool HasHappened { get; set; }
+    public short LikeCount { get; set; }
 
     public virtual ICollection<EventLike> EventLikes { get; set; } = new List<EventLike>();
 
