@@ -92,9 +92,11 @@ public class EventService : IEventService
         );
     }
     #region likes
-    public async Task<bool> LikeEventAsync(int aaugUserId, int eventId)
+    public async Task<bool> LikeEventAsync(int eventId)
     {
-        var existingLike = await unitOfWork.EventLikeRepository.GetUserEventLike(aaugUserId, eventId).FirstOrDefaultAsync();
+        var aaugUser = await tokenService.GetAaugUserFromToken();
+
+        var existingLike = await unitOfWork.EventLikeRepository.GetUserEventLike(aaugUser.Id, eventId).FirstOrDefaultAsync();
         var existingEvent = await unitOfWork.EventRepository.GetEvent(eventId).FirstOrDefaultAsync();
 
         if (existingEvent == null)
@@ -114,7 +116,7 @@ public class EventService : IEventService
         var eventLikeDto = new EventLikeInsertDto
         {
             EventId = eventId,
-            UserId = aaugUserId
+            UserId = aaugUser.Id
         };
         existingEvent.LikeCount++;
         await unitOfWork.EventLikeRepository.InsertLikeAsync(eventLikeDto);

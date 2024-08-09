@@ -12,7 +12,7 @@ public interface IEventService
     Task<IEnumerable<EventGetViewModel>> SearchEventAsync(string keyWord);
     #region likes
     Task<IEnumerable<EventLikeGetViewModel>> GetEventLikesAsync(int eventId);
-    Task<bool> LikeEventAsync(int aaugUserId, int eventId);
+    Task<bool> LikeEventAsync(int eventId);
     #endregion
 
     #region  Admins

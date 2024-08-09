@@ -64,10 +64,11 @@ public class EventController : ControllerBase
     {
         return Ok(await eventService.GetEventLikesAsync(eventId));
     }
-    [HttpPost("LikeEvent/{aaugUserId}/{eventId}")]
-    public async Task<IActionResult> LikeEvent(int aaugUserId, int eventId)
+    [HttpPost("LikeEvent/{eventId}")]
+    [Authorize]
+    public async Task<IActionResult> LikeEvent(int eventId)
     {
-        return Ok(await eventService.LikeEventAsync(aaugUserId, eventId));
+        return Ok(await eventService.LikeEventAsync(eventId));
     }
     #endregion
 }

@@ -1,10 +1,12 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DomainModels.Dtos;
 using AAUG.Service.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
@@ -15,11 +17,13 @@ public class TokenService : ITokenService
     private IConfiguration configuration;
     private readonly UserManager<IdentityUser> userManager;
     private readonly IHttpContextAccessor httpContextAccessor;
-    public TokenService(IConfiguration configuration, UserManager<IdentityUser> userManager, IHttpContextAccessor httpContextAccessor)
+    private IAaugUnitOfWork unitOfWork;
+    public TokenService(IConfiguration configuration, UserManager<IdentityUser> userManager, IHttpContextAccessor httpContextAccessor, IAaugUnitOfWork unitOfWork)
     {
         this.configuration = configuration;
         this.userManager = userManager;
         this.httpContextAccessor = httpContextAccessor;
+        this.unitOfWork = unitOfWork;
     }
 
     public async Task<string> GenerateJwtToken(LoginDto user)
@@ -64,15 +68,27 @@ public class TokenService : ITokenService
         var token = await userManager.GeneratePasswordResetTokenAsync(user);
         return token;
     }
+    public async Task<AaugUserGetDto> GetAaugUserFromToken()
+    {
+        var httpContext = httpContextAccessor.HttpContext;
+        if (httpContext != null)
+        {
+            var user = httpContext.User;
+            if (user != null)
+            {
+                var userId = user.FindFirstValue(ClaimTypes.Email);
+                if (userId != null)
+                {
+                    var aaugUser = await unitOfWork.AaugUserRepository.GetByUserName(userId).FirstAsync();
+                    return aaugUser;
+                }
+            }
+        }
+        throw new Exception("user not found");
+    }
+
     public string GetUserFromToken()
     {
-        var headers = httpContextAccessor.HttpContext.Request.Headers;
-
-        if (headers.ContainsKey("Authorization"))
-        {
-            return headers["Authorization"].ToString();
-        }
-
         return null;
     }
 

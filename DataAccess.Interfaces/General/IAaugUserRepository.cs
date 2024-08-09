@@ -10,4 +10,5 @@ public interface IAaugUserRepository
     IQueryable<AaugUserFullGetDto> GetFullUserInfoByUserId(int Id);
     IQueryable<AaugUser> GetFullUserInfoByUserIdWithTracking(int Id);
     IQueryable<AaugUserGetDto> GetUserByGuId(string guId);
+    IQueryable<AaugUserGetDto> GetByUserName(string Username);
 }

@@ -3,8 +3,6 @@ using AAUG.Api.Middlewares;
 using AAUG.DomainModels;
 using AAUG.Service.Implementations.ViewModelMapper;
 using AutoMapper;
-
-
 using AAUG.ServiceExtentions;
 using Microsoft.AspNetCore.Identity;
 using AAUG.Context.Context;
@@ -23,14 +21,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
-    // .AddJsonOptions(options =>
-    // {
-    //     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
-    // });
+// .AddJsonOptions(options =>
+// {
+//     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+// });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDependency(builder.Configuration);
 
-builder.Services.AddIdentityCore<IdentityUser>()
+builder.Services.AddIdentityCore<IdentityUser>(options =>
+    {
+        options.Password.RequireDigit = false; 
+        options.Password.RequiredLength = 8; 
+        options.Password.RequireNonAlphanumeric = false; 
+        options.Password.RequireUppercase = false; 
+        options.Password.RequireLowercase = false; 
+        options.Password.RequiredUniqueChars = 0; 
+    })
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddApiEndpoints();

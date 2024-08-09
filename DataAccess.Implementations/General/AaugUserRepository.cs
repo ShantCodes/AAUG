@@ -58,13 +58,19 @@ public class AaugUserRepository : EntityRepository<AaugUser>, IAaugUserRepositor
 
     public IQueryable<AaugUser> GetFullUserInfoByUserIdWithTracking(int Id)
     {
-        return GetData(a => a.Id == Id);        
+        return GetData(a => a.Id == Id);
     }
 
     public IQueryable<AaugUserGetDto> GetUserByGuId(string guId)
     {
         return mapper.ProjectTo<AaugUserGetDto>(
             GetData(a => a.UserId == guId)
+        );
+    }
+    public IQueryable<AaugUserGetDto> GetByUserName(string Username)
+    {
+        return mapper.ProjectTo<AaugUserGetDto>(
+            GetData(a => a.Email == Username)
         );
     }
 
