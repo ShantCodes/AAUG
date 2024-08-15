@@ -51,6 +51,7 @@ namespace AAUG.Api.Controllers.Authentication
         }
 
         [HttpPost("resetpassword")]
+        [Authorize]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto resetPasswordDto)
         {
             return Ok(await authService.ResetPasswordAsync(resetPasswordDto));

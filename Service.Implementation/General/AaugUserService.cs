@@ -152,6 +152,6 @@ public class AaugUserService : IAaugUserService
         var user = await userManager.FindByNameAsync(userEmail);
 
         return await unitOfWork.AaugUserRepository.GetUserByGuId(user.Id).FirstOrDefaultAsync();
-    }
+    }    
 
 }

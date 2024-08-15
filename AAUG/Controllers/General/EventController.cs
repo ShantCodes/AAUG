@@ -25,6 +25,7 @@ public class EventController : ControllerBase
         return Ok(await eventService.InsertEventAsync(inputEntity));
     }
     [HttpPut("EditEventAsync")]
+    [Authorize]
     public async Task<IActionResult> EditEvent([FromForm] EventEditViewModel inputEntity)
     {
         return Ok(await eventService.EditEventAsync(inputEntity));

@@ -12,13 +12,10 @@ public class ForgotPasswordDto
 public class ResetPasswordDto
 {
     [Required]
-    public string UserId { get; set; }
+    public string CurrentPassword { get; set; }
 
     [Required]
-    public string Token { get; set; }
-
-    [Required]
-    [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at most {1} characters long.", MinimumLength = 6)]
+    [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at most {1} characters long.", MinimumLength = 8)]
     [DataType(DataType.Password)]
     public string Password { get; set; }
 

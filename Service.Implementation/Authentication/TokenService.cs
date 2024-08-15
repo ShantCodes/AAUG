@@ -26,6 +26,7 @@ public class TokenService : ITokenService
         this.unitOfWork = unitOfWork;
     }
 
+
     public async Task<string> GenerateJwtToken(LoginDto user)
     {
         var userIdentity = await userManager.FindByNameAsync(user.Username);
@@ -85,6 +86,23 @@ public class TokenService : ITokenService
             }
         }
         throw new Exception("user not found");
+    }
+
+    public string GetUserRoleFromToken()
+    {
+        var httpContext = httpContextAccessor.HttpContext;
+        if (httpContext != null)
+        {
+            var user = httpContext.User;
+            if (user != null)
+            {
+                var userRole = user.FindFirstValue(ClaimTypes.Role);
+                if (userRole == null)
+                    return null;
+                return userRole;
+            }
+        }
+        return null;
     }
 
     public string GetUserFromToken()

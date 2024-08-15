@@ -81,7 +81,5 @@ public class EventEditViewModel
 
     public string? Presentator { get; set; }
 
-    public int? PresentatorUserId { get; set; }
-
     public IFormFile? ThumbNailFile { get; set; }
 }

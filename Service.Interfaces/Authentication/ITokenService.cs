@@ -8,5 +8,6 @@ public interface ITokenService
     string GetUserFromToken();
     Task<string> GeneratePasswordResetTokenAsync(string email);
     Task<AaugUserGetDto> GetAaugUserFromToken();
+    string GetUserRoleFromToken();
 
 }

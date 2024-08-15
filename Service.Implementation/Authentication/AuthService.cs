@@ -6,6 +6,7 @@ using AAUG.Service.Interfaces;
 using AAUG.Service.Interfaces.EmailSender;
 using AAUG.Service.Interfaces.General;
 using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 
@@ -19,12 +20,14 @@ public class AuthService : IAuthService
     private readonly IEmailSenderService emailSenderService;
     private readonly IAaugUserService aaugUserService;
     private readonly IMapper mapper;
+    private readonly IHttpContextAccessor httpContextAccessor;
     public AuthService(IConfiguration configuration,
                         UserManager<IdentityUser> userManager,
                         ITokenService tokenService,
                         IEmailSenderService emailSenderService,
                         IAaugUserService aaugUserService,
-                        IMapper mapper)
+                        IMapper mapper,
+                        IHttpContextAccessor httpContextAccessor)
     {
         this.configuration = configuration;
         this.userManager = userManager;
@@ -32,6 +35,7 @@ public class AuthService : IAuthService
         this.emailSenderService = emailSenderService;
         this.aaugUserService = aaugUserService;
         this.mapper = mapper;
+        this.httpContextAccessor = httpContextAccessor;
     }
     public async Task<bool> Login(LoginDto user)
     {
@@ -79,22 +83,28 @@ public class AuthService : IAuthService
         await emailSenderService.SendEmailAsync(forgotPasswordDto.Email, "Reset Password",
             $"Please reset your password by clicking here: <a href='{callbackUrl}'>link</a>");
 
-            return true;
+        return true;
     }
 
     public async Task<bool> ResetPasswordAsync(ResetPasswordDto resetPasswordDto)
     {
-        var user = await userManager.FindByIdAsync(resetPasswordDto.UserId);
+        var aaugUser = await tokenService.GetAaugUserFromToken();
+        if (aaugUser == null)
+        {
+            throw new Exception("user not found or wrong inputs");
+        }
+        var user = await userManager.FindByIdAsync(aaugUser.UserId);
         if (user == null)
         {
-            throw new ApplicationException("User not found.");
+            throw new Exception("User not found");
         }
 
-        var result = await userManager.ResetPasswordAsync(user, resetPasswordDto.Token, resetPasswordDto.Password);
+        var result = await userManager.ChangePasswordAsync(user, resetPasswordDto.CurrentPassword, resetPasswordDto.Password);
+
         if (!result.Succeeded)
         {
             var errors = string.Join(", ", result.Errors.Select(e => e.Description));
-            throw new ApplicationException($"Reset password failed: {errors}");
+            throw new Exception($"Password reset failed: {errors}");
         }
 
         return true;

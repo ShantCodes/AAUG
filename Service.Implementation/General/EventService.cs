@@ -8,6 +8,7 @@ using AAUG.Service.Interfaces.Media;
 using AutoMapper;
 using Azure.Identity;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 
 namespace AAUG.Service.Implementations.General;
@@ -68,21 +69,43 @@ public class EventService : IEventService
 
     public async Task<EventEditViewModel> EditEventAsync(EventEditViewModel inputEntity)
     {
+        var aaugUser = await tokenService.GetAaugUserFromToken();
+        var userRole = tokenService.GetUserRoleFromToken();
+        if (aaugUser == null)
+            throw new Exception("User not found");
+
         var existingData = await unitOfWork.EventRepository.GetEvent(inputEntity.Id).FirstOrDefaultAsync();
+
         if (existingData == null)
             throw new Exception("the Event not found or the data is empty");
-        var eventdto = mapper.Map<EventEditDto>(inputEntity);
-        mapper.Map(eventdto, existingData);
 
-        if (inputEntity.ThumbNailFile != null)
+        if (existingData.PresentatorUserId == aaugUser.Id || userRole == "Varich" || userRole == "King" || userRole == "Hanxnakhumb")
         {
-            var newMediaFileDto = await mediaFileService.InsertEventsMediaFileAsync(inputEntity.ThumbNailFile, existingData.ThumbNailFileId);
-            existingData.ThumbNailFileId = newMediaFileDto.Id;
-        }
-        await unitOfWork.SaveChangesAsync();
-        await unitOfWork.CommitTransactionAsync();
+            var eventDto = mapper.Map<EventEditDto>(inputEntity);
+            if (existingData.ThumbNailFileId.HasValue)
+            {
+                eventDto.ThumbNailFileId = existingData.ThumbNailFileId;
+            }
+            eventDto.PresentatorUserId = aaugUser.Id;
+            mapper.Map(eventDto, existingData);
 
-        return inputEntity;
+            if (inputEntity.ThumbNailFile != null)
+            {
+                var newMediaFileDto = await mediaFileService.InsertEventsMediaFileAsync(inputEntity.ThumbNailFile, existingData.ThumbNailFileId);
+                existingData.ThumbNailFileId = newMediaFileDto.Id;
+            }
+
+            await unitOfWork.SaveChangesAsync();
+            await unitOfWork.CommitTransactionAsync();
+
+            return inputEntity;
+        }
+        else
+        {
+            throw new Exception("this user is not allowed to edit this event");
+        }
+
+
     }
 
     public async Task<IEnumerable<EventGetViewModel>> SearchEventAsync(string keyWord)
@@ -101,7 +124,7 @@ public class EventService : IEventService
 
         if (existingEvent == null)
             throw new Exception("Event not found");
-            
+
         if (existingLike != null)
         {
             var deleteEntity = mapper.Map<EventLikeDeleteDto>(existingLike);
