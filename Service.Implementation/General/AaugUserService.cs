@@ -56,19 +56,16 @@ public class AaugUserService : IAaugUserService
         }
         return result;
     }
-    public async Task<IList<string>> GetUserRolesAsync(string userId)
-    {
-        var user = await userManager.FindByIdAsync(userId);
-        if (user == null)
-        {
-            return null;
-        }
-        return await userManager.GetRolesAsync(user);
-    }
+
 
     public async Task<AaugUserInsertViewModel> InsertUserInfoAsync(AaugUserInsertViewModel inputEntity)
     {
         var entity = mapper.Map<AaugUsersInsertDto>(inputEntity);
+        var existingUser = await unitOfWork.AaugUserRepository.GetByUserName(inputEntity.Name).FirstOrDefaultAsync();
+        if (existingUser != null)
+        {
+            throw new Exception("UserName already exists, try another");
+        }
         await unitOfWork.AaugUserRepository.AddAsync(entity);
 
         await unitOfWork.SaveChangesAsync();
@@ -102,20 +99,22 @@ public class AaugUserService : IAaugUserService
         if (entity == null)
             throw new Exception("the user not found");
 
-        var NewMediaFileDto = await mediaFileService.InsertUserMediaFileAsync(receiptFile, entity.ReceiptFileId); 
+        var NewMediaFileDto = await mediaFileService.InsertUserMediaFileAsync(receiptFile, entity.ReceiptFileId);
         entity.ReceiptFileId = NewMediaFileDto.Id;
-        entity.IsApproved = false;        
+        entity.IsApproved = false;
         entity.SubscribeDate = DateTime.UtcNow;
 
         await unitOfWork.SaveChangesAsync();
-        await unitOfWork.CommitTransactionAsync();   
+        await unitOfWork.CommitTransactionAsync();
 
         return mapper.Map<AaugUserFullGetViewModel>(entity);
     }
 
     public async Task<AaugUserFullEditViewModel> EditAaugUserFullAsync(AaugUserFullEditViewModel inputEntity)
     {
-        var existingRecord = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(inputEntity.Id).FirstOrDefaultAsync();
+        var aaugUser = await tokenService.GetAaugUserFromToken();
+        var userRole = tokenService.GetUserRoleFromToken();
+        var existingRecord = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(aaugUser.Id).FirstOrDefaultAsync();
         if (existingRecord == null)
             throw new Exception("the user data not found");
 
@@ -132,16 +131,6 @@ public class AaugUserService : IAaugUserService
 
         return inputEntity;
     }
-
-    public async Task<IEnumerable<AaugUserGetViewModel>> GetAllUsersAsync()
-    {
-        var entity = await unitOfWork.AaugUserRepository.GetUsersAsync();
-        var data = mapper.Map<IEnumerable<AaugUserGetViewModel>>(
-            entity
-        );
-        return data;
-    }
-
     public async Task<AaugUserGetDto> GetCurrentUserInfo()
     {
         var userContext = httpContextAccessor.HttpContext.User;
@@ -152,6 +141,66 @@ public class AaugUserService : IAaugUserService
         var user = await userManager.FindByNameAsync(userEmail);
 
         return await unitOfWork.AaugUserRepository.GetUserByGuId(user.Id).FirstOrDefaultAsync();
-    }    
+    }
+
+    #region Admins
+
+    public async Task<IList<string>> GetUserRolesAsync(string userId)
+    {
+        var user = await userManager.FindByIdAsync(userId);
+        if (user == null)
+        {
+            return null;
+        }
+        return await userManager.GetRolesAsync(user);
+    }
+    public async Task<IEnumerable<AaugUserGetViewModel>> GetAllUsersAsync()
+    {
+        var entity = await unitOfWork.AaugUserRepository.GetUsersAsync();
+        var data = mapper.Map<IEnumerable<AaugUserGetViewModel>>(
+            entity
+        );
+        return data;
+    }
+
+    public async Task<bool> DeleteUserAsync(int aaugUserId)
+    {
+        var aaugUser = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserId(aaugUserId).FirstOrDefaultAsync();
+        if (aaugUser == null)
+            throw new Exception("user not found");
+
+        var userId = aaugUser.UserId;
+        await unitOfWork.AaugUserRepository.DeleteUserAsync(aaugUserId);
+        await unitOfWork.SaveChangesAsync();
+
+        await userService.DeleteUserAsync(userId);
+
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+
+        return true;
+    }
+
+    public async Task<bool> ApproveAaugUserAsync(int aaugUserId, bool approveState)
+    {
+        var entity = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(aaugUserId).FirstOrDefaultAsync();
+        if (entity == null)
+            throw new Exception("user not found");
+
+        entity.IsApproved = approveState;
+
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+
+        return true;
+    }
+
+    public async Task<IEnumerable<AaugUserGetViewModel>> GetNotApprovedAaugUsersAsync()
+    {
+        return mapper.Map<IEnumerable<AaugUserGetViewModel>>(
+            await unitOfWork.AaugUserRepository.GetNotApprovedAaugUsers().ToListAsync()
+        );
+    }
+    #endregion
 
 }

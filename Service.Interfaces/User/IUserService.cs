@@ -10,5 +10,6 @@ public interface IUserService
     Task<string> AssignUserRolesAsync(string userId, short roleId);
     Task<IdentityResult> UnassignRoleFromUserAsync(string userId, short roleId);
     Task<IEnumerable<RoleDto>> GetAllRolesAsync();
-    
+    Task<IdentityResult> DeleteUserAsync(string userId);
+
 }

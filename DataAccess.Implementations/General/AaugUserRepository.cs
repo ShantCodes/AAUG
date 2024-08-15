@@ -24,6 +24,13 @@ public class AaugUserRepository : EntityRepository<AaugUser>, IAaugUserRepositor
         return AddAsync(mapper.Map<AaugUser>(inputEntity));
     }
 
+    public IQueryable<AaugUserGetDto> GetNotApprovedAaugUsers()
+    {
+        return mapper.ProjectTo<AaugUserGetDto>(
+            GetData(a => !a.IsApproved)
+        );
+    }
+
     public Task<List<AaugUser>> GetUsersAsync()
     {
         var data = GetData()
@@ -72,6 +79,11 @@ public class AaugUserRepository : EntityRepository<AaugUser>, IAaugUserRepositor
         return mapper.ProjectTo<AaugUserGetDto>(
             GetData(a => a.Email == Username)
         );
+    }
+
+    public Task<AaugUser> DeleteUserAsync(int aaugUserId)
+    {
+        return DeleteAsync(aaugUserId);
     }
 
 }

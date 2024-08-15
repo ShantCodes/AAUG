@@ -27,24 +27,28 @@ public class AaugUserController : ControllerBase
     }
 
     [HttpGet("GetAllUsers")]
+    [Authorize(Roles = "King,Varich")]
     public async Task<IActionResult> GetAllUsers()
     {
         return Ok(await AaugUserService.GetAllUsersAsync());
     }
 
     [HttpGet("GetAllRoles")]
+    [Authorize(Roles = "King,Varich")]
     public async Task<IActionResult> GetAllUserRoles()
     {
         return Ok(await userService.GetAllRolesAsync());
     }
 
     [HttpPost("AssignRolesToUser")]
+    [Authorize(Roles = "King,Varich")]
     public async Task<IActionResult> AssignRolesToUser(string userId, short roleId)
     {
         return Ok(await userService.AssignUserRolesAsync(userId, roleId));
     }
 
     [HttpDelete("UnAssignRolesToUser")]
+    [Authorize(Roles = "King,Varich")]
     public async Task<IActionResult> UnAssignRolesToUser(string userId, short roleId)
     {
         return Ok(await userService.UnassignRoleFromUserAsync(userId, roleId));
@@ -70,6 +74,24 @@ public class AaugUserController : ControllerBase
     public async Task<IActionResult> EditAaugUserFull(AaugUserFullEditViewModel inputEntity)
     {
         return Ok(await AaugUserService.EditAaugUserFullAsync(inputEntity));
+    }
+    [HttpDelete("DeleteUser")]
+    [Authorize(Roles = "Varich,King")]
+    public async Task<IActionResult> DeleteUser(int aaugUserId)
+    {
+        return Ok(await AaugUserService.DeleteUserAsync(aaugUserId));
+    }
+    [HttpGet("GetNotApprovedUsers")]
+    [Authorize(Roles = "King,Varich")]
+    public async Task<IActionResult> GetNotApprovedUsers()
+    {
+        return Ok(await AaugUserService.GetNotApprovedAaugUsersAsync());
+    }
+    [HttpPut("ApproveAaugUser")]
+    [Authorize(Roles = "King,Varich")]
+    public async Task<IActionResult> ApproveAaugUser(int aaugUserId, bool IsApproved)
+    {
+        return Ok(await AaugUserService.ApproveAaugUserAsync(aaugUserId, IsApproved));
     }
 
 }

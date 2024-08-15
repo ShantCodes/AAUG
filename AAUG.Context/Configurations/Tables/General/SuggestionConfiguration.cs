@@ -34,9 +34,9 @@ internal class SuggestionConfiguration : IEntityTypeConfiguration<Suggestion>
         .WithOne(a => a.Suggestion)
         .HasForeignKey(a => a.SuggestionId);
 
-        builder.HasOne(a => a.AaugUser)
-        .WithMany(a => a.Suggestions)
-        .HasForeignKey(a => a.UserId);
+        // builder.HasOne(a => a.AaugUser)
+        // .WithMany(a => a.Suggestions)
+        // .HasForeignKey(a => a.UserId);
         #endregion
     }
 }

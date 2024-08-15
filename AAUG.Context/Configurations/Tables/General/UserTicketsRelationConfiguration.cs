@@ -27,9 +27,9 @@ public class UserTicketsRelationConfiguration
             #endregion
 
             #region Relations
-            builder.HasOne(utr => utr.AaugUser)
-                .WithMany(au => au.UserTicketsRelations)
-                .HasForeignKey(utr => utr.UserId);
+            // builder.HasOne(utr => utr.AaugUser)
+            //     .WithMany(au => au.UserTicketsRelations)
+            //     .HasForeignKey(utr => utr.UserId);
 
             builder.HasOne(utr => utr.Ticket)
                 .WithMany(t => t.UserTicketsRelations)

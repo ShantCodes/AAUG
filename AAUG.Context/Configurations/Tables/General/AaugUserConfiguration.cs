@@ -46,41 +46,41 @@ namespace AAUG.Context.Configurations.Tables.General
                 .WithOne(a => a.PresentatorUser)
                 .HasForeignKey(a => a.PresentatorUserId);
 
-            builder.HasMany(a => a.UserMajors)
-            .WithOne(a => a.User)
-            .HasForeignKey(a => a.UserId);
+            // builder.HasMany(a => a.UserMajors)
+            // .WithOne(a => a.User)
+            // .HasForeignKey(a => a.UserId);
 
-            builder.HasMany(a => a.UserTalents)
-            .WithOne(a => a.User)
-            .HasForeignKey(a => a.UserId);
+            // builder.HasMany(a => a.UserTalents)
+            // .WithOne(a => a.User)
+            // .HasForeignKey(a => a.UserId);
 
             builder.HasMany(a => a.Camps)
             .WithOne(a => a.RepresentatorUser)
             .HasForeignKey(a => a.RepresentatorUserId);
 
-            builder.HasMany(a => a.UserTicketsRelations)
-                .WithOne(a => a.AaugUser)
-                .HasForeignKey(a => a.UserId);
+            // builder.HasMany(a => a.UserTicketsRelations)
+            //     .WithOne(a => a.AaugUser)
+            //     .HasForeignKey(a => a.UserId);
 
-            builder.HasOne(u => u.ProfilePictureFile)
-            .WithMany(m => m.AaugUserProfilePictureFiles)
-            .HasForeignKey(u => u.ProfilePictureFileId)
-            .IsRequired(false);
+            // builder.HasOne(u => u.ProfilePictureFile)
+            // .WithMany(m => m.AaugUserProfilePictureFiles)
+            // .HasForeignKey(u => u.ProfilePictureFileId)
+            // .IsRequired(false);
 
-            builder.HasOne(u => u.NationalCardFile)
-                .WithMany(m => m.AaugUserNationalCardFiles)
-                .HasForeignKey(u => u.NationalCardFileId)
-                .IsRequired();
+            // builder.HasOne(u => u.NationalCardFile)
+            //     .WithMany(m => m.AaugUserNationalCardFiles)
+            //     .HasForeignKey(u => u.NationalCardFileId)
+            //     .IsRequired();
 
-            builder.HasOne(u => u.UniversityCardFile)
-                .WithMany(m => m.AaugUserUniversityCardFiles)
-                .HasForeignKey(u => u.UniversityCardFileId)
-                .IsRequired();
+            // builder.HasOne(u => u.UniversityCardFile)
+            //     .WithMany(m => m.AaugUserUniversityCardFiles)
+            //     .HasForeignKey(u => u.UniversityCardFileId)
+            //     .IsRequired();
 
-            builder.HasOne(u => u.ReceiptFile)
-                .WithMany(m => m.AaugUserReceiptFiles)
-                .HasForeignKey(u => u.ReceiptFileId)
-                .IsRequired();
+            // builder.HasOne(u => u.ReceiptFile)
+            //     .WithMany(m => m.AaugUserReceiptFiles)
+            //     .HasForeignKey(u => u.ReceiptFileId)
+            //     .IsRequired();
 
 
             #endregion

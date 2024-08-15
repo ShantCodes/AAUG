@@ -74,4 +74,18 @@ public class UserService : IUserService
             .ToList();
     }
 
+    public async Task<IdentityResult> DeleteUserAsync(string userId)
+    {
+        var user = await userManager.FindByIdAsync(userId);
+        if (user != null)
+        {
+            var result = await userManager.DeleteAsync(user);
+            return result;
+        }
+        else
+        {
+            return IdentityResult.Failed(new IdentityError { Description = "User not found" });
+        }
+    }
+
 }

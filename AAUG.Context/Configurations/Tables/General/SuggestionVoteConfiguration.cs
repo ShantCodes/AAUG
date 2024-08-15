@@ -26,9 +26,9 @@ internal class SuggestionVoteConfiguration : IEntityTypeConfiguration<Suggestion
         #endregion
 
         #region Relations
-        builder.HasOne(a => a.AaugUser)
-        .WithMany(a => a.SuggestionVotes)
-        .HasForeignKey(a => a.UserId);
+        // builder.HasOne(a => a.AaugUser)
+        // .WithMany(a => a.SuggestionVotes)
+        // .HasForeignKey(a => a.UserId);
 
         builder.HasOne(a => a.Suggestion)
         .WithMany(a => a.SuggestionVotes)

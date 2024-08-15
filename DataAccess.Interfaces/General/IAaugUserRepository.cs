@@ -11,4 +11,6 @@ public interface IAaugUserRepository
     IQueryable<AaugUser> GetFullUserInfoByUserIdWithTracking(int Id);
     IQueryable<AaugUserGetDto> GetUserByGuId(string guId);
     IQueryable<AaugUserGetDto> GetByUserName(string Username);
+    Task<AaugUser> DeleteUserAsync(int aaugUserId);
+    IQueryable<AaugUserGetDto> GetNotApprovedAaugUsers();
 }

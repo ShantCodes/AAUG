@@ -14,5 +14,9 @@ public interface IAaugUserService
     Task<AaugUserFullEditViewModel> EditAaugUserFullAsync(AaugUserFullEditViewModel inputEntity);
     Task<IEnumerable<AaugUserGetViewModel>> GetAllUsersAsync();
     Task<AaugUserGetDto> GetCurrentUserInfo();
-
+    #region admins
+    Task<bool> DeleteUserAsync(int aaugUserId);
+    Task<bool> ApproveAaugUserAsync(int aaugUserId, bool approveState);
+    Task<IEnumerable<AaugUserGetViewModel>> GetNotApprovedAaugUsersAsync();
+    #endregion
 }

@@ -11,5 +11,5 @@ public partial class UserTalent
 
     public int UserId { get; set; }
 
-    public virtual AaugUser? User { get; set; } = null!;
+    // public virtual AaugUser? User { get; set; } = null!;
 }

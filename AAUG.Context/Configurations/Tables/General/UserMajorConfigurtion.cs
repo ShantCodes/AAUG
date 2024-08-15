@@ -26,10 +26,10 @@ namespace AAUG.Context.Configurations.Tables.General
             #endregion
 
             #region Relations
-            builder.HasOne(um => um.User)
-                            .WithMany(u => u.UserMajors)
-                            .HasForeignKey(um => um.UserId)
-                            .OnDelete(DeleteBehavior.Cascade);
+            // builder.HasOne(um => um.User)
+            //                 .WithMany(u => u.UserMajors)
+            //                 .HasForeignKey(um => um.UserId)
+            //                 .OnDelete(DeleteBehavior.Cascade);
             #endregion
         }
     }
