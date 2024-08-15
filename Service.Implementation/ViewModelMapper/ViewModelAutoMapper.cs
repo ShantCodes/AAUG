@@ -54,6 +54,9 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             .ForMember(a => a.UniversityCardFileId, a => a.Ignore());
 
             CreateMap<AaugUserGetDto, AaugUserGetViewModel>();
+            CreateMap<AaugUserFullGetDto, AaugUserFullInsertViewModel>();
+            CreateMap<AaugUser, AaugUserFullGetViewModel>();
+            CreateMap<AaugUser, AaugUserWithProfilePicureGetViewModel>();
         }
 
         private void NewsProfile()

@@ -9,9 +9,10 @@ public interface IAaugUserService
 {
     Task<AaugUserInsertViewModel> InsertUserInfoAsync(AaugUserInsertViewModel inputEntity);
     Task<IdentityUser> GetUserByIdAsync(string userId);
-    Task<AaugUserFullInsertViewModel> InsertFullUserInfoAsync(AaugUserFullInsertViewModel inputEntity);
-    Task<AaugUserFullGetViewModel> UpdateSubscribtion(int userId, IFormFile receiptFile);
+    Task<AaugUserFullGetViewModel> InsertFullUserInfoAsync(AaugUserFullInsertViewModel inputEntity);
+    Task<AaugUserFullGetViewModel> UpdateSubscribtion(IFormFile receiptFile);
     Task<AaugUserFullEditViewModel> EditAaugUserFullAsync(AaugUserFullEditViewModel inputEntity);
+    Task<AaugUserWithProfilePicureGetViewModel> InsertProfilePictureAsync(IFormFile profilePicture);
     Task<IEnumerable<AaugUserGetViewModel>> GetAllUsersAsync();
     Task<AaugUserGetDto> GetCurrentUserInfo();
     #region admins

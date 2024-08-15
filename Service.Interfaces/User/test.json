@@ -1,0 +1,89 @@
+[
+    {
+      "id": 4,
+      "eventTitle": "filestest",
+      "eventDetails": "this is the file insertion test",
+      "eventDate": "0001-01-01",
+      "presentator": "shant",
+      "presentatorUserId": 3,
+      "thumbNailFileId": 2,
+      "isApproved": true,
+      "hasHappened": false,
+      "likeCount": 0,
+      "aaugUserGetViewModel": null,
+      "thumbnailFile": {
+        "id": 2,
+        "gid": "89e4bb7a-e5d6-479d-823d-372179414720",
+        "mediaFolderId": 1,
+        "name": "ed670eaab6274dbdabc2a9986466e877 enigma",
+        "extension": ".jpeg",
+        "size": 127.2880859375,
+        "isOmit": false,
+        "date": "2024-07-25T14:59:25.663",
+        "folderPathTypeId": 21,
+        "mediaFolder": {
+          "id": 1,
+          "mediaDriveId": null,
+          "name": "E:\\AaugFiles\\EventFiles"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "eventTitle": "filestest",
+      "eventDetails": "this is the file insertion test",
+      "eventDate": "0001-01-01",
+      "presentator": "shant",
+      "presentatorUserId": 3,
+      "thumbNailFileId": 3,
+      "isApproved": true,
+      "hasHappened": false,
+      "likeCount": 0,
+      "aaugUserGetViewModel": null,
+      "thumbnailFile": {
+        "id": 3,
+        "gid": "a275f2ae-efb1-484c-9c79-83304cfc61bf",
+        "mediaFolderId": 1,
+        "name": "ed670eaab6274dbdabc2a9986466e877 enigma",
+        "extension": ".jpeg",
+        "size": 127.2880859375,
+        "isOmit": false,
+        "date": "2024-07-25T15:01:36.98",
+        "folderPathTypeId": 21,
+        "mediaFolder": {
+          "id": 1,
+          "mediaDriveId": null,
+          "name": "E:\\AaugFiles\\EventFiles"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "eventTitle": "this is the king",
+      "eventDetails": "i am indeed the right user bro",
+      "eventDate": "0001-01-01",
+      "presentator": "Shant",
+      "presentatorUserId": 3,
+      "thumbNailFileId": 9,
+      "isApproved": true,
+      "hasHappened": false,
+      "likeCount": 1,
+      "aaugUserGetViewModel": null,
+      "thumbnailFile": {
+        "id": 9,
+        "gid": "3b7b2b85-4c36-42af-a53c-fd0d8803d23d",
+        "mediaFolderId": 1,
+        "name": "enigma 2d",
+        "extension": ".png",
+        "size": 113.0068359375,
+        "isOmit": false,
+        "date": "2024-08-15T09:45:05.23",
+        "folderPathTypeId": 21,
+        "mediaFolder": {
+          "id": 1,
+          "mediaDriveId": null,
+          "name": "E:\\AaugFiles\\EventFiles"
+        }
+      }
+    }
+  ]

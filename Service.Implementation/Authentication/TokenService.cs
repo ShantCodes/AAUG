@@ -77,10 +77,13 @@ public class TokenService : ITokenService
             var user = httpContext.User;
             if (user != null)
             {
-                var userId = user.FindFirstValue(ClaimTypes.Email);
-                if (userId != null)
+                var userName = user.FindFirstValue(ClaimTypes.Email);
+                if (userName != null)
                 {
-                    var aaugUser = await unitOfWork.AaugUserRepository.GetByUserName(userId).FirstAsync();
+                    var userGuId = await userManager.FindByNameAsync(userName);
+                    if (userGuId == null)
+                        throw new Exception("user not found");
+                    var aaugUser = await unitOfWork.AaugUserRepository.GetUserByGuId(userGuId.Id).FirstAsync();
                     return aaugUser;
                 }
             }

@@ -5,7 +5,7 @@ namespace AAUG.DomainModels.Models.Tables.General;
 
 public partial class AaugUser
 {
-    public int? Id { get; set; }
+    public int Id { get; set; }
 
     public string? UserId { get; set; }
 

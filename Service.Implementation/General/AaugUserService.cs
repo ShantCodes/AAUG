@@ -73,29 +73,33 @@ public class AaugUserService : IAaugUserService
         return inputEntity;
     }
 
-    public async Task<AaugUserFullInsertViewModel> InsertFullUserInfoAsync(AaugUserFullInsertViewModel inputEntity)
+    public async Task<AaugUserFullGetViewModel> InsertFullUserInfoAsync(AaugUserFullInsertViewModel inputEntity)
     {
-        var existingEntity = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserId(inputEntity.Id).FirstOrDefaultAsync();
-
-        var profilePictureFile = await mediaFileService.InsertUserMediaFileAsync(inputEntity.ProfilePictureFile);
+        var aaugUser = await tokenService.GetAaugUserFromToken();
+        var existingEntity = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(aaugUser.Id).FirstOrDefaultAsync();
+;
         var nationalCardFile = await mediaFileService.InsertUserMediaFileAsync(inputEntity.NationalCardFile);
         var universityCardFile = await mediaFileService.InsertUserMediaFileAsync(inputEntity.UniversityCardFile);
         var receiptFile = await mediaFileService.InsertUserMediaFileAsync(inputEntity.ReceiptFile);
+
         existingEntity.NationalCardFileId = nationalCardFile.Id;
         existingEntity.UniversityCardFileId = universityCardFile.Id;
-        existingEntity.ProfilePictureFileId = profilePictureFile.Id;
         existingEntity.ReceiptFileId = receiptFile.Id;
+
+        existingEntity.SubscribeDate = DateTime.UtcNow;
 
         await unitOfWork.SaveChangesAsync();
         await unitOfWork.CommitTransactionAsync();
 
-        return mapper.Map<AaugUserFullInsertViewModel>(existingEntity);
+        return mapper.Map<AaugUserFullGetViewModel>(existingEntity);
 
     }
 
-    public async Task<AaugUserFullGetViewModel> UpdateSubscribtion(int userId, IFormFile receiptFile)
+    public async Task<AaugUserFullGetViewModel> UpdateSubscribtion(IFormFile receiptFile)
     {
-        var entity = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(userId).FirstOrDefaultAsync();
+        var aaugUser = await tokenService.GetAaugUserFromToken();
+
+        var entity = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(aaugUser.Id).FirstOrDefaultAsync();
         if (entity == null)
             throw new Exception("the user not found");
 
@@ -108,6 +112,20 @@ public class AaugUserService : IAaugUserService
         await unitOfWork.CommitTransactionAsync();
 
         return mapper.Map<AaugUserFullGetViewModel>(entity);
+    }
+
+    public async Task<AaugUserWithProfilePicureGetViewModel> InsertProfilePictureAsync(IFormFile profilePicture)
+    {
+        var aaugUser = await tokenService.GetAaugUserFromToken();
+        var existingRecord = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(aaugUser.Id).FirstOrDefaultAsync();
+
+        var profilePictureFile = await mediaFileService.InsertUserMediaFileAsync(profilePicture);
+        existingRecord.ProfilePictureFileId = profilePictureFile.Id;
+
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+
+        return mapper.Map<AaugUserWithProfilePicureGetViewModel>(existingRecord);
     }
 
     public async Task<AaugUserFullEditViewModel> EditAaugUserFullAsync(AaugUserFullEditViewModel inputEntity)
@@ -140,7 +158,9 @@ public class AaugUserService : IAaugUserService
         var userEmail = userContext.FindFirst(ClaimTypes.Email)?.Value;
         var user = await userManager.FindByNameAsync(userEmail);
 
-        return await unitOfWork.AaugUserRepository.GetUserByGuId(user.Id).FirstOrDefaultAsync();
+        return mapper.Map<AaugUserGetDto>(
+            await unitOfWork.AaugUserRepository.GetUserByGuId(user.Id).FirstOrDefaultAsync()
+        );
     }
 
     #region Admins

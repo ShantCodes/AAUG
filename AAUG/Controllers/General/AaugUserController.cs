@@ -66,9 +66,16 @@ public class AaugUserController : ControllerBase
         return Ok(await AaugUserService.InsertFullUserInfoAsync(insertEntity));
     }
     [HttpPost("updateSubscribtion")]
-    public async Task<IActionResult> updateSubscribtion(int userId, IFormFile file)
+    [Authorize]
+    public async Task<IActionResult> updateSubscribtion(IFormFile file)
     {
-        return Ok(await AaugUserService.UpdateSubscribtion(userId, file));
+        return Ok(await AaugUserService.UpdateSubscribtion(file));
+    }
+    [HttpPut("InsertProfilePicture")]
+    [Authorize]
+    public async Task<IActionResult> InsertProfilePicture(IFormFile profilePictureFile)
+    {
+        return Ok(await AaugUserService.InsertProfilePictureAsync(profilePictureFile));
     }
     [HttpPut("EditAaugUserFull")]
     public async Task<IActionResult> EditAaugUserFull(AaugUserFullEditViewModel inputEntity)

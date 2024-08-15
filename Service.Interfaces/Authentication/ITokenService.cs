@@ -1,4 +1,5 @@
 ﻿using AAUG.DomainModels.Dtos;
+using AAUG.DomainModels.Models.Tables.General;
 
 namespace AAUG.Service.Interfaces;
 
