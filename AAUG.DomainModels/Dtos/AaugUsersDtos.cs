@@ -1,4 +1,6 @@
-﻿namespace AAUG.DomainModels.Dtos;
+﻿using AAUG.DomainModels.Dtos.Media;
+
+namespace AAUG.DomainModels.Dtos;
 
 public class AaugUsersInsertDto
 {
@@ -72,6 +74,25 @@ public class AaugUserGetDto
     public string? NameArmenian { get; set; }
 
     public string? LastNameArmenian { get; set; }
+
+    public bool IsApproved { get; set; }
+}
+
+public class AaugUserWithProfilePictureGetDto
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = null!;
+    public string? UserId { get; set; }
+
+    public string LastName { get; set; } = null!;
+
+    public string? NameArmenian { get; set; }
+
+    public string? LastNameArmenian { get; set; }
+
+    public string? Email { get; set; }
+    public int? ProfilePictureFileId { get; set; }
+    public MediaFileGetDto? ProfilePictureFile { get; set; }
 }
 
 public class AaugUserFullGetDto

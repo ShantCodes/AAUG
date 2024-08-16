@@ -57,16 +57,24 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             CreateMap<AaugUserFullGetDto, AaugUserFullInsertViewModel>();
             CreateMap<AaugUser, AaugUserFullGetViewModel>();
             CreateMap<AaugUser, AaugUserWithProfilePicureGetViewModel>();
+
+            CreateMap<AaugUserWithProfilePictureGetDto, AaugUserWithProfilePicureGetViewModel>();
         }
 
         private void NewsProfile()
         {
             CreateMap<NewsForInsertDto, NewsForInsertViewModel>();
             CreateMap<NewsForInsertDto, NewsForShowViewModel>();
-            CreateMap<NewsForInsertViewModel, NewsForInsertDto>();
+            CreateMap<NewsForInsertViewModel, NewsForInsertDto>()
+            .ForMember(a => a.NewsFileId, a => a.Ignore());
             CreateMap<News, NewsForShowViewModel>();
             CreateMap<NewsForInsertViewModel, News>();
             CreateMap<NewsForEditViewModel, News>();
+            CreateMap<News, NewsForShowViewModel>();
+            CreateMap<NewsForEditViewModel, NewsForEditDto>()
+            .ForMember(a => a.NewsFileId, a => a.Ignore());
+
+            CreateMap<NewsGetDto, NewsForShowViewModel>();
         }
     }
 }

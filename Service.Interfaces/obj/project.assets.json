@@ -3512,11 +3512,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj",
+      "projectUniqueName": "D:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj",
       "projectName": "AAUG.Service.Interfaces",
-      "projectPath": "d:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj",
+      "projectPath": "D:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "d:\\AAUG\\Project\\clone\\Service.Interfaces\\obj\\",
+      "outputPath": "D:\\AAUG\\Project\\clone\\Service.Interfaces\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

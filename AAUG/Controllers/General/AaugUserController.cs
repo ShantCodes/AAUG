@@ -32,7 +32,12 @@ public class AaugUserController : ControllerBase
     {
         return Ok(await AaugUserService.GetAllUsersAsync());
     }
-
+    [HttpGet("SearchUsers/{name}")]
+    [Authorize(Roles = "King,Varich")]
+    public async Task<IActionResult> SearchUsers(string name)
+    {
+        return Ok(await AaugUserService.SearchAaugUserAsynv(name));
+    }
     [HttpGet("GetAllRoles")]
     [Authorize(Roles = "King,Varich")]
     public async Task<IActionResult> GetAllUserRoles()

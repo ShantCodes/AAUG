@@ -5,6 +5,7 @@ using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DataAccess.Interfaces.General;
 using AAUG.DomainModels;
 using AAUG.DomainModels.Models.Tables.General;
+using AAUG.DomainModels.ViewModels;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,14 +21,21 @@ namespace AAUG.DataAccess.Implementations.General
             this.mapper = mapper;
         }
 
+        public IQueryable<NewsGetDto> GetNewsByTitle(string newsTitle)
+        {
+            return mapper.ProjectTo<NewsGetDto>(
+                GetData(a => a.NewsTitle.Contains(newsTitle))
+            );
+        }
+
         public Task<News> FirstAsync(int id)
         {
             return GetData(a => a.Id == id).FirstAsync();
         }
 
-        public IQueryable<NewsForInsertDto> GetAllNews()
+        public IQueryable<NewsGetDto> GetAllNews()
         {
-            return mapper.ProjectTo<NewsForInsertDto>(GetData());
+            return mapper.ProjectTo<NewsGetDto>(GetData());
         }
 
         public Task<News> InsertNews(NewsForInsertDto inputEntity)

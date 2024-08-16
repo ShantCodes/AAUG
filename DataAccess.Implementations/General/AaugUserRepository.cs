@@ -56,6 +56,17 @@ public class AaugUserRepository : EntityRepository<AaugUser>, IAaugUserRepositor
         return data;
     }
 
+    public IQueryable<AaugUserWithProfilePictureGetDto> SearchAaugUser(string name)
+    {
+        return mapper.ProjectTo<AaugUserWithProfilePictureGetDto>(
+            GetData(a => a.Name.Contains(name)
+            || a.NameArmenian.Contains(name)
+            || a.LastName.Contains(name)
+            || a.LastNameArmenian.Contains(name)
+            || a.Email.Contains(name))
+        );
+    }
+
     public IQueryable<AaugUserFullGetDto> GetFullUserInfoByUserId(int Id)
     {
         return mapper.ProjectTo<AaugUserFullGetDto>(

@@ -3512,11 +3512,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "d:\\AAUG\\Project\\clone\\AAUG.Context\\AAUG.Context.csproj": {
-              "projectPath": "d:\\AAUG\\Project\\clone\\AAUG.Context\\AAUG.Context.csproj"
+            "D:\\AAUG\\Project\\clone\\AAUG.Context\\AAUG.Context.csproj": {
+              "projectPath": "D:\\AAUG\\Project\\clone\\AAUG.Context\\AAUG.Context.csproj"
             },
-            "d:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
-              "projectPath": "d:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj"
+            "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
+              "projectPath": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj"
             },
             "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {
               "projectPath": "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj"

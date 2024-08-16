@@ -66,11 +66,13 @@ public class MappingProfile : Profile
         CreateMap<AaugUser, AaugUserFullGetDto>();
         CreateMap<AaugUser, AaugUserGetDto>();
         CreateMap<AaugUsersEditDto, AaugUser>();
+        CreateMap<AaugUser, AaugUserWithProfilePictureGetDto>();
     }
 
     private void NewsProfile()
     {
         CreateMap<News, NewsForInsertDto>();
         CreateMap<NewsForInsertDto, News>();
+        CreateMap<News, NewsGetDto>();
     }
 }

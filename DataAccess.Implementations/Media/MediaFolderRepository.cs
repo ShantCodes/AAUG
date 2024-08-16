@@ -27,9 +27,14 @@ public class MediaFolderRepository : EntityRepository<MediaFolder>, IMediaFolder
 
     public IQueryable<MediaFolderPathDto> GetEventsFolder()
     {
-        var x = GetData(a => a.MediaPathTypeId == MediaPaths.EventsFolder);
-        var test = mapper.ProjectTo<MediaFolderPathDto>(x);
-        return test;
+        return mapper.ProjectTo<MediaFolderPathDto>(
+            GetData(a => a.MediaPathTypeId == MediaPaths.EventsFolder));
+    }
+    public IQueryable<MediaFolderPathDto> GetNewsFolder()
+    {
+        return mapper.ProjectTo<MediaFolderPathDto>(
+            GetData(a => a.MediaPathTypeId == MediaPaths.NewsFolder)
+        );
     }
     public IQueryable<MediaFolderPathDto> GetCampsFolder()
     {

@@ -13,6 +13,7 @@ public interface IAaugUserService
     Task<AaugUserFullGetViewModel> UpdateSubscribtion(IFormFile receiptFile);
     Task<AaugUserFullEditViewModel> EditAaugUserFullAsync(AaugUserFullEditViewModel inputEntity);
     Task<AaugUserWithProfilePicureGetViewModel> InsertProfilePictureAsync(IFormFile profilePicture);
+    Task<IEnumerable<AaugUserWithProfilePicureGetViewModel>> SearchAaugUserAsynv(string name);
     Task<IEnumerable<AaugUserGetViewModel>> GetAllUsersAsync();
     Task<AaugUserGetDto> GetCurrentUserInfo();
     #region admins

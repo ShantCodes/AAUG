@@ -146,7 +146,7 @@ public class MediaFIleService : IMediaFileService
         var mediaFileResult = mapper.Map<MediaFileGetDto>(mediaFileInsertDto);
         mediaFileResult.Id = mediaFile.Id;
 
-         if (existingFileId != null)
+        if (existingFileId != null)
         {
             var existingFile = await unitOfWork.MediaFileRepository.GetMediaFileByGuIdAsync(existingFileId.Value).FirstOrDefaultAsync();
             if (existingFile != null)
@@ -221,7 +221,105 @@ public class MediaFIleService : IMediaFileService
 
         return mediaFileResult;
     }
+    #region news
 
+    public async Task<MediaFileGetDto> InsertNewsMediaFileAsync(IFormFile file)
+    {
+        var eventFolder = await unitOfWork.MediaFolderRepository.GetNewsFolder().FirstAsync();
+
+        if (!Directory.Exists(eventFolder.Name))
+        {
+            Directory.CreateDirectory(eventFolder.Name);
+        }
+
+        var fileId = Guid.NewGuid();
+        var fileName = $"{fileId}{Path.GetExtension(file.FileName)}";
+        var filePath = Path.Combine(eventFolder.Name, fileName);
+
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        var mediaFileInsertDto = new MediaFileInsertDto
+        {
+            Gid = fileId,
+            MediaFolderId = eventFolder.Id,
+            Name = Path.GetFileNameWithoutExtension(file.FileName),
+            Extension = Path.GetExtension(file.FileName),
+            Size = file.Length / 1024.0, // Size in KB
+            IsOmit = false,
+            Date = DateTime.UtcNow
+        };
+
+        var mediaFile = await unitOfWork.MediaFileRepository.AddMediaFileAsync(mediaFileInsertDto);
+        await unitOfWork.SaveChangesAsync();
+
+        var mediaFileResult = mapper.Map<MediaFileGetDto>(mediaFileInsertDto);
+        mediaFileResult.Id = mediaFile.Id;
+
+        return mediaFileResult;
+
+    }
+    public async Task<MediaFileGetDto> InsertNewsMediaFileAsync(IFormFile file, int? existingFileId)
+    {
+        var eventFolder = await unitOfWork.MediaFolderRepository.GetNewsFolder().FirstAsync();
+
+        if (!Directory.Exists(eventFolder.Name))
+        {
+            Directory.CreateDirectory(eventFolder.Name);
+        }
+
+        var fileId = Guid.NewGuid();
+        var fileName = $"{fileId}{Path.GetExtension(file.FileName)}";
+        var filePath = Path.Combine(eventFolder.Name, fileName);
+
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        var mediaFileInsertDto = new MediaFileInsertDto
+        {
+            Gid = fileId,
+            MediaFolderId = eventFolder.Id,
+            Name = Path.GetFileNameWithoutExtension(file.FileName),
+            Extension = Path.GetExtension(file.FileName),
+            Size = file.Length / 1024.0, // Size in KB
+            IsOmit = false,
+            Date = DateTime.UtcNow
+        };
+
+        var mediaFile = await unitOfWork.MediaFileRepository.AddMediaFileAsync(mediaFileInsertDto);
+        await unitOfWork.SaveChangesAsync();
+
+        var mediaFileResult = mapper.Map<MediaFileGetDto>(mediaFileInsertDto);
+        mediaFileResult.Id = mediaFile.Id;
+
+        if (existingFileId != null)
+        {
+            var existingFile = await unitOfWork.MediaFileRepository.GetMediaFileByGuIdAsync(existingFileId.Value).FirstOrDefaultAsync();
+            if (existingFile != null)
+            {
+                existingFile.IsOmit = true;
+                await unitOfWork.SaveChangesAsync();
+
+                // Remove the old file from the file system
+                var oldFilePath = Path.Combine(eventFolder.Name, $"{existingFile.Gid}{existingFile.Extension}");
+                if (File.Exists(oldFilePath))
+                {
+                    File.Delete(oldFilePath);
+                }
+            }
+        }
+
+        return mediaFileResult;
+    }
+
+    #endregion
+
+
+    #region download files
     public async Task<FileResultDto> DownloadMediaFileAsync(int fileId)
     {
         var mediaFile = await unitOfWork.MediaFileRepository.GetMediaFile(fileId).FirstOrDefaultAsync();
@@ -259,4 +357,5 @@ public class MediaFIleService : IMediaFileService
             _ => "application/octet-stream",
         };
     }
+    #endregion
 }

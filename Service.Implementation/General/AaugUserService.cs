@@ -77,7 +77,7 @@ public class AaugUserService : IAaugUserService
     {
         var aaugUser = await tokenService.GetAaugUserFromToken();
         var existingEntity = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(aaugUser.Id).FirstOrDefaultAsync();
-;
+        ;
         var nationalCardFile = await mediaFileService.InsertUserMediaFileAsync(inputEntity.NationalCardFile);
         var universityCardFile = await mediaFileService.InsertUserMediaFileAsync(inputEntity.UniversityCardFile);
         var receiptFile = await mediaFileService.InsertUserMediaFileAsync(inputEntity.ReceiptFile);
@@ -160,6 +160,13 @@ public class AaugUserService : IAaugUserService
 
         return mapper.Map<AaugUserGetDto>(
             await unitOfWork.AaugUserRepository.GetUserByGuId(user.Id).FirstOrDefaultAsync()
+        );
+    }
+
+    public async Task<IEnumerable<AaugUserWithProfilePicureGetViewModel>> SearchAaugUserAsynv(string name)
+    {
+        return mapper.Map<IEnumerable<AaugUserWithProfilePicureGetViewModel>>(
+            await unitOfWork.AaugUserRepository.SearchAaugUser(name).ToListAsync()
         );
     }
 

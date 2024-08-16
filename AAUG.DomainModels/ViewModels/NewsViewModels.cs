@@ -1,14 +1,14 @@
+using AAUG.DomainModels.Dtos.Media;
+using Microsoft.AspNetCore.Http;
+
 namespace AAUG.DomainModels.ViewModels
 
 {
     public class NewsForInsertViewModel
     {
         public string NewsTitle { get; set; } = null!;
-
         public string NewsDetails { get; set; } = null!;
-
-        public int CreatorUserId { get; set; }
-        public int NewsFileId { get; set; }
+        public IFormFile? NewsFile { get; set; }
     }
 
     public class NewsForEditViewModel
@@ -18,9 +18,7 @@ namespace AAUG.DomainModels.ViewModels
         public string NewsTitle { get; set; } = null!;
 
         public string NewsDetails { get; set; } = null!;
-
-        public int CreatorUserId { get; set; }
-        public int NewsFileId { get; set; }
+        public IFormFile? NewsFile { get; set; }
     }
 
     public class NewsForShowViewModel
@@ -32,6 +30,7 @@ namespace AAUG.DomainModels.ViewModels
         public string NewsDetails { get; set; } = null!;
 
         public int CreatorUserId { get; set; }
-        public int NewsFileId { get; set; }
+        public int? NewsFileId { get; set; }
+        public MediaFileGetDto? NewsFile { get; set; }
     }
 }
