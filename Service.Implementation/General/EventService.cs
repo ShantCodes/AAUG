@@ -39,10 +39,18 @@ public class EventService : IEventService
 
     #endregion
 
-    public async Task<IEnumerable<EventGetViewModel>> GetAllEventsAsync()
+    public async Task<IEnumerable<EventGetViewModel>> GetAllEventsAsync(int pageNumber, int pageSize = 4)
     {
-        var data = mapper.Map<List<EventGetViewModel>>(
-            await unitOfWork.EventRepository.GetEvents().ToListAsync());
+        var skip = (pageNumber - 1) * pageSize;
+
+        var events = await unitOfWork.EventRepository
+                                      .GetEvents()
+                                      .OrderByDescending(e => e.Id)
+                                      .Skip(skip)
+                                      .Take(pageSize)
+                                      .ToListAsync();
+        var data = mapper.Map<List<EventGetViewModel>>(events);
+
         foreach (var item in data)
         {
             if (item.thumbnailFile != null)
@@ -51,9 +59,16 @@ public class EventService : IEventService
 
         return data;
     }
+    
+    public async Task<IEnumerable<DateOnly>> GetReservedEventDatesAsync()
+    {
+        return await unitOfWork.EventRepository.GetReservedEventDates().ToListAsync();
+    }
+
 
     public async Task<EventInsertDto> InsertEventAsync(EventInsertViewModel inputEntity)
     {
+        
         var data = mapper.Map<EventInsertDto>(inputEntity);
         data.IsApproved = false;
         data.HasHappened = false;
@@ -86,7 +101,7 @@ public class EventService : IEventService
             {
                 eventDto.ThumbNailFileId = existingData.ThumbNailFileId;
             }
-            eventDto.PresentatorUserId = aaugUser.Id;
+            eventDto.PresentatorUserId = existingData.PresentatorUserId;
             mapper.Map(eventDto, existingData);
 
             if (inputEntity.ThumbNailFile != null)
@@ -161,6 +176,21 @@ public class EventService : IEventService
         }
         return result;
     }
+
+    public async Task<bool> CheckIfLiked(int eventId)
+    {
+        var aaugUser = await tokenService.GetAaugUserFromToken();
+        var data = await unitOfWork.EventLikeRepository.CheckIfLiked(eventId, aaugUser.Id).FirstOrDefaultAsync();
+
+        if(data == null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
     #endregion
 
     #region admins
@@ -184,6 +214,8 @@ public class EventService : IEventService
             if (item.thumbnailFile != null)
                 item.thumbnailFile.FolderPathTypeId = MediaPaths.EventsFolder;
         }
+
+        data = data.OrderByDescending(x => x.Id).ToList();
 
         return data;
     }

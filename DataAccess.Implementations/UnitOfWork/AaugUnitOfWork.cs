@@ -162,7 +162,7 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         public INewsRepository NewsRepository => _newsRepository ??= new NewsRepository(this, mapper);
 
         public IAaugUserRepository _aaugUserRepository;
-        public IAaugUserRepository AaugUserRepository => _aaugUserRepository ??= new AaugUserRepository(this, mapper); 
+        public IAaugUserRepository AaugUserRepository => _aaugUserRepository ??= new AaugUserRepository(this, mapper);
 
         public IEventRepository _eventRepository;
         public IEventRepository EventRepository => _eventRepository ??= new EventRepository(this, mapper);
@@ -176,8 +176,18 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         #endregion
         #region likes
         public IEventLikeRepository _eventLikeRepository;
-        public IEventLikeRepository EventLikeRepository => _eventLikeRepository ??= new EventLikeRepository(this, mapper); 
-        
+        public IEventLikeRepository EventLikeRepository => _eventLikeRepository ??= new EventLikeRepository(this, mapper);
+
+        #endregion
+
+        #region slide show
+        public ISlideShowRepository _slideShowRepository;
+        public ISlideShowRepository SlideShowRepository => _slideShowRepository ??= new SlideShowRepository(this, mapper);
+        #endregion
+
+        #region slide show title
+        public ISlideShowTitleRepository _slideShowTitleRepository;
+        public ISlideShowTitleRepository SlideShowTitleRepository => _slideShowTitleRepository ??= new SlideShowTitleRepository(this, mapper);
         #endregion
 
         #endregion

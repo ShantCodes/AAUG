@@ -35,6 +35,11 @@ public class EventRepository : EntityRepository<Event>, IEventRepository
         return GetData(a => a.Id == id);
     }
 
+    public IQueryable<DateOnly> GetReservedEventDates()
+    {
+        return GetData().Select(a => a.EventDate);
+    }
+
     public IQueryable<EventGetDto> GetEvents()
     {
         var data = GetData(a => a.IsApproved)

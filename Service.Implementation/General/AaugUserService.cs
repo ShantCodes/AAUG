@@ -1,9 +1,11 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Runtime.CompilerServices;
 using System.Security.Claims;
+using AAUG.DataAccess.Implementations.General;
 using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Dtos.User;
+using AAUG.DomainModels.Enums;
 using AAUG.DomainModels.ViewModels;
 using AAUG.Service.Implementations.Media;
 using AAUG.Service.Interfaces;
@@ -57,6 +59,14 @@ public class AaugUserService : IAaugUserService
         return result;
     }
 
+    public async Task<AaugUserFullGetViewModel> GetAaugUserFullByAaugUserIdAsync(int aaugUserId)
+    {
+        var entity = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserId(aaugUserId).FirstOrDefaultAsync() 
+            ?? throw new Exception("user not found");
+
+        return mapper.Map<AaugUserFullGetViewModel>(entity);
+
+    }
 
     public async Task<AaugUserInsertViewModel> InsertUserInfoAsync(AaugUserInsertViewModel inputEntity)
     {
@@ -105,13 +115,37 @@ public class AaugUserService : IAaugUserService
 
         var NewMediaFileDto = await mediaFileService.InsertUserMediaFileAsync(receiptFile, entity.ReceiptFileId);
         entity.ReceiptFileId = NewMediaFileDto.Id;
-        entity.IsApproved = false;
         entity.SubscribeDate = DateTime.UtcNow;
+        entity.Subscribed = true;
+        entity.IsSubApproved = false;
 
         await unitOfWork.SaveChangesAsync();
         await unitOfWork.CommitTransactionAsync();
 
         return mapper.Map<AaugUserFullGetViewModel>(entity);
+    }
+
+    public async Task<IEnumerable<AaugUserGetViewModel>> GetIsSubApprovedUsersAsync()
+    {
+        return mapper.Map<IEnumerable<AaugUserGetViewModel>>(await unitOfWork.AaugUserRepository.GetIsSubApprovedUsers().ToListAsync());
+    }
+
+    public async Task<bool> ApproveSubscribtionAsync(int aaugUserId, bool approveSub)
+    {
+        var aaugUserEntity = await unitOfWork.AaugUserRepository.GetAaugUserById(aaugUserId).FirstOrDefaultAsync()
+            ?? throw new Exception("user not found");
+        aaugUserEntity.IsSubApproved = approveSub;
+        if (approveSub)
+            await userService.AssignUserRolesAsync(aaugUserEntity.UserId, AaugRoles.Antam);
+        else
+        {
+            await userService.UnassignRoleFromUserAsync(aaugUserEntity.UserId, AaugRoles.Antam);
+        }
+
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+
+        return true;
     }
 
     public async Task<AaugUserWithProfilePicureGetViewModel> InsertProfilePictureAsync(IFormFile profilePicture)
@@ -137,13 +171,23 @@ public class AaugUserService : IAaugUserService
             throw new Exception("the user data not found");
 
         var entity = mapper.Map<AaugUsersEditDto>(inputEntity);
-        mapper.Map(entity, existingRecord);
 
         if (inputEntity.NationalCardFile != null)
         {
             var newMediaFileDto = await mediaFileService.InsertUserMediaFileAsync(inputEntity.NationalCardFile, existingRecord.NationalCardFileId);
             existingRecord.NationalCardFileId = newMediaFileDto.Id;
         }
+        if (inputEntity.ReceiptFile != null)
+        {
+            var newMediaFileDto = await mediaFileService.InsertUserMediaFileAsync(inputEntity.ReceiptFile, existingRecord.ReceiptFileId);
+            existingRecord.ReceiptFileId = newMediaFileDto.Id;
+        }
+        if (inputEntity.UniversityCardFile != null)
+        {
+            var newMediaFileDto = await mediaFileService.InsertUserMediaFileAsync(inputEntity.UniversityCardFile, existingRecord.UniversityCardFileId);
+            existingRecord.NationalCardFileId = newMediaFileDto.Id;
+        }
+
         await unitOfWork.SaveChangesAsync();
         await unitOfWork.CommitTransactionAsync();
 
@@ -152,15 +196,19 @@ public class AaugUserService : IAaugUserService
     public async Task<AaugUserGetDto> GetCurrentUserInfo()
     {
         var userContext = httpContextAccessor.HttpContext.User;
+        string aaugUserRole = tokenService.GetUserRoleFromToken();
 
         if (userContext == null)
             return null;
         var userEmail = userContext.FindFirst(ClaimTypes.Email)?.Value;
         var user = await userManager.FindByNameAsync(userEmail);
 
-        return mapper.Map<AaugUserGetDto>(
+        var result = mapper.Map<AaugUserGetDto>(
             await unitOfWork.AaugUserRepository.GetUserByGuId(user.Id).FirstOrDefaultAsync()
         );
+        result.Role = aaugUserRole;
+
+        return result;
     }
 
     public async Task<IEnumerable<AaugUserWithProfilePicureGetViewModel>> SearchAaugUserAsynv(string name)
@@ -168,6 +216,18 @@ public class AaugUserService : IAaugUserService
         return mapper.Map<IEnumerable<AaugUserWithProfilePicureGetViewModel>>(
             await unitOfWork.AaugUserRepository.SearchAaugUser(name).ToListAsync()
         );
+    }
+
+    public async Task<AaugUserFullGetViewModel> GetCurrentAaugUserFullAsync()
+    {
+        var aaugUser = await tokenService.GetAaugUserFromToken();
+        var data = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserId(aaugUser.Id)
+            .FirstOrDefaultAsync()
+            ?? throw new Exception("user not found");
+
+        var result = mapper.Map<AaugUserFullGetViewModel>(data);
+
+        return result;
     }
 
     #region Admins
@@ -184,9 +244,43 @@ public class AaugUserService : IAaugUserService
     public async Task<IEnumerable<AaugUserGetViewModel>> GetAllUsersAsync()
     {
         var entity = await unitOfWork.AaugUserRepository.GetUsersAsync();
-        var data = mapper.Map<IEnumerable<AaugUserGetViewModel>>(
-            entity
-        );
+        var data = mapper.Map<IEnumerable<AaugUserGetViewModel>>(entity);
+
+        foreach (var item in data)
+        {
+            var x = await userManager.FindByIdAsync(item.UserId);
+            item.Role = await userManager.GetRolesAsync(x);
+        }
+
+        return data;
+
+    }
+
+    public async Task<IEnumerable<AaugUserGetViewModel>> GetSubscribedNotSubApprovedUsersAsync()
+    {
+        var entity = await unitOfWork.AaugUserRepository.GetSubscribedNotSubApprovedUsers().ToListAsync();
+        var data = mapper.Map<IEnumerable<AaugUserGetViewModel>>(entity);
+
+        foreach (var item in data)
+        {
+            var x = await userManager.FindByIdAsync(item.UserId);
+            item.Role = await userManager.GetRolesAsync(x);
+        }
+
+        return data;
+    }
+
+    public async Task<IEnumerable<AaugUserGetViewModel>> GetApprovedUsersAsync()
+    {
+        var entity = await unitOfWork.AaugUserRepository.GetApprovedAaugUsers().ToListAsync();
+        var data = mapper.Map<IEnumerable<AaugUserGetViewModel>>(entity);
+
+        foreach (var item in data)
+        {
+            item.Role = await userManager.GetRolesAsync(
+                await userManager.FindByIdAsync(item.UserId));
+        }
+
         return data;
     }
 

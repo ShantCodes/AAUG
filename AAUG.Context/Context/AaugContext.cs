@@ -31,27 +31,31 @@ namespace AAUG.Context.Context
 
         public virtual DbSet<UserTalent> UserTalents { get; set; }
 
-        public virtual DbSet<FormAnswear> FormAnswears {get; set;}
+        public virtual DbSet<FormAnswear> FormAnswears { get; set; }
 
-        public virtual DbSet<FormQuestion> FormQuestions {get; set;}
+        public virtual DbSet<FormQuestion> FormQuestions { get; set; }
 
-        public virtual DbSet<Form> Forms {get; set;}
+        public virtual DbSet<Form> Forms { get; set; }
 
-        public virtual DbSet<MediaDrive> MediaDrives {get; set;}
+        public virtual DbSet<MediaDrive> MediaDrives { get; set; }
 
-        public virtual DbSet<MediaFolder> MediaFolders {get; set;}
+        public virtual DbSet<MediaFolder> MediaFolders { get; set; }
 
-        public virtual DbSet<Suggestion> Suggestions {get; set;}
+        public virtual DbSet<Suggestion> Suggestions { get; set; }
 
-        public virtual DbSet<SuggestionVote> SuggestionVotes {get; set;}
+        public virtual DbSet<SuggestionVote> SuggestionVotes { get; set; }
 
-        public virtual DbSet<Ticket> Tickets {get; set;}
+        public virtual DbSet<Ticket> Tickets { get; set; }
 
-        public DbSet<UserTicketsRelation> UserTicketsRelations {get; set;}
+        public DbSet<UserTicketsRelation> UserTicketsRelations { get; set; }
+
+        public virtual DbSet<SlideShow> SlideShows { get; set; }
+
+        public virtual DbSet<SlideShowTitle> SlideShowsTitles { get; set; }
 
 
 
- 
+
         #endregion
 
         #region Configurations
@@ -77,6 +81,8 @@ namespace AAUG.Context.Context
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.UserMajorConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.UserTalentConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.FormConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.SlideShowConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.SlideShowTitleConfiguration());
             #endregion
         }
 
@@ -88,7 +94,7 @@ namespace AAUG.Context.Context
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-            
+
         }
     }
 }

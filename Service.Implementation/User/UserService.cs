@@ -1,4 +1,5 @@
-﻿using AAUG.DomainModels.Enums;
+﻿using AAUG.DataAccess.Implementations.UnitOfWork;
+using AAUG.DomainModels.Enums;
 using AAUG.Service.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -44,7 +45,7 @@ public class UserService : IUserService
         if (!roleExists)
             return "role does not exist in the database";
         var result = await userManager.AddToRoleAsync(user, roleName);
-        if (result.Succeeded)
+        if (result.Succeeded)        
             return $"the user is now {roleName}";
 
         return "request failed";

@@ -13,8 +13,14 @@ public interface IAaugUserService
     Task<AaugUserFullGetViewModel> UpdateSubscribtion(IFormFile receiptFile);
     Task<AaugUserFullEditViewModel> EditAaugUserFullAsync(AaugUserFullEditViewModel inputEntity);
     Task<AaugUserWithProfilePicureGetViewModel> InsertProfilePictureAsync(IFormFile profilePicture);
+    Task<bool> ApproveSubscribtionAsync(int aaugUserId, bool approveSub);
+    Task<AaugUserFullGetViewModel> GetAaugUserFullByAaugUserIdAsync(int aaugUserId);
+    Task<IEnumerable<AaugUserGetViewModel>> GetSubscribedNotSubApprovedUsersAsync();
+    Task<IEnumerable<AaugUserGetViewModel>> GetIsSubApprovedUsersAsync();
     Task<IEnumerable<AaugUserWithProfilePicureGetViewModel>> SearchAaugUserAsynv(string name);
+    Task<AaugUserFullGetViewModel> GetCurrentAaugUserFullAsync();
     Task<IEnumerable<AaugUserGetViewModel>> GetAllUsersAsync();
+    Task<IEnumerable<AaugUserGetViewModel>> GetApprovedUsersAsync();
     Task<AaugUserGetDto> GetCurrentUserInfo();
     #region admins
     Task<bool> DeleteUserAsync(int aaugUserId);

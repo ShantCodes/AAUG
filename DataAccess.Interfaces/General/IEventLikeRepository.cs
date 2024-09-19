@@ -9,5 +9,6 @@ public interface IEventLikeRepository
     IQueryable<EventLikeGetDto> GetUserEventLike(int aaugUserId, int eventId);
     IQueryable<EventLike> GetLikeWithTracking(int id);
     Task<EventLike> InsertLikeAsync(EventLikeInsertDto insertEntity);
+    IQueryable<EventLikeGetDto> CheckIfLiked(int eventId, int aaugUserId);
     void DeleteLike(EventLikeDeleteDto inputEntity);
 }

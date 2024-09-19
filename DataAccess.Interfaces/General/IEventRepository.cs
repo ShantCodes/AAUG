@@ -7,6 +7,7 @@ public interface IEventRepository
 {
     Task<List<Event>> GetEventsAsync();
     IQueryable<Event> GetEvent(int id);
+    IQueryable<DateOnly> GetReservedEventDates();
     IQueryable<EventGetDto> GetEventAsync(int id);
     Task<Event> FirstAsync(int Id);
     Task<Event> AddAsync(EventInsertDto insertEntity);

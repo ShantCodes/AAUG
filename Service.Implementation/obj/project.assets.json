@@ -3566,14 +3566,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {
-              "projectPath": "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj"
+            "d:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {
+              "projectPath": "d:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj"
             },
             "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {
               "projectPath": "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj"
             },
-            "D:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj": {
-              "projectPath": "D:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj"
+            "d:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj": {
+              "projectPath": "d:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj"
             }
           }
         }

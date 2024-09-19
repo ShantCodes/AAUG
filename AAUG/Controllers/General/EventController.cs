@@ -14,10 +14,15 @@ public class EventController : ControllerBase
     {
         this.eventService = eventService;
     }
-    [HttpGet("GetAllEvents")]
-    public async Task<IActionResult> GetAllEvents()
+    [HttpGet("GetAllEvents/{pageNumber}/{pageSize}")]
+    public async Task<IActionResult> GetAllEvents(int pageNumber, int pageSize = 4)
     {
-        return Ok(await eventService.GetAllEventsAsync());
+        return Ok(await eventService.GetAllEventsAsync(pageNumber, pageSize));
+    }
+    [HttpGet("GetReservedEventDates")]
+    public async Task<IActionResult> GetReservedEventDates()
+    {
+        return Ok(await eventService.GetReservedEventDatesAsync());
     }
     [HttpPost("InsertEvent")]
     public async Task<IActionResult> InsertEvent(EventInsertViewModel inputEntity)
@@ -31,19 +36,19 @@ public class EventController : ControllerBase
         return Ok(await eventService.EditEventAsync(inputEntity));
     }
     [HttpPut("ApproveEvent/{eventId}/{isApproved}")]
-    [Authorize(Roles = "Varich,King,Divan")]
+    [Authorize(Roles = "Varich,King,Hanxnakhumb")]
     public async Task<IActionResult> ApproveEvent(int eventId, bool isApproved)
     {
         return Ok(await eventService.ApproveEvent(eventId, isApproved));
     }
     [HttpGet("GetAllNotApprovedEventsForAdmins")]
-    [Authorize(Roles = "Varich,King")]
+    [Authorize(Roles = "Varich,King, Hanxnakhumb")]
     public async Task<IActionResult> GetALlNotApprovedEventsForAdmins()
     {
         return Ok(await eventService.GetAllNotApprovedEventsForAdmins());
     }
     [HttpGet("GetAllEventsForAdmins")]
-    [Authorize(Roles = "Varich,King,Divan")]
+    [Authorize(Roles = "Varich,King,Hanxnakhumb")]
     public async Task<IActionResult> GetALlEventsForAdmins()
     {
         return Ok(await eventService.GetAllEventsForAdmins());
@@ -53,8 +58,8 @@ public class EventController : ControllerBase
     {
         return Ok(await eventService.SearchEventAsync(keyWord));
     }
-    [HttpDelete("DeleteEvent")]
-    [Authorize(Roles = "Varich,King")]
+    [HttpDelete("DeleteEvent/{eventId}")]
+    [Authorize(Roles = "Varich,King, Hanxnakhumb")]
     public async Task<IActionResult> DeleteEvent(int eventId)
     {
         return Ok(await eventService.DeleteEventAsync(eventId));
@@ -70,6 +75,12 @@ public class EventController : ControllerBase
     public async Task<IActionResult> LikeEvent(int eventId)
     {
         return Ok(await eventService.LikeEventAsync(eventId));
+    }
+    [HttpGet("CheckIfLiked/{eventId}")]
+    [Authorize]
+    public async Task<IActionResult> CheckIfLiked(int eventId)
+    {
+        return Ok(await eventService.CheckIfLiked(eventId));
     }
     #endregion
 }

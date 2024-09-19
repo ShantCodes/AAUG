@@ -31,7 +31,6 @@ public class AaugUserFullInsertViewModel
 
 public class AaugUserFullEditViewModel
 {
-    public int Id { get; set; }
     public string? Name { get; set; }
 
     public string? LastName { get; set; }
@@ -79,11 +78,15 @@ public class AaugUserFullGetViewModel
     public int? UniversityCardFileId { get; set; }
     public MediaFileGetDto? UniversityCardFile { get; set; }
 
+    public int? ReceiptFileId { get; set; }
+    public MediaFileGetDto? ReceiptFile { get; set; }
+
     public string? Email { get; set; }
 
     public bool? CanGetNotfiedByMail { get; set; }
 
     public DateTime? SubscribeDate { get; set; }
+    public bool IsApproved { get; set; }
 }
 
 public class AaugUserWithProfilePicureGetViewModel
@@ -117,4 +120,10 @@ public class AaugUserGetViewModel
 
     public string? Email { get; set; }
 
+    public int? ProfilePictureFileId { get; set; }
+    public IList<string>? Role { get; set; }
+
+    public bool Subscribed { get; set; }
+    public bool IsSubApproved { get; set; }
 }
+

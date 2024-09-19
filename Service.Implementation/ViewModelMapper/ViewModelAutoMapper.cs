@@ -22,6 +22,13 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             EventProfile();
 
             EventLikeProfile();
+
+            SlideShowProfile();
+        }
+
+        private void SlideShowProfile()
+        {
+            CreateMap<SlideShowGetDto, SlideShowGetViewModel>();
         }
 
         private void EventLikeProfile()
@@ -59,6 +66,8 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             CreateMap<AaugUser, AaugUserWithProfilePicureGetViewModel>();
 
             CreateMap<AaugUserWithProfilePictureGetDto, AaugUserWithProfilePicureGetViewModel>();
+
+            CreateMap<AaugUserFullGetDto, AaugUserFullGetViewModel>();
         }
 
         private void NewsProfile()

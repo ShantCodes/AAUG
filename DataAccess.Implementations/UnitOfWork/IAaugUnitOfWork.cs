@@ -31,6 +31,9 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         IMediaFolderRepository MediaFolderRepository { get; }
         IEventLikeRepository EventLikeRepository { get; }
 
+        ISlideShowRepository SlideShowRepository { get; }
+        ISlideShowTitleRepository SlideShowTitleRepository { get; }
+
         #endregion
     }
 }

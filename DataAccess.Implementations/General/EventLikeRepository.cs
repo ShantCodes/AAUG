@@ -25,6 +25,12 @@ public class EventLikeRepository : EntityRepository<EventLike>, IEventLikeReposi
                 .Include(a => a.User)
         );
     }
+
+    public IQueryable<EventLikeGetDto> CheckIfLiked(int eventId, int aaugUserId)
+    {
+        return mapper.ProjectTo<EventLikeGetDto>(
+            GetData(a => a.EventId == eventId && a.UserId == aaugUserId));
+    }
     public IQueryable<EventLikeGetDto> GetUserEventLike(int aaugUserId, int eventId)
     {
         return mapper.ProjectTo<EventLikeGetDto>(GetData(a => a.EventId == eventId && a.UserId == aaugUserId));

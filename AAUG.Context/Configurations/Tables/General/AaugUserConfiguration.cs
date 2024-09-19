@@ -37,7 +37,8 @@ namespace AAUG.Context.Configurations.Tables.General
             builder.Property(x => x.CanGetNotfiedByMail).HasColumnName("CanGetNotfiedByMail");
             builder.Property(x => x.IsApproved).HasColumnName("IsApproved");
             builder.Property(x => x.SubscribeDate).HasColumnName("SubscribeDate");
-
+            builder.Property(x => x.Subscribed).HasColumnName("Subscribed");
+            builder.Property(x => x.IsSubApproved).HasColumnName("IsSubApproved");
             #endregion
 
             #region Relations
@@ -81,6 +82,12 @@ namespace AAUG.Context.Configurations.Tables.General
             //     .WithMany(m => m.AaugUserReceiptFiles)
             //     .HasForeignKey(u => u.ReceiptFileId)
             //     .IsRequired();
+
+            builder
+            .HasOne(a => a.IdentityUser)
+            .WithMany()
+            .HasForeignKey(a => a.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
 
 
             #endregion

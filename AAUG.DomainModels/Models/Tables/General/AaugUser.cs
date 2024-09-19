@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 
 namespace AAUG.DomainModels.Models.Tables.General;
@@ -36,6 +37,9 @@ public partial class AaugUser
 
     public DateTime? SubscribeDate { get; set; }
 
+    public bool Subscribed { get; set; }
+    public bool IsSubApproved { get; set; }
+
     public virtual ICollection<Camp>? Camps { get; set; }
 
     public virtual ICollection<EventLike>? EventLikes { get; set; }
@@ -61,4 +65,5 @@ public partial class AaugUser
     // public virtual ICollection<FormQuestion>? FormQuestions { get; set; }
 
     public virtual ICollection<News>? News { get; set; }
+    public virtual IdentityUser IdentityUser { get; set; }
 }

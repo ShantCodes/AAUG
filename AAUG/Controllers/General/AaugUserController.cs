@@ -27,7 +27,7 @@ public class AaugUserController : ControllerBase
     }
 
     [HttpGet("GetAllUsers")]
-    [Authorize(Roles = "King,Varich")]
+    [Authorize(Roles = "King,Varich, Hanxnakhumb")]
     public async Task<IActionResult> GetAllUsers()
     {
         return Ok(await AaugUserService.GetAllUsersAsync());
@@ -44,15 +44,21 @@ public class AaugUserController : ControllerBase
     {
         return Ok(await userService.GetAllRolesAsync());
     }
+    [HttpGet("GetAaugUserFullByAaugUserId/{aaugUserId}")]
+    [Authorize(Roles ="King,Varich")]
+    public async Task<IActionResult> GetAaugUserFullByAaugUserId(int aaugUserId)
+    {
+        return Ok(await AaugUserService.GetAaugUserFullByAaugUserIdAsync(aaugUserId));
+    }
 
-    [HttpPost("AssignRolesToUser")]
+    [HttpPost("AssignRolesToUser/{userId}/{roleId}")]
     [Authorize(Roles = "King,Varich")]
     public async Task<IActionResult> AssignRolesToUser(string userId, short roleId)
     {
         return Ok(await userService.AssignUserRolesAsync(userId, roleId));
     }
 
-    [HttpDelete("UnAssignRolesToUser")]
+    [HttpDelete("UnAssignRolesToUser/{userId}/{roleId}")]
     [Authorize(Roles = "King,Varich")]
     public async Task<IActionResult> UnAssignRolesToUser(string userId, short roleId)
     {
@@ -70,9 +76,9 @@ public class AaugUserController : ControllerBase
     {
         return Ok(await AaugUserService.InsertFullUserInfoAsync(insertEntity));
     }
-    [HttpPost("updateSubscribtion")]
+    [HttpPost("UpdateSubscribtion")]
     [Authorize]
-    public async Task<IActionResult> updateSubscribtion(IFormFile file)
+    public async Task<IActionResult> UpdateSubscribtion(IFormFile file)
     {
         return Ok(await AaugUserService.UpdateSubscribtion(file));
     }
@@ -83,11 +89,18 @@ public class AaugUserController : ControllerBase
         return Ok(await AaugUserService.InsertProfilePictureAsync(profilePictureFile));
     }
     [HttpPut("EditAaugUserFull")]
-    public async Task<IActionResult> EditAaugUserFull(AaugUserFullEditViewModel inputEntity)
+    [Authorize]
+    public async Task<IActionResult> EditAaugUserFull([FromForm] AaugUserFullEditViewModel inputEntity)
     {
         return Ok(await AaugUserService.EditAaugUserFullAsync(inputEntity));
     }
-    [HttpDelete("DeleteUser")]
+    [HttpGet("GetCurrentAaugUserFull")]
+    [Authorize]
+    public async Task<IActionResult> GetCurrentAaugUserFull()
+    {
+        return Ok(await AaugUserService.GetCurrentAaugUserFullAsync());
+    }
+    [HttpDelete("DeleteUser/{aaugUserId}")]
     [Authorize(Roles = "Varich,King")]
     public async Task<IActionResult> DeleteUser(int aaugUserId)
     {
@@ -99,11 +112,35 @@ public class AaugUserController : ControllerBase
     {
         return Ok(await AaugUserService.GetNotApprovedAaugUsersAsync());
     }
-    [HttpPut("ApproveAaugUser")]
+    [HttpGet("GetApprovedUsers")]
+    [Authorize(Roles = "King, Varich")]
+    public async Task<IActionResult> GetApprovedUsers()
+    {
+        return Ok(await AaugUserService.GetApprovedUsersAsync());
+    }
+    [HttpPut("ApproveAaugUser/{aaugUserId}/{IsApproved}")]
     [Authorize(Roles = "King,Varich")]
     public async Task<IActionResult> ApproveAaugUser(int aaugUserId, bool IsApproved)
     {
         return Ok(await AaugUserService.ApproveAaugUserAsync(aaugUserId, IsApproved));
+    }
+    [HttpPut("ApproveSubscribtion/{aaugUserId}/{approveSub}")]
+    [Authorize(Roles ="King,Varich")]
+    public async Task<IActionResult> ApproveSubscribtion(int aaugUserId, bool approveSub)
+    {
+        return Ok(await AaugUserService.ApproveSubscribtionAsync(aaugUserId, approveSub));
+    }
+    [HttpGet("GetSubscribedNotSubApprovedUsers")]
+    [Authorize(Roles ="King,Varich")]
+    public async Task<IActionResult> GetSubscribedNotSubApprovedUsers()
+    {
+        return Ok(await AaugUserService.GetSubscribedNotSubApprovedUsersAsync());
+    }
+    [HttpGet("GetIsSubApprovedUsers")]
+    [Authorize(Roles ="King,Varich")]
+    public async Task<IActionResult> GetIsSubApprovedUsers()
+    {
+        return Ok(await AaugUserService.GetIsSubApprovedUsersAsync());
     }
 
 }

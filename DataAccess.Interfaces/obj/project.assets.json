@@ -3286,8 +3286,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
-              "projectPath": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj"
+            "d:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
+              "projectPath": "d:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj"
             }
           }
         }

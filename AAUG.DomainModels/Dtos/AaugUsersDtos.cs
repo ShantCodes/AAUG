@@ -1,4 +1,5 @@
 ﻿using AAUG.DomainModels.Dtos.Media;
+using Microsoft.AspNetCore.Identity;
 
 namespace AAUG.DomainModels.Dtos;
 
@@ -34,11 +35,9 @@ public class AaugUsersInsertDto
 
 public class AaugUsersEditDto
 {
-    public int Id { get; set; }
     public string Name { get; set; } = null!;
 
     public string LastName { get; set; } = null!;
-    public string UserId { get; set; }
 
     public string? NameArmenian { get; set; }
 
@@ -60,7 +59,6 @@ public class AaugUsersEditDto
 
     public bool? CanGetNotfiedByMail { get; set; }
 
-    public bool IsApproved { get; set; }
 }
 
 public class AaugUserGetDto
@@ -76,6 +74,12 @@ public class AaugUserGetDto
     public string? LastNameArmenian { get; set; }
 
     public bool IsApproved { get; set; }
+    public int? ProfilePictureFileId { get; set; }
+
+    public string? Role { get; set; }
+
+    public bool Subscribed { get; set; }
+    public bool IsSubApproved { get; set; }
 }
 
 public class AaugUserWithProfilePictureGetDto

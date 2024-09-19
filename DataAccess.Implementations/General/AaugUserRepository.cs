@@ -5,6 +5,7 @@ using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Models.Tables.General;
 using AAUG.DomainModels.ViewModels;
 using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace AAUG.DataAccess.Implementations.General;
@@ -42,6 +43,9 @@ public class AaugUserRepository : EntityRepository<AaugUser>, IAaugUserRepositor
                 LastName = u.LastName,
                 NameArmenian = u.NameArmenian,
                 LastNameArmenian = u.LastNameArmenian,
+                ProfilePictureFileId = u.ProfilePictureFileId,
+                Subscribed = u.Subscribed,
+                IsSubApproved = u.IsSubApproved,
                 // MajorsId = u.MajorsId ?? default(short?),
                 // TalentsId = u.TalentsId ?? default(short?),
                 // ProfilePictureFileId = u.ProfilePictureFileId ?? default(int?),
@@ -54,6 +58,32 @@ public class AaugUserRepository : EntityRepository<AaugUser>, IAaugUserRepositor
             .ToListAsync();
 
         return data;
+    }
+
+    public IQueryable<AaugUserGetDto> GetIsSubApprovedUsers()
+    {
+        return mapper.ProjectTo<AaugUserGetDto>(GetData(a => a.IsSubApproved));
+    }
+
+    public IQueryable<AaugUserGetDto> GetUsers()
+    {
+        var x = GetData();
+        var data = mapper.ProjectTo<AaugUserGetDto>(x
+            );
+
+        return data;
+    }
+
+    public IQueryable<AaugUserGetDto> GetApprovedAaugUsers()
+    {
+        return mapper.ProjectTo<AaugUserGetDto>(
+            GetData(a => a.IsApproved)
+        );
+    }
+
+    public IQueryable<AaugUserGetDto> GetSubscribedNotSubApprovedUsers()
+    {
+        return mapper.ProjectTo<AaugUserGetDto>(GetData(a => a.Subscribed && !a.IsSubApproved));
     }
 
     public IQueryable<AaugUserWithProfilePictureGetDto> SearchAaugUser(string name)
@@ -72,6 +102,11 @@ public class AaugUserRepository : EntityRepository<AaugUser>, IAaugUserRepositor
         return mapper.ProjectTo<AaugUserFullGetDto>(
             GetData(a => a.Id == Id)
         );
+    }
+
+    public IQueryable<AaugUser> GetAaugUserById(int id)
+    {
+        return GetData(a => a.Id == id);
     }
 
     public IQueryable<AaugUser> GetFullUserInfoByUserIdWithTracking(int Id)

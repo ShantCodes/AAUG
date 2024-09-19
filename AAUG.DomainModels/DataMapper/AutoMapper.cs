@@ -21,6 +21,13 @@ public class MappingProfile : Profile
         MediaFIleProfile();
 
         EventLikeProfile();
+
+        SlideShowProfile();
+    }
+
+    private void SlideShowProfile()
+    {
+        CreateMap<SlideShow, SlideShowGetDto>();
     }
 
     private void EventLikeProfile()
@@ -56,6 +63,7 @@ public class MappingProfile : Profile
         .ForMember(a => a.ThumbnailFile, a => a.Ignore());
 
         CreateMap<EventEditDto, Event>();
+        CreateMap<Event, DateTime>();
 
     }
 

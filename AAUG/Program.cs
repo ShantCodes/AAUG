@@ -25,17 +25,27 @@ builder.Services.AddControllers();
 // {
 //     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
 // });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDependency(builder.Configuration);
 
 builder.Services.AddIdentityCore<IdentityUser>(options =>
     {
-        options.Password.RequireDigit = false; 
-        options.Password.RequiredLength = 8; 
-        options.Password.RequireNonAlphanumeric = false; 
-        options.Password.RequireUppercase = false; 
-        options.Password.RequireLowercase = false; 
-        options.Password.RequiredUniqueChars = 0; 
+        options.Password.RequireDigit = false;
+        options.Password.RequiredLength = 8;
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequireUppercase = false;
+        options.Password.RequireLowercase = false;
+        options.Password.RequiredUniqueChars = 0;
     })
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
@@ -81,10 +91,13 @@ MapperConfiguration mapperConfiguration = new MapperConfiguration(mapperConfig =
 });
 
 builder.Services.AddSingleton(mapperConfiguration.CreateMapper());
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
 // app.MapIdentityApi<IdentityUser>();
+
+app.UseCors("AllowAllOrigins");
 
 using (var scope = app.Services.CreateScope())
 {
@@ -98,7 +111,7 @@ using (var scope = app.Services.CreateScope())
             await roleManager.CreateAsync(new IdentityRole(role));
     }
 }
-builder.Services.AddHttpContextAccessor();
+
 
 
 // Configure the HTTP request pipeline.
@@ -108,6 +121,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseMiddleware<ExceptionMiddleware>();

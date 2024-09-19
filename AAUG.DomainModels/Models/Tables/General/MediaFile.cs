@@ -16,11 +16,12 @@ public partial class MediaFile
 
     public MediaFolder? MediaFolder { get; set; }
 
-    public virtual ICollection<AaugUser>? AaugUserNationalCardFiles { get; set; } 
+    public virtual ICollection<AaugUser>? AaugUserNationalCardFiles { get; set; }
 
-    public virtual ICollection<AaugUser>? AaugUserProfilePictureFiles { get; set; } 
+    public virtual ICollection<AaugUser>? AaugUserProfilePictureFiles { get; set; }
 
-    public virtual ICollection<AaugUser>? AaugUserUniversityCardFiles { get; set; } 
-    public virtual ICollection<AaugUser>? AaugUserReceiptFiles { get; set; } 
+    public virtual ICollection<AaugUser>? AaugUserUniversityCardFiles { get; set; }
+    public virtual ICollection<AaugUser>? AaugUserReceiptFiles { get; set; }
     public virtual ICollection<News>? News { get; set; }
+    public virtual ICollection<SlideShow> SlideShows { get; set; }
 }

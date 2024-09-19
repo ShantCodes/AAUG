@@ -6,4 +6,5 @@ public class EventLikeGetViewModel
     public int EventId { get; set; }
     public int UserId { get; set; }
     public AaugUserGetViewModel? User { get; set; }
+
 }

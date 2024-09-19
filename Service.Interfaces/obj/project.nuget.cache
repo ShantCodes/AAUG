@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EvqdeF80/pO88iuZ70kEgVjossYy6hV3TMpgVxWRXpfJjGN12ESY36QGnIB0Va674MTBenzk0A93Au5sRhBNUg==",
+  "dgSpecHash": "0TxZxmHkncztSCMOkWYyXs1cCXJdRTterToRrw3s3HInl/zM66Wrq23ZK4tW34qWf652GbAkPLRXqCAZLD+tLw==",
   "success": true,
-  "projectFilePath": "D:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj",
+  "projectFilePath": "d:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
