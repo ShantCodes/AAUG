@@ -22,7 +22,11 @@ public interface IMediaFileService
     Task<MediaFileGetDto> InsertNewsMediaFileAsync(IFormFile file);
     Task<MediaFileGetDto> InsertNewsMediaFileAsync(IFormFile file, int? existingFileId);
     #endregion
-    
+
+    #region slide show
+    Task<MediaFileGetDto> InsertSlideShowMediaFileAsync(IFormFile file);
+    #endregion
+
     #region download
     Task<FileResultDto> DownloadMediaFileAsync(int fileId);
     #endregion

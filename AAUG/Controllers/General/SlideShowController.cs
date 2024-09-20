@@ -1,3 +1,4 @@
+using AAUG.DomainModels.ViewModels;
 using AAUG.Service.Interfaces.General;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,5 +17,15 @@ public class SlideShowController : ControllerBase
     public async Task<IActionResult> GetSlideShows()
     {
         return Ok(await slideShowService.GetSlideShowsAsync());
+    }
+    [HttpPost("InsertSlideShows")]
+    public async Task<IActionResult> InsertSlideShows([FromForm] SlideShowInsertViewModel inputEntity)
+    {
+        return Ok(await slideShowService.InsertSlideShowsAsync(inputEntity));
+    }
+    [HttpPost("InsertSlideShowTitle")]
+    public async Task<IActionResult> InsertSlideShowTitle(SlideShowTitleInsertViewModel inputEntity)
+    {
+        return Ok(await slideShowService.InsertSlideShowTitleAsync(inputEntity));
     }
 }

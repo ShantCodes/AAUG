@@ -29,6 +29,11 @@ namespace AAUG.DataAccess.EntityRepository
             await context.Set<T>().AddAsync(entity);
             return entity;
         }
+        public async Task<List<T>> AddAsync(List<T> entity)
+        {
+            await context.Set<List<T>>().AddAsync(entity);
+            return entity;
+        }
 
         public void Delete(T entity)
         {

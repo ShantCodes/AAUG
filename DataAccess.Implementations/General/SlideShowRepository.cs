@@ -23,4 +23,13 @@ public class SlideShowRepository : EntityRepository<SlideShow>, ISlideShowReposi
             GetData()
         );
     }
+
+    public Task<List<SlideShow>> InsertSlideShowAsync(List<SlideShowInsertDto> inputEntity)
+    {
+        return AddAsync(mapper.Map<List<SlideShow>>(inputEntity));
+    }
+    public Task<SlideShow> InsertSlideShowAsync(SlideShowInsertDto inputEntity)
+    {
+        return AddAsync(mapper.Map<SlideShow>(inputEntity));
+    }
 }

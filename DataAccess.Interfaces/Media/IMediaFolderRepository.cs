@@ -9,4 +9,5 @@ public interface IMediaFolderRepository
     IQueryable<MediaFolderPathDto> GetCampsFolder();
     IQueryable<MediaFolderPathDto> GetEventsFolder();
     IQueryable<MediaFolderPathDto> GetNewsFolder();
+    IQueryable<MediaFolderPathDto> GetSlideShowFolder();
 }

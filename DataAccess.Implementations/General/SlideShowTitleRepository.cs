@@ -1,6 +1,7 @@
 using AAUG.DataAccess.EntityRepository;
 using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DataAccess.Interfaces.General;
+using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Models.Tables.General;
 using AutoMapper;
 
@@ -14,5 +15,10 @@ public class SlideShowTitleRepository : EntityRepository<SlideShowTitle>, ISlide
     {
         this.mapper = mapper;
         this.unitOfWork = unitOfWork;
+    }
+
+    public Task<SlideShowTitle> AddSlideShowTitle(SlideShowTitleInsertDto inputEntity)
+    {
+        return AddAsync(mapper.Map<SlideShowTitle>(inputEntity));
     }
 }

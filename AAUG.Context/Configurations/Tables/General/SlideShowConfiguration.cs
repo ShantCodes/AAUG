@@ -27,9 +27,9 @@ internal class SlideShowConfiguration : IEntityTypeConfiguration<SlideShow>
         #endregion
 
         #region Relations
-        builder.HasOne(a => a.SlideShowTitle)
-        .WithMany(a => a.SlideShows)
-        .HasForeignKey(a => a.TitleId);
+        // builder.HasOne(a => a.Title)
+        // .WithMany(a => a.SlideShows)
+        // .HasForeignKey(a => a.TitleId);
 
         builder.HasOne(a => a.MediaFile)
         .WithMany(a => a.SlideShows)

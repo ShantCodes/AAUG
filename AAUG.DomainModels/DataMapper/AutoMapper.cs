@@ -23,11 +23,19 @@ public class MappingProfile : Profile
         EventLikeProfile();
 
         SlideShowProfile();
+
+        SlideShowTitleProfile();
+    }
+
+    private void SlideShowTitleProfile()
+    {
+        CreateMap<SlideShowTitleInsertDto, SlideShowTitle>();
     }
 
     private void SlideShowProfile()
     {
         CreateMap<SlideShow, SlideShowGetDto>();
+        CreateMap<SlideShowInsertDto, SlideShow>();
     }
 
     private void EventLikeProfile()

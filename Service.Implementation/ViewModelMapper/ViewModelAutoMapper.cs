@@ -24,11 +24,20 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             EventLikeProfile();
 
             SlideShowProfile();
+
+            SlideShowTitleProfile();
+        }
+
+        private void SlideShowTitleProfile()
+        {
+            CreateMap<SlideShowTitleInsertViewModel, SlideShowTitleInsertDto>();
         }
 
         private void SlideShowProfile()
         {
             CreateMap<SlideShowGetDto, SlideShowGetViewModel>();
+            CreateMap<SlideShowInsertViewModel, SlideShowInsertDto>();
+            CreateMap<SlideShow, SlideShowGetViewModel>();
         }
 
         private void EventLikeProfile()

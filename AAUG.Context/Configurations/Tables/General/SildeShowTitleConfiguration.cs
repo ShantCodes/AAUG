@@ -24,6 +24,9 @@ internal class SlideShowTitleConfiguration : IEntityTypeConfiguration<SlideShowT
         #endregion
 
         #region Relations
+        builder.HasMany(a => a.SlideShows)
+        .WithOne(a => a.Title)
+        .HasForeignKey(a => a.TitleId);
         #endregion
     }
 }

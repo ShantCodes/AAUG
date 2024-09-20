@@ -44,4 +44,8 @@ public class MediaFolderRepository : EntityRepository<MediaFolder>, IMediaFolder
     {
         return mapper.ProjectTo<MediaFolderPathDto>(GetData(a => a.MediaPathTypeId == MediaPaths.ProfileFolder));
     }
+    public IQueryable<MediaFolderPathDto> GetSlideShowFolder()
+    {
+        return mapper.ProjectTo<MediaFolderPathDto>(GetData(a => a.MediaPathTypeId == MediaPaths.SlideShowFolder));
+    }
 }

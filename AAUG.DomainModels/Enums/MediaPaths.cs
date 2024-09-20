@@ -6,6 +6,7 @@ public class MediaPaths
     public const short ProfileFolder = 22;
     public const short CampsFolder = 23;
     public const short NewsFolder = 24;
+    public const short SlideShowFolder = 25;
 
     public static string Mapper(short id)
     {
@@ -14,7 +15,8 @@ public class MediaPaths
             EventsFolder => "EventsFolder",
             ProfileFolder => "ProfileFolder",
             CampsFolder => "CampsFolder",
-            NewsFolder => "NewsFolder",
+            NewsFolder => "NewsFolder", 
+            SlideShowFolder => "SlideShowFolder",
             _ => "0"
         };
     }

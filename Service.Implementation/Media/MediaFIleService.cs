@@ -318,6 +318,46 @@ public class MediaFIleService : IMediaFileService
 
     #endregion
 
+    #region slide show
+    public async Task<MediaFileGetDto> InsertSlideShowMediaFileAsync(IFormFile file)
+    {
+        var eventFolder = await unitOfWork.MediaFolderRepository.GetSlideShowFolder().FirstAsync();
+
+        if (!Directory.Exists(eventFolder.Name))
+        {
+            Directory.CreateDirectory(eventFolder.Name);
+        }
+
+        var fileId = Guid.NewGuid();
+        var fileName = $"{fileId}{Path.GetExtension(file.FileName)}";
+        var filePath = Path.Combine(eventFolder.Name, fileName);
+
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        var mediaFileInsertDto = new MediaFileInsertDto
+        {
+            Gid = fileId,
+            MediaFolderId = eventFolder.Id,
+            Name = Path.GetFileNameWithoutExtension(file.FileName),
+            Extension = Path.GetExtension(file.FileName),
+            Size = file.Length / 1024.0, // Size in KB
+            IsOmit = false,
+            Date = DateTime.UtcNow
+        };
+
+        var mediaFile = await unitOfWork.MediaFileRepository.AddMediaFileAsync(mediaFileInsertDto);
+        await unitOfWork.SaveChangesAsync();
+
+        var mediaFileResult = mapper.Map<MediaFileGetDto>(mediaFileInsertDto);
+        mediaFileResult.Id = mediaFile.Id;
+
+        return mediaFileResult;
+    }
+    #endregion
+
 
     #region download files
     public async Task<FileResultDto> DownloadMediaFileAsync(int fileId)
