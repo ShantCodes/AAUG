@@ -32,8 +32,11 @@ public partial class AaugUser
     public string? Email { get; set; }
 
     public bool? CanGetNotfiedByMail { get; set; }
+    public DateOnly DateOfBirth { get; set; }
 
     public bool IsApproved { get; set; }
+
+    public string? Phone { get; set; }
 
     public DateTime? SubscribeDate { get; set; }
 

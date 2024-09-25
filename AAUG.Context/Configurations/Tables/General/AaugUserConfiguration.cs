@@ -34,6 +34,8 @@ namespace AAUG.Context.Configurations.Tables.General
             builder.Property(x => x.NationalCardFileId).HasColumnName("NationalCardFileId");
             builder.Property(x => x.ReceiptFileId).HasColumnName("ReceiptFileId");
             builder.Property(x => x.Email).HasColumnName("Email");
+            builder.Property(x => x.Phone).HasColumnName("Phone");
+            builder.Property(x => x.DateOfBirth).HasColumnName("DateOfBirth");
             builder.Property(x => x.CanGetNotfiedByMail).HasColumnName("CanGetNotfiedByMail");
             builder.Property(x => x.IsApproved).HasColumnName("IsApproved");
             builder.Property(x => x.SubscribeDate).HasColumnName("SubscribeDate");

@@ -54,6 +54,11 @@ public class SlideShowService : ISlideShowService
     #region slide show title
     public async Task<SlideShowTitleInsertViewModel> InsertSlideShowTitleAsync(SlideShowTitleInsertViewModel inputEntity)
     {
+        var existingTitle = await unitOfWork.SlideShowTitleRepository.GetData().FirstOrDefaultAsync();
+        if (existingTitle != null)
+        {
+            await unitOfWork.SlideShowTitleRepository.DeleteAsync(existingTitle.Id);
+        }
         await unitOfWork.SlideShowTitleRepository.AddSlideShowTitle(
            mapper.Map<SlideShowTitleInsertDto>(inputEntity)
        );

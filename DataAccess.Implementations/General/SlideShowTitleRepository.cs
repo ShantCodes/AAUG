@@ -21,4 +21,16 @@ public class SlideShowTitleRepository : EntityRepository<SlideShowTitle>, ISlide
     {
         return AddAsync(mapper.Map<SlideShowTitle>(inputEntity));
     }
+
+    public IQueryable<SlideshowTitleGetDto> GetData()
+    {
+        return mapper.ProjectTo<SlideshowTitleGetDto>(
+            GetData()
+        );
+    }
+
+    public Task<bool> DeleteAsync(int id)
+    {
+        return DeleteAsync(id);
+    }
 }

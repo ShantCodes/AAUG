@@ -30,6 +30,7 @@ public class MappingProfile : Profile
     private void SlideShowTitleProfile()
     {
         CreateMap<SlideShowTitleInsertDto, SlideShowTitle>();
+        CreateMap<SlideShowTitle, SlideshowTitleGetDto>();
     }
 
     private void SlideShowProfile()

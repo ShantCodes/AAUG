@@ -3540,11 +3540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\AAUG\\Project\\clone\\Service.Implementation\\AAUG.Service.Implementations.csproj",
+      "projectUniqueName": "D:\\AAUG\\Project\\clone\\Service.Implementation\\AAUG.Service.Implementations.csproj",
       "projectName": "AAUG.Service.Implementations",
-      "projectPath": "d:\\AAUG\\Project\\clone\\Service.Implementation\\AAUG.Service.Implementations.csproj",
+      "projectPath": "D:\\AAUG\\Project\\clone\\Service.Implementation\\AAUG.Service.Implementations.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "d:\\AAUG\\Project\\clone\\Service.Implementation\\obj\\",
+      "outputPath": "D:\\AAUG\\Project\\clone\\Service.Implementation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3566,14 +3566,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "d:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {
-              "projectPath": "d:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj"
+            "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj": {
+              "projectPath": "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj"
             },
-            "d:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {
-              "projectPath": "d:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj"
+            "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {
+              "projectPath": "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj"
             },
-            "d:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj": {
-              "projectPath": "d:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj"
+            "D:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj": {
+              "projectPath": "D:\\AAUG\\Project\\clone\\Service.Interfaces\\AAUG.Service.Interfaces.csproj"
             }
           }
         }

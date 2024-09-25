@@ -21,6 +21,8 @@ public class AaugUsersInsertDto
     public short? TalentsId { get; set; }
 
     public int? ProfilePictureFileId { get; set; }
+    public string? Phone { get; set; }
+
 
     public int? NationalCardFileId { get; set; }
 
@@ -50,6 +52,8 @@ public class AaugUsersEditDto
     public short? TalentsId { get; set; }
 
     public int? ProfilePictureFileId { get; set; }
+    public string? Phone { get; set; }
+
 
     public int? NationalCardFileId { get; set; }
 
@@ -70,6 +74,7 @@ public class AaugUserGetDto
     public string UserId { get; set; }
 
     public string? NameArmenian { get; set; }
+    public string? Phone { get; set; }
 
     public string? LastNameArmenian { get; set; }
 
@@ -95,6 +100,7 @@ public class AaugUserWithProfilePictureGetDto
     public string? LastNameArmenian { get; set; }
 
     public string? Email { get; set; }
+    public string? Phone { get; set; }
     public int? ProfilePictureFileId { get; set; }
     public MediaFileGetDto? ProfilePictureFile { get; set; }
 }
@@ -125,6 +131,8 @@ public class AaugUserFullGetDto
     public int? ReceiptFileId { get; set; }
 
     public string? Email { get; set; }
+    public string? Phone { get; set; }
+
 
     public bool? CanGetNotfiedByMail { get; set; }
 

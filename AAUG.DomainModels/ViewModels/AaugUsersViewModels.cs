@@ -15,6 +15,8 @@ public class AaugUserInsertViewModel
     public string? LastNameArmenian { get; set; }
 
     public string? Email { get; set; }
+    public string? Phone { get; set; }
+
 }
 
 public class AaugUserFullInsertViewModel
@@ -51,6 +53,8 @@ public class AaugUserFullEditViewModel
     public IFormFile? ReceiptFile { get; set; }
 
     public string? Email { get; set; }
+    public string? Phone { get; set; }
+
 
     public bool? CanGetNotfiedByMail { get; set; }
 }
@@ -82,6 +86,8 @@ public class AaugUserFullGetViewModel
     public MediaFileGetDto? ReceiptFile { get; set; }
 
     public string? Email { get; set; }
+    public string? Phone { get; set; }
+
 
     public bool? CanGetNotfiedByMail { get; set; }
 
@@ -102,6 +108,8 @@ public class AaugUserWithProfilePicureGetViewModel
     public string? LastNameArmenian { get; set; }
 
     public string? Email { get; set; }
+    public string? Phone { get; set; }
+
     public int? ProfilePictureFileId { get; set; }
     public MediaFileGetDto? ProfilePictureFile { get; set; }
 }
