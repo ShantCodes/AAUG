@@ -4,6 +4,7 @@ using AAUG.DataAccess.Interfaces.General;
 using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Models.Tables.General;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace AAUG.DataAccess.Implementations.General;
 
@@ -22,11 +23,9 @@ public class SlideShowTitleRepository : EntityRepository<SlideShowTitle>, ISlide
         return AddAsync(mapper.Map<SlideShowTitle>(inputEntity));
     }
 
-    public IQueryable<SlideshowTitleGetDto> GetData()
+    public Task<SlideShowTitle> GetDataAsync()
     {
-        return mapper.ProjectTo<SlideshowTitleGetDto>(
-            GetData()
-        );
+        return GetData().FirstOrDefaultAsync();
     }
 
     public Task<bool> DeleteAsync(int id)

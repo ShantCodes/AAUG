@@ -31,6 +31,8 @@ namespace AAUG.Service.Implementations.ViewModelMapper
         private void SlideShowTitleProfile()
         {
             CreateMap<SlideShowTitleInsertViewModel, SlideShowTitleInsertDto>();
+            CreateMap<SlideshowTitleGetDto, SlideShowTitleGetViewModel>();
+            CreateMap<SlideShowTitle, SlideShowTitleGetViewModel>();
         }
 
         private void SlideShowProfile()

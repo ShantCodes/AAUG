@@ -20,7 +20,6 @@ internal class SlideShowConfiguration : IEntityTypeConfiguration<SlideShow>
         builder.Property(a => a.Id).HasColumnName("Id");
         builder.Property(a => a.MediaFileId).HasColumnName("MediaFileId");
         builder.Property(a => a.Description).HasColumnName("Description");
-        builder.Property(a => a.TitleId).HasColumnName("TitleId");
         builder.Property(a => a.IsActive).HasColumnName("IsActive");
 
 

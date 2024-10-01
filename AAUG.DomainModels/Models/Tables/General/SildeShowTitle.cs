@@ -6,5 +6,5 @@ public class SlideShowTitle
     public string Description { get; set; }
 
     // relations
-    public virtual ICollection<SlideShow> SlideShows { get; set; }
+    // public virtual ICollection<SlideShow> SlideShows { get; set; }
 }

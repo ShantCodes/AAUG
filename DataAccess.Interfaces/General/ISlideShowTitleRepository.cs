@@ -6,6 +6,6 @@ namespace AAUG.DataAccess.Interfaces.General;
 public interface ISlideShowTitleRepository
 {
     Task<SlideShowTitle> AddSlideShowTitle(SlideShowTitleInsertDto inputEntity);
-    IQueryable<SlideshowTitleGetDto> GetData();
+    Task<SlideShowTitle> GetDataAsync();
     Task<bool> DeleteAsync(int id);
 }

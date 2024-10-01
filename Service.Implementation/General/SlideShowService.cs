@@ -28,6 +28,56 @@ public class SlideShowService : ISlideShowService
         );
     }
 
+    public async Task<IEnumerable<SlideShowGetViewModel>> GetAllSlideShowsForAdminsAsync()
+    {
+        return mapper.Map<IEnumerable<SlideShowGetViewModel>>(
+            await unitOfWork.SlideShowRepository.GetSlideShowsForAdmins().ToListAsync()
+        );
+    }
+
+    //one title with many slideshows
+    public async Task<SlideShowTitleGetViewModel> GetSlideShowsWithTitleAsync()
+    {
+        var slideShows = mapper.Map<IEnumerable<SlideShowGetViewModel>>(
+            await unitOfWork.SlideShowRepository.GetSlideShows().ToListAsync()
+        );
+
+        var x = await unitOfWork.SlideShowTitleRepository.GetDataAsync();
+        var title = mapper.Map<SlideShowTitleGetViewModel>(x) ?? new SlideShowTitleGetViewModel();
+
+        // Ensure SlideShowGetViewModels is initialized
+        if (title.SlideShowGetViewModels == null)
+        {
+            title.SlideShowGetViewModels = new List<SlideShowGetViewModel>();
+        }
+
+        title.SlideShowGetViewModels.AddRange(slideShows.ToList());
+
+        return title;
+    }
+
+    //selecting the slides
+    public async Task<bool> SelectSlidesAsync(List<int> slideShowIds)
+    {
+        var existingSlides = await unitOfWork.SlideShowRepository.GetSlideShowTracking(slideShowIds).ToListAsync();
+        foreach (var item in existingSlides)
+        {
+            if (item.IsActive)
+            {
+                item.IsActive = false;
+            }
+            else
+            {
+                item.IsActive = true;
+            }
+        }
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+
+        return true;
+    }
+
+
     public async Task<IEnumerable<SlideShowGetViewModel>> InsertSlideShowsAsync(List<SlideShowInsertViewModel> inputEntity)
     {
         return mapper.Map<IEnumerable<SlideShowGetViewModel>>(
@@ -54,7 +104,7 @@ public class SlideShowService : ISlideShowService
     #region slide show title
     public async Task<SlideShowTitleInsertViewModel> InsertSlideShowTitleAsync(SlideShowTitleInsertViewModel inputEntity)
     {
-        var existingTitle = await unitOfWork.SlideShowTitleRepository.GetData().FirstOrDefaultAsync();
+        var existingTitle = await unitOfWork.SlideShowTitleRepository.GetDataAsync();
         if (existingTitle != null)
         {
             await unitOfWork.SlideShowTitleRepository.DeleteAsync(existingTitle.Id);

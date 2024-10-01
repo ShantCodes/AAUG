@@ -20,8 +20,19 @@ public class SlideShowRepository : EntityRepository<SlideShow>, ISlideShowReposi
     public IQueryable<SlideShowGetDto> GetSlideShows()
     {
         return mapper.ProjectTo<SlideShowGetDto>(
+            GetData(a => a.IsActive)
+        );
+    }
+    public IQueryable<SlideShowGetDto> GetSlideShowsForAdmins()
+    {
+        return mapper.ProjectTo<SlideShowGetDto>(
             GetData()
         );
+    }
+
+    public IQueryable<SlideShow> GetSlideShowTracking(List<int> slideIds)
+    {
+        return GetData(a => slideIds.Contains(a.Id));
     }
 
     public Task<List<SlideShow>> InsertSlideShowAsync(List<SlideShowInsertDto> inputEntity)
