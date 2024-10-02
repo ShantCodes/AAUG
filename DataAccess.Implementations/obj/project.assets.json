@@ -3486,11 +3486,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
+      "projectUniqueName": "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
       "projectName": "AAUG.DataAccess.Implementations",
-      "projectPath": "d:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
+      "projectPath": "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "d:\\AAUG\\Project\\clone\\DataAccess.Implementations\\obj\\",
+      "outputPath": "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3512,14 +3512,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "d:\\AAUG\\Project\\clone\\AAUG.Context\\AAUG.Context.csproj": {
-              "projectPath": "d:\\AAUG\\Project\\clone\\AAUG.Context\\AAUG.Context.csproj"
+            "D:\\AAUG\\Project\\clone\\AAUG.Context\\AAUG.Context.csproj": {
+              "projectPath": "D:\\AAUG\\Project\\clone\\AAUG.Context\\AAUG.Context.csproj"
             },
-            "d:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
-              "projectPath": "d:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj"
+            "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj": {
+              "projectPath": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\AAUG.DomainModels.csproj"
             },
-            "d:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {
-              "projectPath": "d:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj"
+            "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj": {
+              "projectPath": "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj"
             }
           }
         }

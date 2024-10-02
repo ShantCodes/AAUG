@@ -10,4 +10,8 @@ public interface ISlideShowRepository
     Task<List<SlideShow>> InsertSlideShowAsync(List<SlideShowInsertDto> inputEntity);
     Task<SlideShow> InsertSlideShowAsync(SlideShowInsertDto inputEntity);
     IQueryable<SlideShow> GetSlideShowTracking(List<int> slideIds);
+
+    #region  Delete
+    Task<SlideShow> DeleteSlideAsync(int slideId);
+    #endregion
 }

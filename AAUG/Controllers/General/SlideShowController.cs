@@ -49,4 +49,9 @@ public class SlideShowController : ControllerBase
     {
         return Ok(await slideShowService.SelectSlidesAsync(slideIds));
     }
+    [HttpDelete("DeleteSlide/{slideId}")]
+    public async Task<IActionResult> DeleteSlide(int slideId)
+    {
+        return Ok(await slideShowService.DeleteSlidesAsync(slideId));
+    }
 }

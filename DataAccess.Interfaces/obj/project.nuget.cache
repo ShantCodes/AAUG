@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8PU6GMsHiBj6mu7S0ESItAYrcYO6GptD0HTb39K5Xz2RSBWTdr1RGt3lj17ewhigMYda8tmD0G3Ycg/s39/Uvg==",
+  "dgSpecHash": "kBOigHhg3DBJT6E4U5WwSXrVuednRYGbaTnbfxAc4a8wk/zZMOQW8W+jx4vX/34KAJ0lDm5Sczns23PJI1rxKw==",
   "success": true,
-  "projectFilePath": "d:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj",
+  "projectFilePath": "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\AAUG.DataAccess.Interfaces.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

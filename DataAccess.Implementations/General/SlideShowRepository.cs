@@ -43,4 +43,11 @@ public class SlideShowRepository : EntityRepository<SlideShow>, ISlideShowReposi
     {
         return AddAsync(mapper.Map<SlideShow>(inputEntity));
     }
+
+    #region Delete
+    public Task<SlideShow> DeleteSlideAsync(int slideId)
+    {
+        return DeleteAsync(slideId);
+    }
+    #endregion
 }

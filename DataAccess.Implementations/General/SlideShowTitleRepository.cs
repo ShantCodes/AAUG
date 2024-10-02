@@ -28,7 +28,7 @@ public class SlideShowTitleRepository : EntityRepository<SlideShowTitle>, ISlide
         return GetData().FirstOrDefaultAsync();
     }
 
-    public Task<bool> DeleteAsync(int id)
+    public Task<SlideShowTitle> DeleteTitleAsync(int id)
     {
         return DeleteAsync(id);
     }

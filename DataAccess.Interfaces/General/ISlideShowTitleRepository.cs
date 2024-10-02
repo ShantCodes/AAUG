@@ -7,5 +7,5 @@ public interface ISlideShowTitleRepository
 {
     Task<SlideShowTitle> AddSlideShowTitle(SlideShowTitleInsertDto inputEntity);
     Task<SlideShowTitle> GetDataAsync();
-    Task<bool> DeleteAsync(int id);
+    Task<SlideShowTitle> DeleteTitleAsync(int id);
 }

@@ -5,6 +5,7 @@ using AAUG.Service.Implementations.Media;
 using AAUG.Service.Interfaces.General;
 using AAUG.Service.Interfaces.Media;
 using AutoMapper;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 namespace AAUG.Service.Implementations.General;
@@ -101,13 +102,22 @@ public class SlideShowService : ISlideShowService
 
     }
 
+    public async Task<bool> DeleteSlidesAsync(int slideId)
+    {
+        await unitOfWork.SlideShowRepository.DeleteSlideAsync(slideId);
+        
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+
+        return true;
+    }
     #region slide show title
     public async Task<SlideShowTitleInsertViewModel> InsertSlideShowTitleAsync(SlideShowTitleInsertViewModel inputEntity)
     {
         var existingTitle = await unitOfWork.SlideShowTitleRepository.GetDataAsync();
         if (existingTitle != null)
         {
-            await unitOfWork.SlideShowTitleRepository.DeleteAsync(existingTitle.Id);
+            await unitOfWork.SlideShowTitleRepository.DeleteTitleAsync(existingTitle.Id);
         }
         await unitOfWork.SlideShowTitleRepository.AddSlideShowTitle(
            mapper.Map<SlideShowTitleInsertDto>(inputEntity)

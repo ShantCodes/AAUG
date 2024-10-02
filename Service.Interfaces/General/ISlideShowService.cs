@@ -13,6 +13,7 @@ public interface ISlideShowService
     Task<IEnumerable<SlideShowGetViewModel>> InsertSlideShowsAsync(List<SlideShowInsertViewModel> inputEntity);
     Task<IEnumerable<SlideShowGetViewModel>> InsertSlideShowsAsync(SlideShowInsertViewModel inputEntity);
     Task<bool> SelectSlidesAsync(List<int> slideShowIds);
+    Task<bool> DeleteSlidesAsync(int slideIds);
     #region slide show title
     Task<SlideShowTitleInsertViewModel> InsertSlideShowTitleAsync(SlideShowTitleInsertViewModel inputEntity);
     #endregion

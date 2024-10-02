@@ -49,6 +49,16 @@ namespace AAUG.DataAccess.EntityRepository
             context.Remove(entity);
             return entity;
         }
+        public async Task<T> DeleteAsync(List<int> id)
+        {
+            var entity = await context.Set<T>().FindAsync(id);
+            if (entity == null)
+            {
+                throw new ArgumentException($"Entity with id {id} not found");
+            }
+            context.Remove(entity);
+            return entity;
+        }
 
         public IQueryable<T> GetData()
         {

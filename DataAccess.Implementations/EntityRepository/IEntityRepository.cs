@@ -12,5 +12,6 @@ namespace AAUG.DataAccess.EntityRepository
         void Update(T entity);
         void Delete(T entity);
         Task<T> DeleteAsync(int id);
+        Task<T> DeleteAsync(List<int> id);
     }
 }
