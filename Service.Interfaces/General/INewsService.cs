@@ -8,6 +8,10 @@ namespace AAUG.Service.Interfaces.General
         Task<IEnumerable<NewsForShowViewModel>> GetNewsAsync();
         Task<NewsForShowViewModel> InsertNewsAsync(NewsForInsertViewModel inputEntity);
         Task<NewsForShowViewModel> DeleteNewsByIdAsync(int id);
+        Task<NewsForShowViewModel> GetNewsById(int id);
         Task<NewsForEditViewModel> EditNewsAsync(NewsForEditViewModel inputEntity);
+        #region teaser
+        Task<IEnumerable<NewTeaserGetViewModel>> GetNewsTeasersAsync();
+        #endregion
     }
 }

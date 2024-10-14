@@ -27,36 +27,42 @@ public class TokenService : ITokenService
     }
 
 
-    public async Task<string> GenerateJwtToken(LoginDto user)
+    public async Task<string> GenerateJwtToken(IdentityUser user)
     {
-        var userIdentity = await userManager.FindByNameAsync(user.Username);
-        var getUser = await userManager.FindByIdAsync(userIdentity.Id);
+        // Retrieve user details
         var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Email, user.Username),
-        };
+    {
+        new Claim(ClaimTypes.NameIdentifier, user.Id),
+        new Claim(ClaimTypes.Email, user.Email),
+        new Claim("Username", user.UserName),
+        new Claim("PhoneNumber", user.PhoneNumber ?? string.Empty) // Add phone number as custom claim
+    };
 
-        var roles = await userManager.GetRolesAsync(getUser);
+        // Add roles as claims
+        var roles = await userManager.GetRolesAsync(user);
         foreach (var role in roles)
         {
             claims.Add(new Claim(ClaimTypes.Role, role));
         }
 
-        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("Jwt:Key").Value));
-
+        // Create signing credentials
+        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]));
         var signInCred = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
 
+        // Generate the JWT token
         var securityToken = new JwtSecurityToken(
+            issuer: configuration["Jwt:Issuer"],
+            audience: configuration["Jwt:Audience"],
             claims: claims,
             expires: DateTime.Now.AddMinutes(60),
-            issuer: configuration.GetSection("Jwt:Issuer").Value,
-            audience: configuration.GetSection("Jwt:Audience").Value,
             signingCredentials: signInCred
         );
 
-        string tokenString = new JwtSecurityTokenHandler().WriteToken(securityToken);
-        return tokenString;
+        // Return the token as a string
+        return new JwtSecurityTokenHandler().WriteToken(securityToken);
     }
+
+
 
     public async Task<string> GeneratePasswordResetTokenAsync(string email)
     {
@@ -77,7 +83,8 @@ public class TokenService : ITokenService
             var user = httpContext.User;
             if (user != null)
             {
-                var userName = user.FindFirstValue(ClaimTypes.Email);
+                var userName = user.FindFirst(ClaimTypes.Email)?.Value;
+                var email = user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
                 if (userName != null)
                 {
                     var userGuId = await userManager.FindByNameAsync(userName);
@@ -88,7 +95,8 @@ public class TokenService : ITokenService
                 }
             }
         }
-        throw new Exception("user not found");
+        // throw new Exception("user not found");
+        return null;
     }
 
     public string GetUserRoleFromToken()

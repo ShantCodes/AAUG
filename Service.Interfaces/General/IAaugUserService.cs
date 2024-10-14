@@ -8,6 +8,7 @@ namespace AAUG.Service.Interfaces.General;
 public interface IAaugUserService
 {
     Task<AaugUserInsertViewModel> InsertUserInfoAsync(AaugUserInsertViewModel inputEntity);
+    Task<AaugUserFullGetViewModel> GetAaugUserByPhoneAsync(string phone);
     Task<IdentityUser> GetUserByIdAsync(string userId);
     Task<AaugUserFullGetViewModel> InsertFullUserInfoAsync(AaugUserFullInsertViewModel inputEntity);
     Task<AaugUserFullGetViewModel> UpdateSubscribtion(IFormFile receiptFile);

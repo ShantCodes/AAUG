@@ -27,7 +27,7 @@ public class NewsController : ControllerBase
 
     [HttpPost("InsertNews")]
     [Authorize(Roles = "King,Varich,Hanxnakhumb")]
-    public async Task<IActionResult> InsertNews(NewsForInsertViewModel inputEntity)
+    public async Task<IActionResult> InsertNews([FromForm] NewsForInsertViewModel inputEntity)
     {
         return Ok(await newsService.InsertNewsAsync(inputEntity));
     }
@@ -43,6 +43,16 @@ public class NewsController : ControllerBase
     public async Task<IActionResult> EditNews(NewsForEditViewModel inputEntity)
     {
         return Ok(await newsService.EditNewsAsync(inputEntity));
+    }
+    [HttpGet("GetNewsTeaser")]
+    public async Task<IActionResult> GetNewsTeaser()
+    {
+        return Ok(await newsService.GetNewsTeasersAsync());
+    }
+    [HttpGet("GetNewsById/{id}")]
+    public async Task<IActionResult> GetNewsById(int id)
+    {
+        return Ok(await newsService.GetNewsById(id));
     }
 
 }

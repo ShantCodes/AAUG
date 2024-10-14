@@ -61,11 +61,21 @@ public class AaugUserService : IAaugUserService
 
     public async Task<AaugUserFullGetViewModel> GetAaugUserFullByAaugUserIdAsync(int aaugUserId)
     {
-        var entity = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserId(aaugUserId).FirstOrDefaultAsync() 
+        var entity = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserId(aaugUserId).FirstOrDefaultAsync()
             ?? throw new Exception("user not found");
 
         return mapper.Map<AaugUserFullGetViewModel>(entity);
 
+    }
+
+    public async Task<AaugUserFullGetViewModel> GetAaugUserByPhoneAsync(string phone)
+    {
+        var entity = await unitOfWork.AaugUserRepository.GetFullUserInfoByPhone(phone).FirstOrDefaultAsync();
+        if (entity == null)
+        {
+            return null;
+        }
+        return mapper.Map<AaugUserFullGetViewModel>(entity);
     }
 
     public async Task<AaugUserInsertViewModel> InsertUserInfoAsync(AaugUserInsertViewModel inputEntity)

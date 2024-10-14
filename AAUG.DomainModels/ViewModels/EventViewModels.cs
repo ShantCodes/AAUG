@@ -24,9 +24,11 @@ public class EventGetViewModel
     public bool HasHappened { get; set; }
     public short LikeCount { get; set; }
 
+
     public AaugUserGetViewModel? AaugUserGetViewModel { get; set; }
 
     public MediaFileGetDto? thumbnailFile { get; set; }
+
 }
 
 public class EventWithMediaGetViewModel

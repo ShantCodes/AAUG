@@ -7,6 +7,7 @@ public interface IAaugUserRepository
 {
     Task<AaugUser> AddAsync(AaugUsersInsertDto inputEntity);
     IQueryable<AaugUserWithProfilePictureGetDto> SearchAaugUser(string name);
+    IQueryable<AaugUserFullGetDto> GetFullUserInfoByPhone(string phone);
     IQueryable<AaugUserGetDto> GetUsers();
     Task<List<AaugUser>> GetUsersAsync();
     IQueryable<AaugUserGetDto> GetIsSubApprovedUsers();

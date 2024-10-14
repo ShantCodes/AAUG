@@ -1,4 +1,5 @@
 
+using System.Linq;
 using AAUG.Context.Context;
 using AAUG.DataAccess.EntityRepository;
 using AAUG.DataAccess.Implementations.UnitOfWork;
@@ -38,6 +39,13 @@ namespace AAUG.DataAccess.Implementations.General
             return mapper.ProjectTo<NewsGetDto>(GetData());
         }
 
+        public IQueryable<NewsGetDto> Get4LastNews()
+        {
+            return mapper.ProjectTo<NewsGetDto>(
+                GetData().OrderByDescending(a => a.Id).Take(4)
+            );
+        }
+
         public Task<News> InsertNews(NewsForInsertDto inputEntity)
         {
             return AddAsync(mapper.Map<News>(inputEntity));
@@ -46,6 +54,12 @@ namespace AAUG.DataAccess.Implementations.General
         public Task<News> DeleteNewsAsync(int id)
         {
             return DeleteAsync(id);
+        }
+
+        public IQueryable<NewsGetDto> GetNewsById(int id)
+        {
+            return mapper.ProjectTo<NewsGetDto>(
+                GetData(a => a.Id == id));
         }
     }
 }

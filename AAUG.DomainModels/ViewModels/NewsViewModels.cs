@@ -33,4 +33,16 @@ namespace AAUG.DomainModels.ViewModels
         public int? NewsFileId { get; set; }
         public MediaFileGetDto? NewsFile { get; set; }
     }
+
+    #region teaser
+    public class NewTeaserGetViewModel
+    {
+        public int Id { get; set; }
+        public string NewsTitle { get; set; } = null!;
+        public string NewsDetails { get; set; } = null!;
+        public int CreaterUserId { get; set; }
+        public int? NewsFileId { get; set; }
+
+    }
+    #endregion
 }

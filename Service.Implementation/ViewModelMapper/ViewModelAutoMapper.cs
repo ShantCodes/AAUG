@@ -95,6 +95,7 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             .ForMember(a => a.NewsFileId, a => a.Ignore());
 
             CreateMap<NewsGetDto, NewsForShowViewModel>();
+            CreateMap<NewsGetDto, NewTeaserGetViewModel>();
         }
     }
 }

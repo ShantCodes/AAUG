@@ -34,7 +34,7 @@ public class SlideShowController : ControllerBase
     }
     [HttpPost("InsertSlideShowTitle")]
     [Authorize(Roles = "King,Varich")]
-    public async Task<IActionResult> InsertSlideShowTitle(SlideShowTitleInsertViewModel inputEntity)
+    public async Task<IActionResult> InsertSlideShowTitle([FromForm] SlideShowTitleInsertViewModel inputEntity)
     {
         return Ok(await slideShowService.InsertSlideShowTitleAsync(inputEntity));
     }
@@ -45,7 +45,7 @@ public class SlideShowController : ControllerBase
     }
     [HttpPut("SelectSlides")]
     [Authorize(Roles = "King,Varich")]
-    public async Task<IActionResult> SelectSlides(List<int> slideIds)
+    public async Task<IActionResult> SelectSlides([FromBody] List<int> slideIds)
     {
         return Ok(await slideShowService.SelectSlidesAsync(slideIds));
     }

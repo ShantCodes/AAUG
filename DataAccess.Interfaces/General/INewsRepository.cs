@@ -10,6 +10,9 @@ namespace AAUG.DataAccess.Interfaces.General
         IQueryable<NewsGetDto> GetAllNews();
         Task<News> InsertNews(NewsForInsertDto inputEntity);
         Task<News> DeleteNewsAsync(int id);
-        
+        IQueryable<NewsGetDto> Get4LastNews();
+        IQueryable<NewsGetDto> GetNewsById(int id);
+
+
     }
 }

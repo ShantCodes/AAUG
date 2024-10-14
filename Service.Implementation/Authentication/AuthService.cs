@@ -37,16 +37,33 @@ public class AuthService : IAuthService
         this.mapper = mapper;
         this.httpContextAccessor = httpContextAccessor;
     }
-    public async Task<bool> Login(LoginDto user)
+    public async Task<IdentityUser> Login(LoginDto user)
     {
-        var identityUser = await userManager.FindByEmailAsync(user.Username);
-        if (identityUser is null)
+        // Try to find the user by email, username, or phone number
+        var identityUserByEmail = await userManager.FindByEmailAsync(user.Username);
+        var identityUserByName = await userManager.FindByNameAsync(user.Username);
+
+        // Find by phone number through your custom user service
+        var aaugUserByPhone = await aaugUserService.GetAaugUserByPhoneAsync(user.Username);
+        var identityUserByPhone = aaugUserByPhone != null ? await userManager.FindByIdAsync(aaugUserByPhone.UserId) : null;
+
+        // Check if the user was found and password matches
+        if (identityUserByEmail != null && await userManager.CheckPasswordAsync(identityUserByEmail, user.Password))
         {
-            return false;
+            return identityUserByEmail;
+        }
+        if (identityUserByName != null && await userManager.CheckPasswordAsync(identityUserByName, user.Password))
+        {
+            return identityUserByName;
+        }
+        if (identityUserByPhone != null && await userManager.CheckPasswordAsync(identityUserByPhone, user.Password))
+        {
+            return identityUserByPhone;
         }
 
-        return await userManager.CheckPasswordAsync(identityUser, user.Password);
+        return null; // Return null if login failed
     }
+
 
 
     public async Task<bool> RegisterUserAsync(RegisterDto registerEntity)

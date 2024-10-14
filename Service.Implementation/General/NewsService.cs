@@ -97,6 +97,20 @@ namespace AAUG.Service.General
             return mapper.Map<NewsForShowViewModel>(result);
         }
 
+        public async Task<NewsForShowViewModel> GetNewsById(int id)
+        {
+            return mapper.Map<NewsForShowViewModel>(
+                await unitOfWork.NewsRepository.GetNewsById(id).FirstOrDefaultAsync());
+
+        }
+
+        #region news teaser
+        public async Task<IEnumerable<NewTeaserGetViewModel>> GetNewsTeasersAsync()
+        {
+            return mapper.Map<IEnumerable<NewTeaserGetViewModel>>(unitOfWork.NewsRepository.Get4LastNews());
+        }
+        #endregion
+
         #region Methods and Extensions
         #endregion
     }

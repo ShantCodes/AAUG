@@ -30,13 +30,15 @@ namespace AAUG.Api.Controllers.Authentication
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromForm] LoginDto loginModel)
         {
-            if (await authService.Login(loginModel))
+            var user = await authService.Login(loginModel);
+            if (user != null)
             {
-                var tokenString = await tokenService.GenerateJwtToken(loginModel);
+                var tokenString = await tokenService.GenerateJwtToken(user); // Pass `IdentityUser` object
                 return Ok(tokenString);
             }
-            return BadRequest();
+            return BadRequest("Invalid username or password");
         }
+
 
         [HttpPost("Register")]
         public async Task<IActionResult> Register([FromForm] RegisterDto registerEntity)
@@ -55,7 +57,7 @@ namespace AAUG.Api.Controllers.Authentication
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto resetPasswordDto)
         {
             return Ok(await authService.ResetPasswordAsync(resetPasswordDto));
-        }                
+        }
     }
 
 }

@@ -103,6 +103,12 @@ public class AaugUserRepository : EntityRepository<AaugUser>, IAaugUserRepositor
             GetData(a => a.Id == Id)
         );
     }
+    public IQueryable<AaugUserFullGetDto> GetFullUserInfoByPhone(string phone)
+    {
+        return mapper.ProjectTo<AaugUserFullGetDto>(
+            GetData(a => a.Phone == phone)
+        );
+    }
 
     public IQueryable<AaugUser> GetAaugUserById(int id)
     {
