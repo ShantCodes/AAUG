@@ -38,7 +38,7 @@ public class EventService : IEventService
     }
 
     #endregion
-
+    
     public async Task<IEnumerable<EventGetViewModel>> GetAllEventsAsync(int pageNumber, int pageSize = 4)
     {
         var skip = (pageNumber - 1) * pageSize;
@@ -232,6 +232,23 @@ public class EventService : IEventService
         if (data == null)
         {
             return false;
+        }
+        if (data.ThumbNailFileId != null)
+        {
+            var eventFolder = await unitOfWork.MediaFolderRepository.GetEventsFolder().FirstAsync();
+            var existingFile = await unitOfWork.MediaFileRepository.GetMediaFileByGuIdAsync((int)data.ThumbNailFileId).FirstOrDefaultAsync();
+            if (existingFile != null)
+            {
+                existingFile.IsOmit = true;
+                await unitOfWork.SaveChangesAsync();
+
+                // Remove the old file from the file system
+                var oldFilePath = Path.Combine(eventFolder.Name, $"{existingFile.Gid}{existingFile.Extension}");
+                if (File.Exists(oldFilePath))
+                {
+                    File.Delete(oldFilePath);
+                }
+            }
         }
         await unitOfWork.EventRepository.DeleteEventAsync(eventId);
 
