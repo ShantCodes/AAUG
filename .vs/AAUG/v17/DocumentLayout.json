@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "D:\\AAUG\\Project\\clone\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|d:\\aaug\\project\\clone\\service.implementation\\general\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\general\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\aaug.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\aaug.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\controllers\\general\\aaugusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\controllers\\general\\aaugusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|d:\\aaug\\project\\clone\\dataaccess.implementations\\general\\aauguserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|solutionrelative:dataaccess.implementations\\general\\aauguserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A4A9E5-57AF-41C3-8F96-742B60A6FA7E}|AAUG.DomainModels\\AAUG.DomainModels.csproj|d:\\aaug\\project\\clone\\aaug.domainmodels\\models\\tables\\general\\aauguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A4A9E5-57AF-41C3-8F96-742B60A6FA7E}|AAUG.DomainModels\\AAUG.DomainModels.csproj|solutionrelative:aaug.domainmodels\\models\\tables\\general\\aauguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|d:\\aaug\\project\\clone\\service.implementation\\general\\aauguserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\general\\aauguserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\controllers\\general\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\controllers\\general\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|d:\\aaug\\project\\clone\\service.implementation\\general\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\general\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|d:\\aaug\\project\\clone\\service.implementation\\authentication\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\controllers\\authentication\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\controllers\\authentication\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\controllers\\general\\aaugusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\controllers\\general\\aaugusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|d:\\aaug\\project\\clone\\service.implementation\\media\\mediafileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,16 +75,8 @@
       "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\controllers\\general\\slideshowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|d:\\aaug\\project\\clone\\service.implementation\\general\\aauguserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\general\\aauguserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6DA9D63D-BB68-48E4-A4D5-CFACDEBD52F7}|Service.Interfaces\\AAUG.Service.Interfaces.csproj|d:\\aaug\\project\\clone\\service.interfaces\\general\\iaauguserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6DA9D63D-BB68-48E4-A4D5-CFACDEBD52F7}|Service.Interfaces\\AAUG.Service.Interfaces.csproj|solutionrelative:service.interfaces\\general\\iaauguserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|d:\\aaug\\project\\clone\\dataaccess.implementations\\general\\aauguserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|solutionrelative:dataaccess.implementations\\general\\aauguserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50A4A9E5-57AF-41C3-8F96-742B60A6FA7E}|AAUG.DomainModels\\AAUG.DomainModels.csproj|d:\\aaug\\project\\clone\\aaug.domainmodels\\enums\\aaugroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -85,10 +101,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{43D5CBF3-B21D-4C83-855E-2415B72AA4FC}|AAUG.Context\\AAUG.Context.csproj|d:\\aaug\\project\\clone\\aaug.context\\configurations\\tables\\general\\aauguserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43D5CBF3-B21D-4C83-855E-2415B72AA4FC}|AAUG.Context\\AAUG.Context.csproj|solutionrelative:aaug.context\\configurations\\tables\\general\\aauguserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50A4A9E5-57AF-41C3-8F96-742B60A6FA7E}|AAUG.DomainModels\\AAUG.DomainModels.csproj|d:\\aaug\\project\\clone\\aaug.domainmodels\\models\\tables\\general\\aauguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50A4A9E5-57AF-41C3-8F96-742B60A6FA7E}|AAUG.DomainModels\\AAUG.DomainModels.csproj|solutionrelative:aaug.domainmodels\\models\\tables\\general\\aauguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3546E98E-8E54-4837-B4AE-FA092B7AB4FB}|DataAccess.Implementations\\AAUG.DataAccess.Implementations.csproj|d:\\aaug\\project\\clone\\dataaccess.implementations\\general\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -173,7 +185,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -181,56 +193,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AaugRoles.cs",
-              "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\Enums\\AaugRoles.cs",
-              "RelativeDocumentMoniker": "AAUG.DomainModels\\Enums\\AaugRoles.cs",
-              "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\Enums\\AaugRoles.cs",
-              "RelativeToolTip": "AAUG.DomainModels\\Enums\\AaugRoles.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T04:28:58.134Z"
+              "DocumentIndex": 1,
+              "Title": "AAUG.http",
+              "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\AAUG.http",
+              "RelativeDocumentMoniker": "AAUG\\AAUG.http",
+              "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG\\AAUG.http",
+              "RelativeToolTip": "AAUG\\AAUG.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-11-02T14:43:36.921Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "AAUG\\appsettings.Development.json",
+              "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG\\appsettings.Development.json",
+              "RelativeToolTip": "AAUG\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-02T14:42:58.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\appsettings.json",
+              "RelativeDocumentMoniker": "AAUG\\appsettings.json",
+              "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG\\appsettings.json",
+              "RelativeToolTip": "AAUG\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-02T14:42:34.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AaugUserRepository.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\General\\AaugUserRepository.cs",
               "RelativeDocumentMoniker": "DataAccess.Implementations\\General\\AaugUserRepository.cs",
               "ToolTip": "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\General\\AaugUserRepository.cs",
               "RelativeToolTip": "DataAccess.Implementations\\General\\AaugUserRepository.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAcwGMAAABBAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAwHAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T09:57:16.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NewsController.cs",
-              "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\NewsController.cs",
-              "RelativeDocumentMoniker": "AAUG\\Controllers\\General\\NewsController.cs",
-              "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\NewsController.cs",
-              "RelativeToolTip": "AAUG\\Controllers\\General\\NewsController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwCAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T04:45:56.956Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "EventService.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Implementation\\General\\EventService.cs",
               "RelativeDocumentMoniker": "Service.Implementation\\General\\EventService.cs",
               "ToolTip": "D:\\AAUG\\Project\\clone\\Service.Implementation\\General\\EventService.cs",
               "RelativeToolTip": "Service.Implementation\\General\\EventService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAEAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAAgwCcAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:30:39.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T08:30:39.442Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "INewsService.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Interfaces\\General\\INewsService.cs",
               "RelativeDocumentMoniker": "Service.Interfaces\\General\\INewsService.cs",
@@ -242,19 +268,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "AaugUserController.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\AaugUserController.cs",
               "RelativeDocumentMoniker": "AAUG\\Controllers\\General\\AaugUserController.cs",
               "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\AaugUserController.cs",
               "RelativeToolTip": "AAUG\\Controllers\\General\\AaugUserController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAcwDEAAAAEAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAmwG8AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T17:34:20.413Z"
+              "WhenOpened": "2024-08-23T17:34:20.413Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\Authentication\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "AAUG\\Controllers\\Authentication\\AuthenticationController.cs",
@@ -266,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Implementation\\Authentication\\AuthService.cs",
               "RelativeDocumentMoniker": "Service.Implementation\\Authentication\\AuthService.cs",
@@ -278,19 +305,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "EventController.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\EventController.cs",
               "RelativeDocumentMoniker": "AAUG\\Controllers\\General\\EventController.cs",
               "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\EventController.cs",
               "RelativeToolTip": "AAUG\\Controllers\\General\\EventController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAAwDkAAAAFAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-24T07:41:28.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Implementation\\User\\UserService.cs",
               "RelativeDocumentMoniker": "Service.Implementation\\User\\UserService.cs",
@@ -302,19 +329,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 6,
+              "Title": "AaugUserService.cs",
+              "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Implementation\\General\\AaugUserService.cs",
+              "RelativeDocumentMoniker": "Service.Implementation\\General\\AaugUserService.cs",
+              "ToolTip": "D:\\AAUG\\Project\\clone\\Service.Implementation\\General\\AaugUserService.cs",
+              "RelativeToolTip": "Service.Implementation\\General\\AaugUserService.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAAwJAAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T09:42:41.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AaugUser.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\Models\\Tables\\General\\AaugUser.cs",
               "RelativeDocumentMoniker": "AAUG.DomainModels\\Models\\Tables\\General\\AaugUser.cs",
               "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\Models\\Tables\\General\\AaugUser.cs",
               "RelativeToolTip": "AAUG.DomainModels\\Models\\Tables\\General\\AaugUser.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAkwCgAAAAdAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwCIAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-30T16:19:26.341Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 12,
+              "Title": "NewsController.cs",
+              "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\NewsController.cs",
+              "RelativeDocumentMoniker": "AAUG\\Controllers\\General\\NewsController.cs",
+              "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\NewsController.cs",
+              "RelativeToolTip": "AAUG\\Controllers\\General\\NewsController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T04:45:56.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AaugRoles.cs",
+              "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\Enums\\AaugRoles.cs",
+              "RelativeDocumentMoniker": "AAUG.DomainModels\\Enums\\AaugRoles.cs",
+              "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\Enums\\AaugRoles.cs",
+              "RelativeToolTip": "AAUG.DomainModels\\Enums\\AaugRoles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T04:28:58.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "AaugUsersDtos.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\Dtos\\AaugUsersDtos.cs",
               "RelativeDocumentMoniker": "AAUG.DomainModels\\Dtos\\AaugUsersDtos.cs",
@@ -326,19 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AaugUserService.cs",
-              "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Implementation\\General\\AaugUserService.cs",
-              "RelativeDocumentMoniker": "Service.Implementation\\General\\AaugUserService.cs",
-              "ToolTip": "D:\\AAUG\\Project\\clone\\Service.Implementation\\General\\AaugUserService.cs",
-              "RelativeToolTip": "Service.Implementation\\General\\AaugUserService.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAgwEQAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T09:42:41.198Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "NewsService.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Implementation\\General\\NewsService.cs",
               "RelativeDocumentMoniker": "Service.Implementation\\General\\NewsService.cs",
@@ -350,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "MediaFIleService.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Implementation\\Media\\MediaFIleService.cs",
               "RelativeDocumentMoniker": "Service.Implementation\\Media\\MediaFIleService.cs",
@@ -362,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "INewsRepository.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\General\\INewsRepository.cs",
               "RelativeDocumentMoniker": "DataAccess.Interfaces\\General\\INewsRepository.cs",
@@ -374,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "AaugUserConfiguration.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.Context\\Configurations\\Tables\\General\\AaugUserConfiguration.cs",
               "RelativeDocumentMoniker": "AAUG.Context\\Configurations\\Tables\\General\\AaugUserConfiguration.cs",
@@ -386,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "NewsRepository.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\General\\NewsRepository.cs",
               "RelativeDocumentMoniker": "DataAccess.Implementations\\General\\NewsRepository.cs",
@@ -398,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "SlideShowController.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\SlideShowController.cs",
               "RelativeDocumentMoniker": "AAUG\\Controllers\\General\\SlideShowController.cs",
@@ -410,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "AaugUsersViewModels.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\ViewModels\\AaugUsersViewModels.cs",
               "RelativeDocumentMoniker": "AAUG.DomainModels\\ViewModels\\AaugUsersViewModels.cs",
@@ -422,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "IAaugUserService.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Interfaces\\General\\IAaugUserService.cs",
               "RelativeDocumentMoniker": "Service.Interfaces\\General\\IAaugUserService.cs",
@@ -434,7 +485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "IAaugUserRepository.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\General\\IAaugUserRepository.cs",
               "RelativeDocumentMoniker": "DataAccess.Interfaces\\General\\IAaugUserRepository.cs",
@@ -446,7 +497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "IEventService.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Interfaces\\General\\IEventService.cs",
               "RelativeDocumentMoniker": "Service.Interfaces\\General\\IEventService.cs",
@@ -458,7 +509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "EventRepository.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\General\\EventRepository.cs",
               "RelativeDocumentMoniker": "DataAccess.Implementations\\General\\EventRepository.cs",
@@ -470,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "TokenService.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Implementation\\Authentication\\TokenService.cs",
               "RelativeDocumentMoniker": "Service.Implementation\\Authentication\\TokenService.cs",
@@ -482,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "IEventRepository.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\General\\IEventRepository.cs",
               "RelativeDocumentMoniker": "DataAccess.Interfaces\\General\\IEventRepository.cs",
@@ -494,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "AutoMapper.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\DataMapper\\AutoMapper.cs",
               "RelativeDocumentMoniker": "AAUG.DomainModels\\DataMapper\\AutoMapper.cs",
@@ -506,7 +557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "AaugUserService.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\AppData\\Local\\SourceServer\\52df221518085715709669495f0597ce4e20933ea9806ebb68a33783605da65c\\Service.Implementation\\General\\AaugUserService.cs",
               "ToolTip": "C:\\Users\\Asus\\AppData\\Local\\SourceServer\\52df221518085715709669495f0597ce4e20933ea9806ebb68a33783605da65c\\Service.Implementation\\General\\AaugUserService.cs",
@@ -516,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "ViewModelAutoMapper.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Implementation\\ViewModelMapper\\ViewModelAutoMapper.cs",
               "RelativeDocumentMoniker": "Service.Implementation\\ViewModelMapper\\ViewModelAutoMapper.cs",
@@ -528,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "EventViewModels.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\ViewModels\\EventViewModels.cs",
               "RelativeDocumentMoniker": "AAUG.DomainModels\\ViewModels\\EventViewModels.cs",
@@ -540,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "EventLikeRepository.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\DataAccess.Implementations\\General\\EventLikeRepository.cs",
               "RelativeDocumentMoniker": "DataAccess.Implementations\\General\\EventLikeRepository.cs",
@@ -552,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "IEventLikeRepository.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\DataAccess.Interfaces\\General\\IEventLikeRepository.cs",
               "RelativeDocumentMoniker": "DataAccess.Interfaces\\General\\IEventLikeRepository.cs",
@@ -564,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "EventLikeViewModels.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\ViewModels\\EventLikeViewModels.cs",
               "RelativeDocumentMoniker": "AAUG.DomainModels\\ViewModels\\EventLikeViewModels.cs",
@@ -576,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "FormConfiguration.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.Context\\Configurations\\Tables\\General\\FormConfiguration.cs",
               "RelativeDocumentMoniker": "AAUG.Context\\Configurations\\Tables\\General\\FormConfiguration.cs",
@@ -588,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\Program.cs",
               "RelativeDocumentMoniker": "AAUG\\Program.cs",
@@ -600,7 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "Form.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\Models\\Tables\\General\\Form.cs",
               "RelativeDocumentMoniker": "AAUG.DomainModels\\Models\\Tables\\General\\Form.cs",
@@ -612,7 +663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "FormQuestion.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\Models\\Tables\\General\\FormQuestion.cs",
               "RelativeDocumentMoniker": "AAUG.DomainModels\\Models\\Tables\\General\\FormQuestion.cs",
@@ -624,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "FormAnswear.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.DomainModels\\Models\\Tables\\General\\FormAnswear.cs",
               "RelativeDocumentMoniker": "AAUG.DomainModels\\Models\\Tables\\General\\FormAnswear.cs",
@@ -636,7 +687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "20240628135327_CreateIdentitySchema.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\Migrations\\20240628135327_CreateIdentitySchema.cs",
               "RelativeDocumentMoniker": "AAUG\\Migrations\\20240628135327_CreateIdentitySchema.cs",
@@ -647,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "DependencyInjectionServiceExtension.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
               "RelativeDocumentMoniker": "AAUG\\ServiceExtensions\\DependencyInjectionServiceExtension.cs",
@@ -659,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "AaugContext.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG.Context\\Context\\AaugContext.cs",
               "RelativeDocumentMoniker": "AAUG.Context\\Context\\AaugContext.cs",

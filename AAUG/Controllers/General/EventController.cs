@@ -25,7 +25,7 @@ public class EventController : ControllerBase
         return Ok(await eventService.GetReservedEventDatesAsync());
     }
     [HttpPost("InsertEvent")]
-    public async Task<IActionResult> InsertEvent(EventInsertViewModel inputEntity)
+    public async Task<IActionResult> InsertEvent([FromForm] EventInsertViewModel inputEntity)
     {
         return Ok(await eventService.InsertEventAsync(inputEntity));
     }
