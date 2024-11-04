@@ -45,7 +45,7 @@ public class AaugUserController : ControllerBase
         return Ok(await userService.GetAllRolesAsync());
     }
     [HttpGet("GetAaugUserFullByAaugUserId/{aaugUserId}")]
-    [Authorize(Roles ="King,Varich")]
+    [Authorize(Roles = "King,Varich")]
     public async Task<IActionResult> GetAaugUserFullByAaugUserId(int aaugUserId)
     {
         return Ok(await AaugUserService.GetAaugUserFullByAaugUserIdAsync(aaugUserId));
@@ -106,17 +106,19 @@ public class AaugUserController : ControllerBase
     {
         return Ok(await AaugUserService.DeleteUserAsync(aaugUserId));
     }
-    [HttpGet("GetNotApprovedUsers")]
+    [HttpGet("GetNotApprovedUsers/{pageNumber}/{pageSize}")]
     [Authorize(Roles = "King,Varich")]
-    public async Task<IActionResult> GetNotApprovedUsers()
+    public async Task<IActionResult> GetNotApprovedUsers(int pageNumber, int pageSize = 7)
     {
-        return Ok(await AaugUserService.GetNotApprovedAaugUsersAsync());
+        var result = await AaugUserService.GetNotApprovedAaugUsersAsync(pageNumber, pageSize);
+        return Ok(result);
     }
-    [HttpGet("GetApprovedUsers")]
+    [HttpGet("GetApprovedUsers/{pageNumber}/{pageSize}")]
     [Authorize(Roles = "King, Varich")]
-    public async Task<IActionResult> GetApprovedUsers()
+    public async Task<IActionResult> GetApprovedUsers(int pageNumber, int pageSize = 4)
     {
-        return Ok(await AaugUserService.GetApprovedUsersAsync());
+        var result = await AaugUserService.GetApprovedUsersAsync(pageNumber, pageSize);
+        return Ok(result);
     }
     [HttpPut("ApproveAaugUser/{aaugUserId}/{IsApproved}")]
     [Authorize(Roles = "King,Varich")]
@@ -125,22 +127,22 @@ public class AaugUserController : ControllerBase
         return Ok(await AaugUserService.ApproveAaugUserAsync(aaugUserId, IsApproved));
     }
     [HttpPut("ApproveSubscribtion/{aaugUserId}/{approveSub}")]
-    [Authorize(Roles ="King,Varich")]
+    [Authorize(Roles = "King,Varich")]
     public async Task<IActionResult> ApproveSubscribtion(int aaugUserId, bool approveSub)
     {
         return Ok(await AaugUserService.ApproveSubscribtionAsync(aaugUserId, approveSub));
     }
-    [HttpGet("GetSubscribedNotSubApprovedUsers")]
-    [Authorize(Roles ="King,Varich")]
-    public async Task<IActionResult> GetSubscribedNotSubApprovedUsers()
+    [HttpGet("GetSubscribedNotSubApprovedUsers/{pageNumber}/{pageSize}")]
+    [Authorize(Roles = "King,Varich")]
+    public async Task<IActionResult> GetSubscribedNotSubApprovedUsers(int pageNumber, int pageSize = 4)
     {
-        return Ok(await AaugUserService.GetSubscribedNotSubApprovedUsersAsync());
+        return Ok(await AaugUserService.GetSubscribedNotSubApprovedUsersAsync(pageNumber, pageSize));
     }
-    [HttpGet("GetIsSubApprovedUsers")]
-    [Authorize(Roles ="King,Varich")]
-    public async Task<IActionResult> GetIsSubApprovedUsers()
+    [HttpGet("GetIsSubApprovedUsers/{pageNumber}/{pageSize}")]
+    [Authorize(Roles = "King,Varich")]
+    public async Task<IActionResult> GetIsSubApprovedUsers(int pageNumber, int pageSize = 4)
     {
-        return Ok(await AaugUserService.GetIsSubApprovedUsersAsync());
+        return Ok(await AaugUserService.GetIsSubApprovedUsersAsync(pageNumber, pageSize));
     }
 
 }

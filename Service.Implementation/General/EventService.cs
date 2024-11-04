@@ -45,7 +45,7 @@ public class EventService : IEventService
 
         var events = await unitOfWork.EventRepository
                                       .GetEvents()
-                                      .OrderByDescending(e => e.Id)
+                                      .OrderByDescending(e => e.EventDate)
                                       .Skip(skip)
                                       .Take(pageSize)
                                       .ToListAsync();

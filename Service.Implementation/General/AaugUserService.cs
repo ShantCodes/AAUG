@@ -135,9 +135,25 @@ public class AaugUserService : IAaugUserService
         return mapper.Map<AaugUserFullGetViewModel>(entity);
     }
 
-    public async Task<IEnumerable<AaugUserGetViewModel>> GetIsSubApprovedUsersAsync()
+    public async Task<IEnumerable<AaugUserGetViewModel>> GetIsSubApprovedUsersAsync(int pageNumber, int pageSize)
     {
-        return mapper.Map<IEnumerable<AaugUserGetViewModel>>(await unitOfWork.AaugUserRepository.GetIsSubApprovedUsers().ToListAsync());
+        var skip = (pageNumber - 1) * pageSize;
+
+        var entity = await unitOfWork.AaugUserRepository
+                                     .GetIsSubApprovedUsers()
+                                     .Skip(skip)
+                                     .Take(pageSize)
+                                     .ToListAsync();
+
+        var data = mapper.Map<IEnumerable<AaugUserGetViewModel>>(entity);
+
+        foreach (var item in data)
+        {
+            item.Role = await userManager.GetRolesAsync(
+                await userManager.FindByIdAsync(item.UserId));
+        }
+
+        return data;
     }
 
     public async Task<bool> ApproveSubscribtionAsync(int aaugUserId, bool approveSub)
@@ -266,23 +282,38 @@ public class AaugUserService : IAaugUserService
 
     }
 
-    public async Task<IEnumerable<AaugUserGetViewModel>> GetSubscribedNotSubApprovedUsersAsync()
+    public async Task<IEnumerable<AaugUserGetViewModel>> GetSubscribedNotSubApprovedUsersAsync(int pageNumber, int pageSize)
     {
-        var entity = await unitOfWork.AaugUserRepository.GetSubscribedNotSubApprovedUsers().ToListAsync();
+        var skip = (pageNumber - 1) * pageSize;
+
+        var entity = await unitOfWork.AaugUserRepository
+                                     .GetSubscribedNotSubApprovedUsers()
+                                     .Skip(skip)
+                                     .Take(pageSize)
+                                     .ToListAsync();
+
         var data = mapper.Map<IEnumerable<AaugUserGetViewModel>>(entity);
 
         foreach (var item in data)
         {
-            var x = await userManager.FindByIdAsync(item.UserId);
-            item.Role = await userManager.GetRolesAsync(x);
+            var user = await userManager.FindByIdAsync(item.UserId);
+            item.Role = await userManager.GetRolesAsync(user);
         }
 
         return data;
     }
 
-    public async Task<IEnumerable<AaugUserGetViewModel>> GetApprovedUsersAsync()
+
+    public async Task<IEnumerable<AaugUserGetViewModel>> GetApprovedUsersAsync(int pageNumber, int pageSize = 4)
     {
-        var entity = await unitOfWork.AaugUserRepository.GetApprovedAaugUsers().ToListAsync();
+        var skip = (pageNumber - 1) * pageSize;
+
+        var entity = await unitOfWork.AaugUserRepository
+                                     .GetApprovedAaugUsers()
+                                     .Skip(skip)
+                                     .Take(pageSize)
+                                     .ToListAsync();
+
         var data = mapper.Map<IEnumerable<AaugUserGetViewModel>>(entity);
 
         foreach (var item in data)
@@ -326,12 +357,27 @@ public class AaugUserService : IAaugUserService
         return true;
     }
 
-    public async Task<IEnumerable<AaugUserGetViewModel>> GetNotApprovedAaugUsersAsync()
+    public async Task<IEnumerable<AaugUserGetViewModel>> GetNotApprovedAaugUsersAsync(int pageNumber, int pageSize = 4)
     {
-        return mapper.Map<IEnumerable<AaugUserGetViewModel>>(
-            await unitOfWork.AaugUserRepository.GetNotApprovedAaugUsers().ToListAsync()
-        );
+        var skip = (pageNumber - 1) * pageSize;
+
+        var entity = await unitOfWork.AaugUserRepository
+                                     .GetNotApprovedAaugUsers()
+                                     .Skip(skip)
+                                     .Take(pageSize)
+                                     .ToListAsync();
+
+        var data = mapper.Map<IEnumerable<AaugUserGetViewModel>>(entity);
+
+        foreach (var item in data)
+        {
+            item.Role = await userManager.GetRolesAsync(
+                await userManager.FindByIdAsync(item.UserId));
+        }
+
+        return data;
     }
+
     #endregion
 
 }
