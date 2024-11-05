@@ -94,6 +94,8 @@ public class AaugUserFullGetViewModel
 
     public DateTime? SubscribeDate { get; set; }
     public bool IsApproved { get; set; }
+
+    public int? MembershipCode { get; set; }
 }
 
 public class AaugUserWithProfilePicureGetViewModel

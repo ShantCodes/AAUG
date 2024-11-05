@@ -82,6 +82,12 @@ public class AaugUserController : ControllerBase
     {
         return Ok(await AaugUserService.UpdateSubscribtion(file));
     }
+    [HttpPut("UpdateSubscribtionWithCode/{membershipCode}")]
+    [Authorize]
+    public async Task<IActionResult> UpdateSubscribtionWithCode(int membershipCode)
+    {
+        return Ok(await AaugUserService.UpdateSubWithCodeAsync(membershipCode));
+    }
     [HttpPut("InsertProfilePicture")]
     [Authorize]
     public async Task<IActionResult> InsertProfilePicture(IFormFile profilePictureFile)

@@ -41,6 +41,7 @@ namespace AAUG.Context.Configurations.Tables.General
             builder.Property(x => x.SubscribeDate).HasColumnName("SubscribeDate");
             builder.Property(x => x.Subscribed).HasColumnName("Subscribed");
             builder.Property(x => x.IsSubApproved).HasColumnName("IsSubApproved");
+            builder.Property(x => x.MembershipCode).HasColumnName("MembershipCode");
             #endregion
 
             #region Relations

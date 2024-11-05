@@ -135,6 +135,22 @@ public class AaugUserService : IAaugUserService
         return mapper.Map<AaugUserFullGetViewModel>(entity);
     }
 
+    public async Task<AaugUserFullGetViewModel> UpdateSubWithCodeAsync(int membershipCode)
+    {
+        var aaugUser = await tokenService.GetAaugUserFromToken();
+
+        var entity = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(aaugUser.Id).FirstOrDefaultAsync();
+        if (entity == null)
+            throw new Exception("the user not found");
+
+        entity.MembershipCode = membershipCode;
+
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+
+        return mapper.Map<AaugUserFullGetViewModel>(entity);
+    }
+
     public async Task<IEnumerable<AaugUserGetViewModel>> GetIsSubApprovedUsersAsync(int pageNumber, int pageSize)
     {
         var skip = (pageNumber - 1) * pageSize;

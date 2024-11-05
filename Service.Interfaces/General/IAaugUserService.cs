@@ -12,6 +12,7 @@ public interface IAaugUserService
     Task<IdentityUser> GetUserByIdAsync(string userId);
     Task<AaugUserFullGetViewModel> InsertFullUserInfoAsync(AaugUserFullInsertViewModel inputEntity);
     Task<AaugUserFullGetViewModel> UpdateSubscribtion(IFormFile receiptFile);
+    Task<AaugUserFullGetViewModel> UpdateSubWithCodeAsync(int membershipCode);
     Task<AaugUserFullEditViewModel> EditAaugUserFullAsync(AaugUserFullEditViewModel inputEntity);
     Task<AaugUserWithProfilePicureGetViewModel> InsertProfilePictureAsync(IFormFile profilePicture);
     Task<bool> ApproveSubscribtionAsync(int aaugUserId, bool approveSub);

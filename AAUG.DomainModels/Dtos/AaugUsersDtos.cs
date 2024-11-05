@@ -138,6 +138,8 @@ public class AaugUserFullGetDto
 
     public bool? IsApproved { get; set; }
     public DateTime? SubscribeDate { get; set; }
+
+    public int? MembershipCode { get; set; }
 }
 
 public class SubscribeFileDto

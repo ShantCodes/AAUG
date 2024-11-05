@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\AAUG\\Project\\clone\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\controllers\\general\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\controllers\\general\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\controllers\\general\\aaugusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\controllers\\general\\aaugusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\controllers\\general\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\controllers\\general\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6DA9D63D-BB68-48E4-A4D5-CFACDEBD52F7}|Service.Interfaces\\AAUG.Service.Interfaces.csproj|d:\\aaug\\project\\clone\\service.interfaces\\general\\iaauguserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -185,7 +185,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -193,13 +193,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AaugUserController.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\AaugUserController.cs",
               "RelativeDocumentMoniker": "AAUG\\Controllers\\General\\AaugUserController.cs",
               "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\AaugUserController.cs",
               "RelativeToolTip": "AAUG\\Controllers\\General\\AaugUserController.cs",
-              "ViewState": "AQIAAHgAAAAAAAAAAAAIwIkAAAAEAAAA",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAUwFcAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T17:34:20.413Z",
               "EditorCaption": ""
@@ -226,8 +226,7 @@
               "RelativeToolTip": "AAUG\\Program.cs",
               "ViewState": "AQIAAG4AAAAAAAAAAAAIwIMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T13:18:03.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T13:18:03.025Z"
             },
             {
               "$type": "Document",
@@ -243,16 +242,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "NewsController.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\NewsController.cs",
               "RelativeDocumentMoniker": "AAUG\\Controllers\\General\\NewsController.cs",
               "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG\\Controllers\\General\\NewsController.cs",
               "RelativeToolTip": "AAUG\\Controllers\\General\\NewsController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwDIAAAAFAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAA9wDIAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T04:45:56.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-29T04:45:56.956Z"
             },
             {
               "$type": "Document",
@@ -264,8 +262,7 @@
               "RelativeToolTip": "Service.Interfaces\\General\\IAaugUserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwBIAAABvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T08:43:42.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-03T08:43:42.548Z"
             },
             {
               "$type": "Document",
@@ -277,8 +274,7 @@
               "RelativeToolTip": "Service.Implementation\\General\\AaugUserService.cs",
               "ViewState": "AQIAABYBAAAAAAAAAAAwwBwBAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T09:42:41.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T09:42:41.198Z"
             },
             {
               "$type": "Document",
@@ -290,8 +286,7 @@
               "RelativeToolTip": "AAUG\\Controllers\\General\\EventController.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAqwBMAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T07:41:28.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-24T07:41:28.565Z"
             },
             {
               "$type": "Document",
@@ -303,8 +298,7 @@
               "RelativeToolTip": "Service.Implementation\\General\\EventService.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAmwDwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:30:39.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T08:30:39.442Z"
             },
             {
               "$type": "Document",
@@ -316,8 +310,7 @@
               "RelativeToolTip": "DataAccess.Implementations\\General\\EventRepository.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAAwCoAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T11:33:18.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T11:33:18.391Z"
             },
             {
               "$type": "Document",

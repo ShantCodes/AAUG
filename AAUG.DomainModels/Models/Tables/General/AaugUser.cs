@@ -42,6 +42,7 @@ public partial class AaugUser
 
     public bool Subscribed { get; set; }
     public bool IsSubApproved { get; set; }
+    public int? MembershipCode { get; set; }
 
     public virtual ICollection<Camp>? Camps { get; set; }
 
