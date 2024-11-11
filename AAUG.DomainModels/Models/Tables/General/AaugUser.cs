@@ -38,6 +38,8 @@ public partial class AaugUser
 
     public string? Phone { get; set; }
 
+    public DateOnly? BornDate { get; set; }
+
     public DateTime? SubscribeDate { get; set; }
 
     public bool Subscribed { get; set; }

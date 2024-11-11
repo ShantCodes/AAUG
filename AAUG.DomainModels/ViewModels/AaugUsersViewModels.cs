@@ -54,7 +54,7 @@ public class AaugUserFullEditViewModel
 
     public string? Email { get; set; }
     public string? Phone { get; set; }
-
+    public DateOnly? BornDate { get; set; }
 
     public bool? CanGetNotfiedByMail { get; set; }
 }
@@ -88,7 +88,7 @@ public class AaugUserFullGetViewModel
 
     public string? Email { get; set; }
     public string? Phone { get; set; }
-
+    public DateOnly? BornDate { get; set; }
 
     public bool? CanGetNotfiedByMail { get; set; }
 

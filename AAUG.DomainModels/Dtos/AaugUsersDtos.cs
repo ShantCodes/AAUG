@@ -60,6 +60,7 @@ public class AaugUsersEditDto
     public int? UniversityCardFileId { get; set; }
 
     public string? Email { get; set; }
+    public DateOnly? BornDate { get; set; }
 
     public bool? CanGetNotfiedByMail { get; set; }
 
@@ -80,6 +81,7 @@ public class AaugUserGetDto
 
     public bool IsApproved { get; set; }
     public int? ProfilePictureFileId { get; set; }
+    public DateOnly? BornDate { get; set; }
 
     public string? Role { get; set; }
 
@@ -101,6 +103,7 @@ public class AaugUserWithProfilePictureGetDto
 
     public string? Email { get; set; }
     public string? Phone { get; set; }
+    public DateOnly BornDate { get; set; }
     public int? ProfilePictureFileId { get; set; }
     public MediaFileGetDto? ProfilePictureFile { get; set; }
 }
@@ -132,7 +135,7 @@ public class AaugUserFullGetDto
 
     public string? Email { get; set; }
     public string? Phone { get; set; }
-
+    public DateOnly? BornDate { get; set; }
 
     public bool? CanGetNotfiedByMail { get; set; }
 

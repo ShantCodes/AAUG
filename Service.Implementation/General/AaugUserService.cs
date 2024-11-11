@@ -144,6 +144,9 @@ public class AaugUserService : IAaugUserService
             throw new Exception("the user not found");
 
         entity.MembershipCode = membershipCode;
+        entity.SubscribeDate = DateTime.UtcNow;
+        entity.Subscribed = true;
+        entity.IsSubApproved = false;
 
         await unitOfWork.SaveChangesAsync();
         await unitOfWork.CommitTransactionAsync();
@@ -182,6 +185,8 @@ public class AaugUserService : IAaugUserService
         else
         {
             await userService.UnassignRoleFromUserAsync(aaugUserEntity.UserId, AaugRoles.Antam);
+            aaugUserEntity.Subscribed = false;
+            aaugUserEntity.SubscribeDate = null;
         }
 
         await unitOfWork.SaveChangesAsync();
@@ -209,6 +214,25 @@ public class AaugUserService : IAaugUserService
         var aaugUser = await tokenService.GetAaugUserFromToken();
         var userRole = tokenService.GetUserRoleFromToken();
         var existingRecord = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(aaugUser.Id).FirstOrDefaultAsync();
+        if (inputEntity.BornDate != null)
+            existingRecord.BornDate = inputEntity.BornDate;
+
+        if (inputEntity.Name != null)
+            existingRecord.Name = inputEntity.Name;
+
+        if (inputEntity.LastName != null)
+            if (inputEntity.BornDate != null)
+                existingRecord.LastName = inputEntity.LastName;
+
+        if (inputEntity.NameArmenian != null)
+            existingRecord.NameArmenian = inputEntity.NameArmenian;
+
+        if (inputEntity.LastNameArmenian!= null)
+            existingRecord.LastNameArmenian= inputEntity.LastNameArmenian;
+
+        if (inputEntity.Email != null)
+            existingRecord.Email= inputEntity.Email;
+
         if (existingRecord == null)
             throw new Exception("the user data not found");
 
@@ -227,7 +251,7 @@ public class AaugUserService : IAaugUserService
         if (inputEntity.UniversityCardFile != null)
         {
             var newMediaFileDto = await mediaFileService.InsertUserMediaFileAsync(inputEntity.UniversityCardFile, existingRecord.UniversityCardFileId);
-            existingRecord.NationalCardFileId = newMediaFileDto.Id;
+            existingRecord.UniversityCardFileId = newMediaFileDto.Id;
         }
 
         await unitOfWork.SaveChangesAsync();
