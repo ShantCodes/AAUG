@@ -20,4 +20,6 @@ public interface IAaugUserRepository
     IQueryable<AaugUserGetDto> GetByUserName(string Username);
     Task<AaugUser> DeleteUserAsync(int aaugUserId);
     IQueryable<AaugUserGetDto> GetNotApprovedAaugUsers();
+    IQueryable<AaugUser> GetUserByGuIdTracking(string guId);
+    IQueryable<AaugUserGetDto> GetAaugUserByEmail(string email);
 }

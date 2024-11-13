@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Dtos.Authentication;
 using AAUG.DomainModels.ViewModels;
@@ -8,6 +9,7 @@ using AAUG.Service.Interfaces.General;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace AAUG.Service.Implementations;
@@ -21,13 +23,15 @@ public class AuthService : IAuthService
     private readonly IAaugUserService aaugUserService;
     private readonly IMapper mapper;
     private readonly IHttpContextAccessor httpContextAccessor;
+    private readonly IAaugUnitOfWork unitOfWork;
     public AuthService(IConfiguration configuration,
                         UserManager<IdentityUser> userManager,
                         ITokenService tokenService,
                         IEmailSenderService emailSenderService,
                         IAaugUserService aaugUserService,
                         IMapper mapper,
-                        IHttpContextAccessor httpContextAccessor)
+                        IHttpContextAccessor httpContextAccessor,
+                        IAaugUnitOfWork unitOfWork)
     {
         this.configuration = configuration;
         this.userManager = userManager;
@@ -36,11 +40,17 @@ public class AuthService : IAuthService
         this.aaugUserService = aaugUserService;
         this.mapper = mapper;
         this.httpContextAccessor = httpContextAccessor;
+        this.unitOfWork = unitOfWork;
     }
     public async Task<IdentityUser> Login(LoginDto user)
     {
-        // Try to find the user by email, username, or phone number
-        var identityUserByEmail = await userManager.FindByEmailAsync(user.Username);
+        var aaugUser = await unitOfWork.AaugUserRepository.GetAaugUserByEmail(user.Username).FirstOrDefaultAsync();
+        var identityUserByEmail = new IdentityUser();
+        if (aaugUser != null)
+            identityUserByEmail = await userManager.FindByIdAsync(aaugUser.UserId);
+        //var identityUserByEmail = await userManager.FindByEmailAsync(aaugUser.Email);
+        //var identityUserByEmail = await userManager.FindByIdAsync(aaugUser.UserId);
+
         var identityUserByName = await userManager.FindByNameAsync(user.Username);
 
         // Find by phone number through your custom user service

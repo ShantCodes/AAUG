@@ -3,6 +3,7 @@ using AAUG.DomainModels.Enums;
 using AAUG.Service.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using static AAUG.DomainModels.Enums.AaugRoles;
 
@@ -13,12 +14,14 @@ public class UserService : IUserService
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly UserManager<IdentityUser> userManager;
     private readonly RoleManager<IdentityRole> roleManager;
+    private readonly IAaugUnitOfWork unitOfWork;
 
-    public UserService(IHttpContextAccessor httpContextAccessor, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
+    public UserService(IHttpContextAccessor httpContextAccessor, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, IAaugUnitOfWork unitOfWork)
     {
         _httpContextAccessor = httpContextAccessor;
         this.userManager = userManager;
         this.roleManager = roleManager;
+        this.unitOfWork = unitOfWork;
     }
 
     public string GetCurrentUserId()
@@ -45,7 +48,7 @@ public class UserService : IUserService
         if (!roleExists)
             return "role does not exist in the database";
         var result = await userManager.AddToRoleAsync(user, roleName);
-        if (result.Succeeded)        
+        if (result.Succeeded)
             return $"the user is now {roleName}";
 
         return "request failed";
@@ -65,6 +68,18 @@ public class UserService : IUserService
             throw new Exception($"Role with ID {roleId} not found.");
         }
 
+        if (roleId == AaugRoles.Antam)
+        {
+            var aaugUser = await unitOfWork.AaugUserRepository.GetUserByGuIdTracking(userId).FirstOrDefaultAsync()
+                            ?? throw new Exception("user not found");
+            aaugUser.Subscribed = false;
+            aaugUser.IsSubApproved = false;
+            aaugUser.SubscribeDate = null;
+
+            await unitOfWork.SaveChangesAsync();
+            await unitOfWork.CommitTransactionAsync();
+            
+        }
         return await userManager.RemoveFromRoleAsync(user, roleName);
     }
 

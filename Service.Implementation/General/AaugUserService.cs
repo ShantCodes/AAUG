@@ -4,6 +4,7 @@ using System.Security.Claims;
 using AAUG.DataAccess.Implementations.General;
 using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DomainModels.Dtos;
+using AAUG.DomainModels.Dtos.Media;
 using AAUG.DomainModels.Dtos.User;
 using AAUG.DomainModels.Enums;
 using AAUG.DomainModels.ViewModels;
@@ -199,8 +200,12 @@ public class AaugUserService : IAaugUserService
     {
         var aaugUser = await tokenService.GetAaugUserFromToken();
         var existingRecord = await unitOfWork.AaugUserRepository.GetFullUserInfoByUserIdWithTracking(aaugUser.Id).FirstOrDefaultAsync();
+        var profilePictureFile = new MediaFileGetDto();
+        if (existingRecord.ProfilePictureFileId != null)
+            profilePictureFile = await mediaFileService.InsertUserMediaFileAsync(profilePicture, existingRecord.ProfilePictureFileId);
+        else
+            profilePictureFile = await mediaFileService.InsertUserMediaFileAsync(profilePicture);
 
-        var profilePictureFile = await mediaFileService.InsertUserMediaFileAsync(profilePicture);
         existingRecord.ProfilePictureFileId = profilePictureFile.Id;
 
         await unitOfWork.SaveChangesAsync();
@@ -227,11 +232,11 @@ public class AaugUserService : IAaugUserService
         if (inputEntity.NameArmenian != null)
             existingRecord.NameArmenian = inputEntity.NameArmenian;
 
-        if (inputEntity.LastNameArmenian!= null)
-            existingRecord.LastNameArmenian= inputEntity.LastNameArmenian;
+        if (inputEntity.LastNameArmenian != null)
+            existingRecord.LastNameArmenian = inputEntity.LastNameArmenian;
 
         if (inputEntity.Email != null)
-            existingRecord.Email= inputEntity.Email;
+            existingRecord.Email = inputEntity.Email;
 
         if (existingRecord == null)
             throw new Exception("the user data not found");

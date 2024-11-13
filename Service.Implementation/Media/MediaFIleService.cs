@@ -75,7 +75,7 @@ public class MediaFIleService : IMediaFileService
 
     public async Task<MediaFileGetDto> InsertUserMediaFileAsync(IFormFile file)
     {
-        var eventFolder = await unitOfWork.MediaFolderRepository.GetEventsFolder().FirstAsync();
+        var eventFolder = await unitOfWork.MediaFolderRepository.GetProfileFolder().FirstAsync();
 
         if (!Directory.Exists(eventFolder.Name))
         {
@@ -113,7 +113,7 @@ public class MediaFIleService : IMediaFileService
     }
     public async Task<MediaFileGetDto> InsertUserMediaFileAsync(IFormFile file, int? existingFileId)
     {
-        var eventFolder = await unitOfWork.MediaFolderRepository.GetEventsFolder().FirstAsync();
+        var eventFolder = await unitOfWork.MediaFolderRepository.GetProfileFolder().FirstAsync();
 
         if (!Directory.Exists(eventFolder.Name))
         {
@@ -384,6 +384,10 @@ public class MediaFIleService : IMediaFileService
         };
         throw new ArgumentException("Invalid media file path.");
     }
+
+    #region Remove file
+
+    #endregion
     private string GetContentType(string extension)
     {
         // Simple content type mapping
