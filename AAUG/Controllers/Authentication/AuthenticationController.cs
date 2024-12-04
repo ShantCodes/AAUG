@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Dtos.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using AAUG.Service.Interfaces.EmailSender;
 
 namespace AAUG.Api.Controllers.Authentication
 {
@@ -19,12 +20,14 @@ namespace AAUG.Api.Controllers.Authentication
         public AuthenticationController(ITokenService tokenService,
          SignInManager<IdentityUser> signInManager,
          UserManager<IdentityUser> userManager,
-         IAuthService authService)
+         IAuthService authService,
+         IEmailSenderService emailSenderService)
         {
             this.tokenService = tokenService;
             this.signInManager = signInManager;
             this.userManager = userManager;
             this.authService = authService;
+
         }
 
         [HttpPost("login")]
@@ -46,7 +49,7 @@ namespace AAUG.Api.Controllers.Authentication
             return Ok(await authService.RegisterUserAsync(registerEntity));
         }
 
-        [HttpPost("forgotpassword")]
+        [HttpPost("Forgotpassword")]
         public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto forgotPasswordDto)
         {
             return Ok(await authService.ForgotPasswordAsync(forgotPasswordDto));
@@ -58,6 +61,7 @@ namespace AAUG.Api.Controllers.Authentication
         {
             return Ok(await authService.ResetPasswordAsync(resetPasswordDto));
         }
+
     }
 
 }

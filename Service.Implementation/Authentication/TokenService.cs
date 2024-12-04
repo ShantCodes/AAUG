@@ -35,6 +35,7 @@ public class TokenService : ITokenService
         new Claim(ClaimTypes.NameIdentifier, user.Id),
         new Claim(ClaimTypes.Email, user.Email),
         new Claim("Username", user.UserName),
+        new Claim("UserId", user.Id),
         new Claim("PhoneNumber", user.PhoneNumber ?? string.Empty) // Add phone number as custom claim
     };
 
@@ -84,7 +85,16 @@ public class TokenService : ITokenService
             if (user != null)
             {
                 var userName = user.FindFirst(ClaimTypes.Email)?.Value;
+                var userId = user.FindFirst("UserId")?.Value;
                 var email = user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (userId != null)
+                {
+                    var userGuId = await userManager.FindByIdAsync(userId);
+                     if (userGuId == null)
+                        throw new Exception("user not found");
+                    var aaugUser = await unitOfWork.AaugUserRepository.GetUserByGuId(userGuId.Id).FirstAsync();
+                    return aaugUser;
+                }
                 if (userName != null)
                 {
                     var userGuId = await userManager.FindByNameAsync(userName);

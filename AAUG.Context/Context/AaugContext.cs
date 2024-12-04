@@ -53,7 +53,7 @@ namespace AAUG.Context.Context
 
         public virtual DbSet<SlideShowTitle> SlideShowsTitles { get; set; }
 
-
+        public virtual DbSet<PushSubscription> PushSubscriptions { get; set; }
 
 
         #endregion
@@ -83,6 +83,7 @@ namespace AAUG.Context.Context
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.FormConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.SlideShowConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.SlideShowTitleConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.PushSubscriptionConfiguration());
             #endregion
         }
 

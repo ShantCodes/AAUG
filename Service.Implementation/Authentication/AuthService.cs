@@ -84,7 +84,7 @@ public class AuthService : IAuthService
         var identityUser = new IdentityUser
         {
             UserName = registerEntity.Username,
-            Email = registerEntity.Username
+            Email = registerEntity.Email
         };
 
         var result = await userManager.CreateAsync(identityUser, registerEntity.Password);
@@ -95,22 +95,34 @@ public class AuthService : IAuthService
         return result.Succeeded;
     }
 
-    public async Task<bool> ForgotPasswordAsync(ForgotPasswordDto forgotPasswordDto)
+    public async Task<bool> ForgotPasswordAsync(ForgotPasswordDto model)
     {
-        var user = await userManager.FindByEmailAsync(forgotPasswordDto.Email);
-        if (user == null)
-        {
-            // Don't reveal that the user does not exist or is not confirmed
+        if (string.IsNullOrEmpty(model.Email))
             return false;
-        }
+        var aaugUser = await unitOfWork.AaugUserRepository.GetAaugUserByEmail(model.Email).FirstOrDefaultAsync();
+        if (aaugUser == null)
+            return false;
+        var user = await userManager.FindByIdAsync(aaugUser.UserId);
+
+        var newPassword = GenerateRandomPassword();
+
+        var subject = "Your New Password";
+        var body = $"<p>Hello {aaugUser.Name},</p><p>Your new password is: <strong>{newPassword}</strong></p>";
+
+        await emailSenderService.SendEmailAsync(aaugUser.Email, subject, body);
 
         var token = await userManager.GeneratePasswordResetTokenAsync(user);
-        var callbackUrl = $"{configuration["AppUrl"]}/api/account/resetpassword?userId={user.Id}&token={WebUtility.UrlEncode(token)}";
-
-        await emailSenderService.SendEmailAsync(forgotPasswordDto.Email, "Reset Password",
-            $"Please reset your password by clicking here: <a href='{callbackUrl}'>link</a>");
+        var result = await userManager.ResetPasswordAsync(user, token, newPassword);
 
         return true;
+    }
+
+    private string GenerateRandomPassword(int length = 8)
+    {
+        const string validChars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?_-";
+        var random = new Random();
+        return new string(Enumerable.Repeat(validChars, length)
+            .Select(s => s[random.Next(s.Length)]).ToArray());
     }
 
     public async Task<bool> ResetPasswordAsync(ResetPasswordDto resetPasswordDto)

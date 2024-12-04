@@ -6,10 +6,13 @@ using AAUG.Service.Implementations;
 using AAUG.Service.Implementations.EmailSender;
 using AAUG.Service.Implementations.General;
 using AAUG.Service.Implementations.Media;
+using AAUG.Service.Implementations.Notification;
 using AAUG.Service.Interfaces;
 using AAUG.Service.Interfaces.EmailSender;
 using AAUG.Service.Interfaces.General;
 using AAUG.Service.Interfaces.Media;
+using AAUG.Service.Interfaces.Notification;
+using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
@@ -42,9 +45,9 @@ namespace AAUG.ServiceExtentions
 
             services.AddTransient<IAaugTest, AaugTest>();
             services.AddTransient<INewsService, NewsService>();
-            services.AddTransient<IAaugUserService, AaugUserService>();            
-            services.AddTransient<IEventService, EventService>();     
-            services.AddTransient<ISlideShowService, SlideShowService>();     
+            services.AddTransient<IAaugUserService, AaugUserService>();
+            services.AddTransient<IEventService, EventService>();
+            services.AddTransient<ISlideShowService, SlideShowService>();
 
             #region media service DI
             services.AddTransient<IMediaFileService, MediaFIleService>();
@@ -55,6 +58,18 @@ namespace AAUG.ServiceExtentions
             #region User Service DI
             services.AddScoped<IUserService, UserService>();
 
+            #endregion
+            #region push notification
+            services.AddSingleton<NotificationService>(sp =>
+            {
+                var configuration = sp.GetRequiredService<IConfiguration>();
+                var unitOfWork = sp.GetRequiredService<IAaugUnitOfWork>();
+                var mapper = sp.GetRequiredService<IMapper>();
+
+                return new NotificationService(unitOfWork, mapper, configuration);
+            });
+
+            services.AddTransient<INotificationService, NotificationService>();
 
             #endregion
 

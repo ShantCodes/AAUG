@@ -190,6 +190,11 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         public ISlideShowTitleRepository SlideShowTitleRepository => _slideShowTitleRepository ??= new SlideShowTitleRepository(this, mapper);
         #endregion
 
+        #region push subscription
+        public IPushSubscriptionRepository _pushSubscriptionRepository;
+        public IPushSubscriptionRepository PushSubscriptionRepository => _pushSubscriptionRepository ??= new PushSubscriptionRepository(this, mapper);
+        #endregion
+
         #endregion
     }
 }

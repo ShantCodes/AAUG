@@ -75,6 +75,35 @@
           }
         }
       },
+      "Lib.Net.Http.EncryptedContentEncoding/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Lib.Net.Http.EncryptedContentEncoding.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Lib.Net.Http.EncryptedContentEncoding.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Lib.Net.Http.WebPush/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Lib.Net.Http.EncryptedContentEncoding": "2.1.0"
+        },
+        "compile": {
+          "lib/net6.0/Lib.Net.Http.WebPush.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Lib.Net.Http.WebPush.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Http/2.2.2": {
         "type": "package",
         "dependencies": {
@@ -1278,6 +1307,47 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Lib.Net.Http.EncryptedContentEncoding/2.1.0": {
+      "sha512": "4i7lOuMNvYF8K9/ZqqW2ecQxS9TEtQ808Ty7BXMTiy1zC5nBVDG2UDiKWfhFOpTPMoaDgd+ye6qfI6l3klW92g==",
+      "type": "package",
+      "path": "lib.net.http.encryptedcontentencoding/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib.net.http.encryptedcontentencoding.2.1.0.nupkg.sha512",
+        "lib.net.http.encryptedcontentencoding.nuspec",
+        "lib/net451/Lib.Net.Http.EncryptedContentEncoding.dll",
+        "lib/net451/Lib.Net.Http.EncryptedContentEncoding.xml",
+        "lib/net461/Lib.Net.Http.EncryptedContentEncoding.dll",
+        "lib/net461/Lib.Net.Http.EncryptedContentEncoding.xml",
+        "lib/netstandard2.0/Lib.Net.Http.EncryptedContentEncoding.dll",
+        "lib/netstandard2.0/Lib.Net.Http.EncryptedContentEncoding.xml",
+        "lib/netstandard2.1/Lib.Net.Http.EncryptedContentEncoding.dll",
+        "lib/netstandard2.1/Lib.Net.Http.EncryptedContentEncoding.xml"
+      ]
+    },
+    "Lib.Net.Http.WebPush/3.3.0": {
+      "sha512": "5WDV8nZ7h11EBg+oC5PVrDVpEdkSEsxaw1HR3L+TR76vflkoTab3lSepJdZ+T9NxzOtsrQoup5CTLLxZbUlBIw==",
+      "type": "package",
+      "path": "lib.net.http.webpush/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib.net.http.webpush.3.3.0.nupkg.sha512",
+        "lib.net.http.webpush.nuspec",
+        "lib/net451/Lib.Net.Http.WebPush.dll",
+        "lib/net451/Lib.Net.Http.WebPush.xml",
+        "lib/net461/Lib.Net.Http.WebPush.dll",
+        "lib/net461/Lib.Net.Http.WebPush.xml",
+        "lib/net5.0/Lib.Net.Http.WebPush.dll",
+        "lib/net5.0/Lib.Net.Http.WebPush.xml",
+        "lib/net6.0/Lib.Net.Http.WebPush.dll",
+        "lib/net6.0/Lib.Net.Http.WebPush.xml",
+        "lib/netstandard2.0/Lib.Net.Http.WebPush.dll",
+        "lib/netstandard2.0/Lib.Net.Http.WebPush.xml"
       ]
     },
     "Microsoft.AspNetCore.Http/2.2.2": {
@@ -3219,6 +3289,7 @@
     "net8.0": [
       "AutoMapper >= 13.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "Lib.Net.Http.WebPush >= 3.3.0",
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.AspNetCore.Http.Features >= 5.0.17",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 8.0.7",
@@ -3285,6 +3356,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.1, )"
+          },
+          "Lib.Net.Http.WebPush": {
+            "target": "Package",
+            "version": "[3.3.0, )"
           },
           "Microsoft.AspNetCore.Http": {
             "target": "Package",

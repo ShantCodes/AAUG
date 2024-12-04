@@ -16,9 +16,24 @@ using System.Text;
 using AAUG.Api.ServiceExtensions;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using AAUG.DomainModels.Dtos.Email;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+
+builder.Services.Configure<EmailSettings>(
+    builder.Configuration.GetSection("EmailSettings"));
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
@@ -28,16 +43,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 // {
 //     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
 // });
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAllOrigins",
-        builder =>
-        {
-            builder.AllowAnyOrigin()
-                   .AllowAnyMethod()
-                   .AllowAnyHeader();
-        });
-});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDependency(builder.Configuration);
 
@@ -100,7 +106,7 @@ var app = builder.Build();
 
 // app.MapIdentityApi<IdentityUser>();
 
-app.UseCors("AllowAllOrigins");
+
 
 using (var scope = app.Services.CreateScope())
 {
@@ -115,7 +121,9 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+app.UseCors("AllowAll");
 
+app.UseRouting();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -124,6 +132,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseStaticFiles();
+
+
+
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -131,5 +143,15 @@ app.UseMiddleware<ExceptionMiddleware>();
 app.UseMiddleware<TokenMiddleware>();
 
 app.MapControllers();
+
+
+app.UseSpa(spa =>
+{
+    spa.Options.SourcePath = "wwwroot";
+    if (app.Environment.IsDevelopment())
+    {
+        spa.UseReactDevelopmentServer(npmScript: "start");
+    }
+});
 
 app.Run();

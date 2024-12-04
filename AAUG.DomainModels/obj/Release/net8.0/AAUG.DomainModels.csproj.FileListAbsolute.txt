@@ -1,0 +1,13 @@
+D:\AAUG\Project\clone\AAUG.DomainModels\bin\Release\net8.0\AAUG.DomainModels.deps.json
+D:\AAUG\Project\clone\AAUG.DomainModels\bin\Release\net8.0\AAUG.DomainModels.dll
+D:\AAUG\Project\clone\AAUG.DomainModels\bin\Release\net8.0\AAUG.DomainModels.pdb
+D:\AAUG\Project\clone\AAUG.DomainModels\obj\Release\net8.0\AAUG.DomainModels.csproj.AssemblyReference.cache
+D:\AAUG\Project\clone\AAUG.DomainModels\obj\Release\net8.0\AAUG.DomainModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\AAUG\Project\clone\AAUG.DomainModels\obj\Release\net8.0\AAUG.DomainModels.AssemblyInfoInputs.cache
+D:\AAUG\Project\clone\AAUG.DomainModels\obj\Release\net8.0\AAUG.DomainModels.AssemblyInfo.cs
+D:\AAUG\Project\clone\AAUG.DomainModels\obj\Release\net8.0\AAUG.DomainModels.csproj.CoreCompileInputs.cache
+D:\AAUG\Project\clone\AAUG.DomainModels\obj\Release\net8.0\AAUG.DomainModels.sourcelink.json
+D:\AAUG\Project\clone\AAUG.DomainModels\obj\Release\net8.0\AAUG.DomainModels.dll
+D:\AAUG\Project\clone\AAUG.DomainModels\obj\Release\net8.0\refint\AAUG.DomainModels.dll
+D:\AAUG\Project\clone\AAUG.DomainModels\obj\Release\net8.0\AAUG.DomainModels.pdb
+D:\AAUG\Project\clone\AAUG.DomainModels\obj\Release\net8.0\ref\AAUG.DomainModels.dll

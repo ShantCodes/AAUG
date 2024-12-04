@@ -7,6 +7,7 @@ using AAUG.DomainModels;
 using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Models.Tables.General;
 using AAUG.DomainModels.ViewModels;
+using AAUG.DomainModels.ViewModels.Notification;
 using AutoMapper;
 
 namespace AAUG.Service.Implementations.ViewModelMapper
@@ -26,7 +27,13 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             SlideShowProfile();
 
             SlideShowTitleProfile();
+
+            #region notificatiopn
+
+            #endregion
         }
+
+
 
         private void SlideShowTitleProfile()
         {

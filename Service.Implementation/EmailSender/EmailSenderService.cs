@@ -1,39 +1,44 @@
 ﻿using System.Net;
 using System.Net.Mail;
+using AAUG.DomainModels.Dtos.Email;
 using AAUG.Service.Interfaces.EmailSender;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace AAUG.Service.Implementations.EmailSender;
 
 public class EmailSenderService : IEmailSenderService
 {
-    private readonly IConfiguration configuration;
+    private readonly EmailSettings _emailSettings;
 
-    public EmailSenderService(IConfiguration configuration)
+    public EmailSenderService(IOptions<EmailSettings> emailSettings)
     {
-        this.configuration = configuration;
+        _emailSettings = emailSettings.Value;
     }
 
-    public async Task SendEmailAsync(string email, string subject, string htmlMessage)
+    public async Task SendEmailAsync(string to, string subject, string body)
     {
-        var client = new SmtpClient
+        // Set a custom callback to bypass SSL certificate validation
+        ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) => true;
+
+        using (var client = new SmtpClient())
         {
-            Host = configuration["EmailSettings:Host"],
-            Port = int.Parse(configuration["EmailSettings:Port"]),
-            EnableSsl = true,
-            Credentials = new NetworkCredential(configuration["EmailSettings:Username"], configuration["EmailSettings:Password"])
-        };
+            client.Host = _emailSettings.SmtpHost;
+            client.Port = _emailSettings.SmtpPort;
+            client.EnableSsl = _emailSettings.EnableSsl;
+            client.Credentials = new NetworkCredential(_emailSettings.Username, _emailSettings.Password);
 
-        var mailMessage = new MailMessage
-        {
-            From = new MailAddress(configuration["EmailSettings:From"]),
-            Subject = subject,
-            Body = htmlMessage, 
-            IsBodyHtml = true
-        };
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress(_emailSettings.SenderEmail, _emailSettings.SenderName),
+                Subject = subject,
+                Body = body,
+                IsBodyHtml = true
+            };
+            mailMessage.To.Add(to);
 
-        mailMessage.To.Add(email);
-
-        await client.SendMailAsync(mailMessage);
+            await client.SendMailAsync(mailMessage);
+        }
     }
+
 }

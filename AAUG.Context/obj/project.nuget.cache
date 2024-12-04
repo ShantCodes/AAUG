@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/7i8oTdtizQP9h+qoao8x2SClPH5acDnY8RHc5Ds9EyJUTNzQalTHSaNu9JT6Efd6fApGEwcVJCZdVfOMdavDQ==",
+  "dgSpecHash": "ymNSpBh87llibsQnXNnjU0V8pvbwAMBpK8eHrtMUGtcQWuFOtszZtoATAqGdsfrmQ9xRiRgaJ2BXavP/QSyShQ==",
   "success": true,
   "projectFilePath": "D:\\AAUG\\Project\\clone\\AAUG.Context\\AAUG.Context.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\Asus\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\lib.net.http.encryptedcontentencoding\\2.1.0\\lib.net.http.encryptedcontentencoding.2.1.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\lib.net.http.webpush\\3.3.0\\lib.net.http.webpush.3.3.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.6\\microsoft.aspnetcore.cryptography.internal.8.0.6.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.6\\microsoft.aspnetcore.cryptography.keyderivation.8.0.6.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",

@@ -237,6 +237,10 @@ public class AaugUserService : IAaugUserService
 
         if (inputEntity.Email != null)
             existingRecord.Email = inputEntity.Email;
+        if (inputEntity.Phone != null)
+        {
+            existingRecord.Phone = inputEntity.Phone;
+        }
 
         if (existingRecord == null)
             throw new Exception("the user data not found");
@@ -271,8 +275,13 @@ public class AaugUserService : IAaugUserService
 
         if (userContext == null)
             return null;
-        var userEmail = userContext.FindFirst(ClaimTypes.Email)?.Value;
-        var user = await userManager.FindByNameAsync(userEmail);
+        //var userEmail = userContext.FindFirst(ClaimTypes.Email)?.Value;
+        var userId = userContext.FindFirst("UserId")?.Value;
+        if (userId == null)
+        {
+            return null;
+        }
+        var user = await userManager.FindByIdAsync(userId);
 
         var result = mapper.Map<AaugUserGetDto>(
             await unitOfWork.AaugUserRepository.GetUserByGuId(user.Id).FirstOrDefaultAsync()

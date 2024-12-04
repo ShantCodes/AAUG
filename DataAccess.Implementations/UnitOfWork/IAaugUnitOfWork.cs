@@ -34,6 +34,8 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         ISlideShowRepository SlideShowRepository { get; }
         ISlideShowTitleRepository SlideShowTitleRepository { get; }
 
+        IPushSubscriptionRepository PushSubscriptionRepository { get; }
+
         #endregion
     }
 }
