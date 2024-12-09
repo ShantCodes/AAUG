@@ -1,3 +1,4 @@
+using System.Net;
 using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DomainModels.Models.Tables.General;
 using AAUG.DomainModels.ViewModels.Notification;
@@ -79,24 +80,19 @@ public class NotificationService : INotificationService
                 // Attempt to send the push notification
                 await _pushClient.RequestPushMessageDeliveryAsync(pushSubscription, pushMessage);
             }
-            catch (Lib.Net.Http.WebPush.PushServiceClientException ex)
+            catch (Lib.Net.Http.WebPush.PushServiceClientException ex) when (ex.StatusCode == HttpStatusCode.Gone)
             {
                 // Log specific errors (e.g., invalid subscription)
-                Console.WriteLine($"Push notification failed for {subscription.EndPoint}: {ex.Message}");
+                //Console.WriteLine($"Push notification failed for {subscription.EndPoint}: {ex.Message}");
 
-                await unitOfWork.PushSubscriptionRepository.DeleteRecordAsync(subscription.Id);
-                await unitOfWork.SaveChangesAsync();
-                await unitOfWork.CommitTransactionAsync();
+                //await unitOfWork.PushSubscriptionRepository.DeleteRecordAsync(subscription.Id);
+                //await unitOfWork.SaveChangesAsync();
+                //await unitOfWork.CommitTransactionAsync();
 
                 isSuccess = false;
             }
             catch (Exception ex)
             {
-                // Log unexpected errors
-                //Console.WriteLine($"Unexpected error sending push notification: {ex.Message}");
-                await unitOfWork.PushSubscriptionRepository.DeleteRecordAsync(subscription.Id);
-                await unitOfWork.SaveChangesAsync();
-                await unitOfWork.CommitTransactionAsync();
                 isSuccess = false;
             }
         }

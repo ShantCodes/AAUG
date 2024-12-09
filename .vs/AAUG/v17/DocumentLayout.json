@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\AAUG\\Project\\clone\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|d:\\aaug\\project\\clone\\service.implementation\\notification\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\notification\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|d:\\aaug\\project\\clone\\service.implementation\\notification\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF65F318-1C26-45C0-94B3-55FE068F3242}|Service.Implementation\\AAUG.Service.Implementations.csproj|solutionrelative:service.implementation\\notification\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|solutionrelative:aaug\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9912F4C7-6B02-4A34-8530-A520E655FE52}|AAUG\\AAUG.Api.csproj|d:\\aaug\\project\\clone\\aaug\\controllers\\notification\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -270,7 +270,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -315,16 +315,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\AAUG\\appsettings.json",
               "RelativeDocumentMoniker": "AAUG\\appsettings.json",
               "ToolTip": "D:\\AAUG\\Project\\clone\\AAUG\\appsettings.json",
               "RelativeToolTip": "AAUG\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-02T14:42:34.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T14:42:34.321Z"
             },
             {
               "$type": "Document",
@@ -348,8 +347,7 @@
               "RelativeToolTip": "AAUG\\Controllers\\Notification\\NotificationController.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAwwCIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T03:49:23.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T03:49:23.782Z"
             },
             {
               "$type": "Document",
@@ -361,8 +359,7 @@
               "RelativeToolTip": "AAUG\\Controllers\\General\\AaugUserController.cs",
               "ViewState": "AQIAAHYAAAAAAAAAAAAowHoAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T17:34:20.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T17:34:20.413Z"
             },
             {
               "$type": "Document",
@@ -374,18 +371,17 @@
               "RelativeToolTip": "AAUG.DomainModels\\Enums\\AaugRoles.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T04:28:58.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-29T04:28:58.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "D:\\AAUG\\Project\\clone\\Service.Implementation\\Notification\\NotificationService.cs",
               "RelativeDocumentMoniker": "Service.Implementation\\Notification\\NotificationService.cs",
               "ToolTip": "D:\\AAUG\\Project\\clone\\Service.Implementation\\Notification\\NotificationService.cs",
               "RelativeToolTip": "Service.Implementation\\Notification\\NotificationService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAEAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAwwFsAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T15:32:56.504Z",
               "EditorCaption": ""

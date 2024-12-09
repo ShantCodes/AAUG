@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AAUG.Context")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+763d3e64ed8df981bbb230e97f7525deef8d1df7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdbadb72cd6123135efefb78b4f47b09a94f907d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AAUG.Context")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AAUG.Context")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
