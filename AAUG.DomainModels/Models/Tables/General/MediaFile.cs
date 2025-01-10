@@ -24,4 +24,6 @@ public partial class MediaFile
     public virtual ICollection<AaugUser>? AaugUserReceiptFiles { get; set; }
     public virtual ICollection<News>? News { get; set; }
     public virtual ICollection<SlideShow> SlideShows { get; set; }
+
+    public virtual ICollection<ExpandEventFile> ExpandEventFiles { get; set; }
 }

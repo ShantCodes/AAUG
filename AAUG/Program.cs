@@ -144,7 +144,6 @@ app.UseMiddleware<TokenMiddleware>();
 
 app.MapControllers();
 
-
 app.UseSpa(spa =>
 {
     spa.Options.SourcePath = "wwwroot";

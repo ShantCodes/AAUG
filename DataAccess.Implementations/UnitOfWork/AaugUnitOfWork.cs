@@ -195,6 +195,13 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
         public IPushSubscriptionRepository PushSubscriptionRepository => _pushSubscriptionRepository ??= new PushSubscriptionRepository(this, mapper);
         #endregion
 
+        #region expandEvents
+        public IExpandEventTextRepository _expandEventTextRepository;
+        public IExpandEventTextRepository ExpandEventTextRepository => _expandEventTextRepository ??= new ExpandEventTextRepository(this, mapper);
+        public IExpandEventFileRepository _expandEventFileRepository;
+        public IExpandEventFileRepository ExpandEventFileRepository => _expandEventFileRepository ??= new ExpandEventFileRepository(this, mapper);
+        #endregion
+
         #endregion
     }
 }

@@ -36,6 +36,13 @@ namespace AAUG.Api.Controllers.Notification
             return Ok(await notificationService.SendNotificationAsync(payload));
         }
 
+        [HttpGet("CountActiveSubs")]
+        [Authorize(Roles = "King,Varich,Hanxnakhumb")]
+        public async Task<IActionResult> CountActiveSubs()
+        {
+            return Ok(await notificationService.CountActiveSubsAsync());
+        }
+
     }
 }
 

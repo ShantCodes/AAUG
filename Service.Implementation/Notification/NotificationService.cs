@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Net;
 using AAUG.DataAccess.Implementations.UnitOfWork;
+using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Models.Tables.General;
 using AAUG.DomainModels.ViewModels.Notification;
 using AAUG.Service.Interfaces.Notification;
@@ -39,7 +41,14 @@ public class NotificationService : INotificationService
             AuthKey = model.Keys.Auth,
             P256dhKey = model.Keys.P256dh
         };
-        await unitOfWork.PushSubscriptionRepository.AddDataAsync(data);
+        var dataDto = new NotificationInsertDto
+        {
+            Endpoint = data.EndPoint,
+            Auth = data.AuthKey,
+            P256dh = data.P256dhKey,
+            IsActive = true,
+        };
+        await unitOfWork.PushSubscriptionRepository.AddDataAsync(dataDto);
 
         await unitOfWork.SaveChangesAsync();
         await unitOfWork.CommitTransactionAsync();
@@ -50,9 +59,12 @@ public class NotificationService : INotificationService
     public async Task<bool> SendNotificationAsync(NotificationPayload payload)
     {
         var subscriptions = await unitOfWork.PushSubscriptionRepository.GetAllAsync().ToListAsync();
+        var activeSubs = subscriptions.Where(a => a.IsActive == true);
+        if (!activeSubs.Any())
+            return false;
         bool isSuccess = true; // Track success status
 
-        foreach (var subscription in subscriptions)
+        foreach (var subscription in activeSubs)
         {
             var pushSubscription = new Lib.Net.Http.WebPush.PushSubscription
             {
@@ -83,11 +95,11 @@ public class NotificationService : INotificationService
             catch (Lib.Net.Http.WebPush.PushServiceClientException ex) when (ex.StatusCode == HttpStatusCode.Gone)
             {
                 // Log specific errors (e.g., invalid subscription)
-                //Console.WriteLine($"Push notification failed for {subscription.EndPoint}: {ex.Message}");
+                // Console.WriteLine($"Push notification failed for {subscription.EndPoint}: {ex.Message}");
 
-                //await unitOfWork.PushSubscriptionRepository.DeleteRecordAsync(subscription.Id);
-                //await unitOfWork.SaveChangesAsync();
-                //await unitOfWork.CommitTransactionAsync();
+                subscription.IsActive = false;
+                await unitOfWork.SaveChangesAsync();
+                await unitOfWork.CommitTransactionAsync();
 
                 isSuccess = false;
             }
@@ -99,6 +111,16 @@ public class NotificationService : INotificationService
 
         return isSuccess;
     }
+
+    #region count active subs
+    public async Task<int> CountActiveSubsAsync()
+    {
+        var data = await unitOfWork.PushSubscriptionRepository.GetAllAsync().ToListAsync();
+        var activeData = data.Where(a => a.IsActive == true);
+
+        return activeData.Count();
+    }
+    #endregion
 
 
 }

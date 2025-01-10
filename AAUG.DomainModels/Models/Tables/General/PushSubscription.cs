@@ -6,4 +6,5 @@ public class PushSubscription
     public string EndPoint  { get; set; }
     public string P256dhKey  { get; set; }
     public string AuthKey  { get; set; }
+    public bool IsActive { get; set; }
 }

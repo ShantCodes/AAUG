@@ -7,4 +7,5 @@ public interface INotificationService
 {
     Task<bool> SaveSubscriptionAsync(SubscriptionViewModel model);
     Task<bool> SendNotificationAsync(NotificationPayload payload);
+    Task<int> CountActiveSubsAsync();
 }

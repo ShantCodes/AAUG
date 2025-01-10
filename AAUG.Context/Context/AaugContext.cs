@@ -55,6 +55,9 @@ namespace AAUG.Context.Context
 
         public virtual DbSet<PushSubscription> PushSubscriptions { get; set; }
 
+        public virtual DbSet<ExpandEventFile> ExpandEventFiles { get; set; }
+        public virtual DbSet<ExpandEventText> ExpandEventTexts { get; set; }
+
 
         #endregion
 
@@ -84,6 +87,8 @@ namespace AAUG.Context.Context
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.SlideShowConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.SlideShowTitleConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.Tables.General.PushSubscriptionConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.ExpandEventFileConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.Tables.General.ExpandEventTextConfiguration());
             #endregion
         }
 

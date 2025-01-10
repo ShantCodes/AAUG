@@ -1,6 +1,7 @@
 using AAUG.DataAccess.EntityRepository;
 using AAUG.DataAccess.Implementations.UnitOfWork;
 using AAUG.DataAccess.Interfaces.General;
+using AAUG.DomainModels.Dtos;
 using AAUG.DomainModels.Models.Tables.General;
 using AutoMapper;
 
@@ -15,9 +16,21 @@ public class PushSubscriptionRepository : EntityRepository<PushSubscription>, IP
         this.unitOfWork = unitOfWork;
         this.mapper = mapper;
     }
-    public async Task AddDataAsync(PushSubscription pushSubscription)
+    //public async Task AddDataAsync(PushSubscription pushSubscription)
+    //{
+    //    await AddAsync(pushSubscription);
+    //}
+
+    public async Task AddDataAsync(NotificationInsertDto entity)
     {
-        await AddAsync(pushSubscription);
+        var data = new PushSubscription
+        {
+            EndPoint = entity.Endpoint,
+            P256dhKey = entity.P256dh,
+            AuthKey = entity.Auth,
+            IsActive = entity.IsActive,
+        };
+        await AddAsync(data);
     }
 
     public IQueryable<PushSubscription> GetByEndpointAsync(string endpoint)

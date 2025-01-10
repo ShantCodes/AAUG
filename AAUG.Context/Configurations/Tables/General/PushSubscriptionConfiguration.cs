@@ -21,6 +21,7 @@ namespace AAUG.Context.Configurations.Tables.General
             builder.Property(x => x.EndPoint).HasColumnName("EndPoint");
             builder.Property(x => x.P256dhKey).HasColumnName("P256dhKey");
             builder.Property(x => x.AuthKey).HasColumnName("AuthKey");
+            builder.Property(x => x.IsActive).HasColumnName("IsActive");
             #endregion
 
             #region Relations

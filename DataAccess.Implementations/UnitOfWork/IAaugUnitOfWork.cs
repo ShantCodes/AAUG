@@ -36,6 +36,9 @@ namespace AAUG.DataAccess.Implementations.UnitOfWork
 
         IPushSubscriptionRepository PushSubscriptionRepository { get; }
 
+        IExpandEventFileRepository ExpandEventFileRepository { get; }
+        IExpandEventTextRepository ExpandEventTextRepository { get; }
+
         #endregion
     }
 }
