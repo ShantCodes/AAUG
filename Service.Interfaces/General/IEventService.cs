@@ -22,4 +22,12 @@ public interface IEventService
     Task<IEnumerable<EventGetViewModel>> GetAllNotApprovedEventsForAdmins();
     Task<bool> DeleteEventAsync(int eventId);
     #endregion
+
+    #region eventdetails
+    Task<IEnumerable<EventDetailsGetViewModel>> GetEventDetailsByIdAsync(int eventId);
+    Task<IEnumerable<EventDetailsTextGetViewModel>> InsertEventDetailTextsAsync(IEnumerable<EventDetailsTextInsertViewModel> insertEntity);
+    Task<bool> EditEventDetailsAsync(EventDetailsTextEditViewModel insertEntity);
+    Task<bool> DeleteEventDetailFileAsync(int expandEventTextId, int expandEventFileId);
+
+    #endregion
 }

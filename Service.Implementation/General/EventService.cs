@@ -38,7 +38,7 @@ public class EventService : IEventService
     }
 
     #endregion
-    
+
     public async Task<IEnumerable<EventGetViewModel>> GetAllEventsAsync(int pageNumber, int pageSize = 4)
     {
         var skip = (pageNumber - 1) * pageSize;
@@ -59,7 +59,7 @@ public class EventService : IEventService
 
         return data;
     }
-    
+
     public async Task<IEnumerable<DateOnly>> GetReservedEventDatesAsync()
     {
         return await unitOfWork.EventRepository.GetReservedEventDates().ToListAsync();
@@ -68,7 +68,7 @@ public class EventService : IEventService
 
     public async Task<EventInsertDto> InsertEventAsync(EventInsertViewModel inputEntity)
     {
-        
+
         var data = mapper.Map<EventInsertDto>(inputEntity);
         data.IsApproved = false;
         data.HasHappened = false;
@@ -182,7 +182,7 @@ public class EventService : IEventService
         var aaugUser = await tokenService.GetAaugUserFromToken();
         var data = await unitOfWork.EventLikeRepository.CheckIfLiked(eventId, aaugUser.Id).FirstOrDefaultAsync();
 
-        if(data == null)
+        if (data == null)
         {
             return false;
         }
@@ -257,6 +257,66 @@ public class EventService : IEventService
         return true;
     }
 
+    #endregion
+
+    #region Event details
+    public async Task<IEnumerable<EventDetailsGetViewModel>> GetEventDetailsByIdAsync(int eventId)
+    {
+        return mapper.Map<IEnumerable<EventDetailsGetViewModel>>(
+            await unitOfWork.ExpandEventTextRepository.GetEventDetailsById(eventId).ToListAsync()
+        );
+    }
+
+    public async Task<IEnumerable<EventDetailsTextGetViewModel>> InsertEventDetailTextsAsync(IEnumerable<EventDetailsTextInsertViewModel> insertEntity)
+    {
+        var data = await unitOfWork.ExpandEventTextRepository.InsertDetailsAsync(
+            mapper.Map<IEnumerable<EventDetailsTextInsertDto>>(insertEntity)
+        );
+        await unitOfWork.SaveChangesAsync();
+        var returnData = mapper.Map<IEnumerable<EventDetailsTextGetViewModel>>(data);
+
+        await unitOfWork.CommitTransactionAsync();
+        return returnData;
+    }
+
+    public async Task<bool> EditEventDetailsAsync(EventDetailsTextEditViewModel insertEntity)
+    {
+        var existingRecord = await unitOfWork.ExpandEventTextRepository.GetEventDetailsById(insertEntity.Id).FirstOrDefaultAsync();
+        if (insertEntity.Details != null)
+            existingRecord.Details = insertEntity.Details;
+        if (insertEntity.OrderBy != null)
+        {
+            existingRecord.OrderBy = (byte)insertEntity.OrderBy;
+        }
+
+        await unitOfWork.SaveChangesAsync();
+        await unitOfWork.CommitTransactionAsync();
+
+        return true;
+    }
+
+    public async Task<bool> DeleteEventDetailFileAsync(int expandEventTextId, int expandEventFileId)
+    {
+        var existingeventText = await unitOfWork.ExpandEventTextRepository.GetByIdTracking(expandEventTextId).FirstOrDefaultAsync();
+        if (existingeventText.ExpandEventFiles.Select(a => a.MediaFileId).Contains(expandEventFileId))
+        {
+            var eventFolder = await unitOfWork.MediaFolderRepository.GetEventsFolder().FirstAsync();
+            var existingFile = await unitOfWork.MediaFileRepository.GetMediaFile(expandEventFileId).FirstOrDefaultAsync();
+            if (existingFile == null)
+                return false;
+            existingFile.IsOmit = true;
+            await unitOfWork.SaveChangesAsync();
+
+            var oldFilePath = Path.Combine(eventFolder.Name, $"{existingFile.Gid}{existingFile.Extension}");
+            if (File.Exists(oldFilePath))
+            {
+                File.Delete(oldFilePath);
+            }
+            return true;
+        }
+        else
+            return false;
+    }
     #endregion
 
 }

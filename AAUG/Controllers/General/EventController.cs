@@ -83,4 +83,24 @@ public class EventController : ControllerBase
         return Ok(await eventService.CheckIfLiked(eventId));
     }
     #endregion
+
+    #region evnet details
+    [HttpGet("GetEventDetails/{eventId}")]
+    public async Task<IActionResult> GetEventDetails(int eventId)
+    {
+        return Ok(await eventService.GetEventDetailsByIdAsync(eventId));
+    }
+    [HttpGet("InsertEventDetailsText")]
+    [Authorize(Roles = "Varich,King, Hanxnakhumb")]
+    public async Task<IActionResult> InsertEventDetailsText(IEnumerable<EventDetailsTextInsertViewModel> insertEntity)
+    {
+        return Ok(await eventService.InsertEventDetailTextsAsync(insertEntity));
+    }
+    [HttpDelete("DeleteEventDatailFile/{expandEventTextId}/{expandEventFileId}")]
+    [Authorize(Roles = "Varich,King, Hanxnakhumb")]
+    public async Task<IActionResult> DeleteEventDetailFile(int expandEventTextId, int expandEventFileId)
+    {
+        return Ok(await eventService.DeleteEventDetailFileAsync(expandEventTextId, expandEventFileId));
+    }
+    #endregion
 }

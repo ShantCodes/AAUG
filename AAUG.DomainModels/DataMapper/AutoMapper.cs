@@ -25,6 +25,14 @@ public class MappingProfile : Profile
         SlideShowProfile();
 
         SlideShowTitleProfile();
+
+        EventDetailsProfile();
+    }
+
+    private void EventDetailsProfile()
+    {
+        CreateMap<ExpandEventText, EventDetailsGetDto>();
+        CreateMap<ExpandEventFile, EventDetailsFileGetDto>();
     }
 
     private void SlideShowTitleProfile()

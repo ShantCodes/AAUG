@@ -68,3 +68,30 @@ public class EventGetDto
 
     public MediaFileGetDto? ThumbnailFile { get; set; }
 }
+
+#region event details
+public class EventDetailsGetDto
+{
+    public int Id { get; set; }
+    public string Details { get; set; }
+    public byte OrderBy { get; set; }
+    public int EventId { get; set; }
+    public IEnumerable<EventDetailsFileGetDto> EventDetailsFileGetDto { get; set; }
+
+}
+
+public class EventDetailsFileGetDto
+{
+    public int Id { get; set; }
+    public int MediaFileId { get; set; }
+    public int ExpandEventTextId { get; set; }
+}
+
+public class EventDetailsTextInsertDto
+{
+    public string Details { get; set; }
+    public byte OrderBy { get; set; }
+    public int EventId { get; set; }
+}
+#endregion
+

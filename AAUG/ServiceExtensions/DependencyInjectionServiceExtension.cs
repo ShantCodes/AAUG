@@ -48,7 +48,6 @@ namespace AAUG.ServiceExtentions
             services.AddTransient<IAaugUserService, AaugUserService>();
             services.AddTransient<IEventService, EventService>();
             services.AddTransient<ISlideShowService, SlideShowService>();
-            services.AddTransient<IEventDetails, EventDetails>();
 
             #region media service DI
             services.AddTransient<IMediaFileService, MediaFIleService>();

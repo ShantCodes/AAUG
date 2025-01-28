@@ -85,3 +85,47 @@ public class EventEditViewModel
 
     public IFormFile? ThumbNailFile { get; set; }
 }
+
+#region event details
+public class EventDetailsGetViewModel
+{
+    public int Id { get; set; }
+    public string Details { get; set; }
+    public byte OrderBy { get; set; }
+    public int EventId { get; set; }
+    public List<EventDetailsFileGetViewModel> EventDetailsFileGetViewModels { get; set; }
+
+}
+
+public class EventDetailsFileGetViewModel
+{
+    public int Id { get; set; }
+    public int MediaFileId { get; set; }
+    public int ExpandEventTextId { get; set; }
+}
+
+public class EventDetailsTextInsertViewModel
+{
+    public string Details { get; set; }
+    public byte OrderBy { get; set; }
+    public int EventId { get; set; }
+}
+public class EventDetailsTextEditViewModel
+{
+    public int Id { get; set; }
+    public string Details { get; set; }
+    public byte? OrderBy { get; set; }
+}
+public class EventDetailsTextGetViewModel
+{
+    public string Details { get; set; }
+    public byte OrderBy { get; set; }
+    public int EventId { get; set; }
+}
+
+public class EventDetailsFileInsertViewModel
+{
+    public int ExpandEventTextId { get; set; }
+    public IFormFile EventDetailFile { get; set; }
+}
+#endregion

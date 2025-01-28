@@ -13,7 +13,7 @@ internal class ExpandEventFileConfiguration : IEntityTypeConfiguration<ExpandEve
         #endregion
 
         #region TableMapping
-        builder.ToTable("EventLikes", "General");
+        builder.ToTable("ExpandEventFiles", "General");
         #endregion
 
         #region Column Mappings

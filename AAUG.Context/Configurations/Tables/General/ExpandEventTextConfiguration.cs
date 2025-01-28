@@ -13,7 +13,7 @@ internal class ExpandEventTextConfiguration : IEntityTypeConfiguration<ExpandEve
         #endregion
 
         #region TableMapping
-        builder.ToTable("EventLikes", "General");
+        builder.ToTable("Expandeventtexts", "General");
         #endregion
 
         #region Column Mappings

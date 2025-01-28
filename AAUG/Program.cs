@@ -144,13 +144,13 @@ app.UseMiddleware<TokenMiddleware>();
 
 app.MapControllers();
 
-app.UseSpa(spa =>
-{
-    spa.Options.SourcePath = "wwwroot";
-    if (app.Environment.IsDevelopment())
-    {
-        spa.UseReactDevelopmentServer(npmScript: "start");
-    }
-});
+// app.UseSpa(spa =>
+// {
+//     spa.Options.SourcePath = "wwwroot";
+//     if (app.Environment.IsDevelopment())
+//     {
+//         spa.UseReactDevelopmentServer(npmScript: "start");
+//     }
+// });
 
 app.Run();

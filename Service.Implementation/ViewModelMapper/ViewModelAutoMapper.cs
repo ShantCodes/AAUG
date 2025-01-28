@@ -31,9 +31,17 @@ namespace AAUG.Service.Implementations.ViewModelMapper
             #region notificatiopn
 
             #endregion
+
+            #region event details
+            EventDetailsProfile();
+            #endregion
         }
 
-
+        private void EventDetailsProfile()
+        {
+            CreateMap<EventDetailsGetDto, EventDetailsGetViewModel>();
+            CreateMap<EventDetailsTextInsertViewModel, EventDetailsTextInsertDto>();
+        }
 
         private void SlideShowTitleProfile()
         {
